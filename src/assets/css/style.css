@@ -116,7 +116,7 @@ html, body {
 .header-subtitle {
   font-family: var(--font-sans);
   font-size: 10px;
-  color: var(--text-muted);
+  color: #3b82f6; /* Blue 500 */
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-top: 2px;
