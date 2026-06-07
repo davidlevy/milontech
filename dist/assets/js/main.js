@@ -162,43 +162,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Scrollspy Handler ---
-  let scrollTimeout = false;
-  
-  detailScrollContainer.addEventListener('scroll', () => {
+  const scrollspyOptions = {
+    root: detailScrollContainer,
+    rootMargin: '-10px 0px -80% 0px',
+    threshold: 0
+  };
+
+  const scrollspyObserver = new IntersectionObserver((entries) => {
     if (isScrollingProgrammatically) return;
-    
-    // Throttle to 100ms to prevent Safari iOS watchdog crash
-    if (scrollTimeout) return;
-    scrollTimeout = true;
 
-    setTimeout(() => {
-      scrollTimeout = false;
-      
-      window.requestAnimationFrame(() => {
-        const blocks = detailScrollContainer.querySelectorAll('.detail-block:not(.hidden)');
-        let activeBlock = null;
-        let minDiff = Infinity;
-        
-        const containerTop = detailScrollContainer.getBoundingClientRect().top;
-
-        blocks.forEach(block => {
-          const rect = block.getBoundingClientRect();
-          const diff = Math.abs(rect.top - containerTop);
-          if (diff < minDiff && rect.top - containerTop < 150) {
-            minDiff = diff;
-            activeBlock = block;
-          }
-        });
-
-        if (activeBlock) {
-          const idx = parseInt(activeBlock.getAttribute('data-id'), 10);
-          if (idx !== activeTermIndex) {
-            selectTerm(idx, false);
-          }
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = parseInt(entry.target.getAttribute('data-id'), 10);
+        if (idx !== activeTermIndex) {
+          selectTerm(idx, false);
         }
-      });
-    }, 100);
-  }, { passive: true });
+      }
+    });
+  }, scrollspyOptions);
+
+  // Observe all detail blocks
+  const detailBlocks = document.querySelectorAll('.detail-block');
+  detailBlocks.forEach(block => scrollspyObserver.observe(block));
 
   function updateStats() {
     statCount.textContent = glossary.length;
