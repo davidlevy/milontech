@@ -280,6 +280,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Mobile Swipe to Change Category ---
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    // Only execute on mobile screens and when detail pane is NOT active
+    if (window.innerWidth > 860 || detailPane.classList.contains('mobile-active')) return;
+
+    const threshold = 60; // Minimum swipe distance
+    const diffX = touchEndX - touchStartX;
+
+    if (Math.abs(diffX) < threshold) return;
+
+    const badges = Array.from(categoryBadges);
+    const currentIndex = badges.findIndex(b => b.classList.contains('active'));
+    
+    if (currentIndex === -1) return;
+
+    // In RTL, swiping right (diffX > 0) reveals items to the left (next index)
+    if (diffX > 0) {
+      if (currentIndex < badges.length - 1) {
+        badges[currentIndex + 1].click();
+        badges[currentIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    } else {
+      // Swiping left (diffX < 0)
+      if (currentIndex > 0) {
+        badges[currentIndex - 1].click();
+        badges[currentIndex - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  }
+
   // --- Event Listeners ---
 
   // Search input change
