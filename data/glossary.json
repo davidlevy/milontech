@@ -5498,5 +5498,16 @@
     "englishExampleTranslation": "Data harvesting is performed every night.",
     "isNative": true,
     "complexity": "High"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "גירסה",
+    "englishTerm": "Girsa",
+    "englishDefinition": "Version",
+    "hebrewExample": "איזו גירסה זאת?",
+    "transliteration": "Eizo girsa zot?",
+    "englishExampleTranslation": "Which version is this?",
+    "isNative": true,
+    "complexity": "Low"
   }
 ]
