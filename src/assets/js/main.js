@@ -131,7 +131,14 @@ function initVirtualizer() {
       const itemData = glossary[actualIndex];
       
       let node = renderedNodes[vIndex];
-      if (!node) {
+      const currentDataId = node ? parseInt(node.getAttribute('data-id'), 10) : -1;
+      
+      // If node doesn't exist, or it's representing a different actual item now (due to search)
+      if (!node || currentDataId !== actualIndex) {
+        if (node) {
+          node.remove();
+          itemResizeObserver.unobserve(node);
+        }
         node = document.createElement('div');
         node.className = 'detail-block active';
         node.setAttribute('data-id', actualIndex);
@@ -139,6 +146,12 @@ function initVirtualizer() {
         node.innerHTML = generateDetailHtml(itemData, actualIndex);
         virtualListInner.appendChild(node);
         renderedNodes[vIndex] = node;
+        
+        // Tell the virtualizer the actual height of this node
+        instance.measureElement(node);
+        
+        // Tell our custom observer to watch this node for height changes
+        itemResizeObserver.observe(node);
       }
       
       // Position it exactly where TanStack says it belongs
@@ -235,6 +248,8 @@ function initVirtualizer() {
           updateScrollspy(instance);
         }
       });
+      // Clear TanStack's size cache because index 0 is now a completely different item
+      virtualizer.measure();
       // Force render since options changed
       renderVirtualItems(virtualizer);
     }

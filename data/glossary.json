@@ -5509,5 +5509,16 @@
     "englishExampleTranslation": "Which version is this?",
     "isNative": true,
     "complexity": "Low"
+  },
+  {
+    "category": "QA & Testing",
+    "hebrewTerm": "מקרה קצה",
+    "englishTerm": "Mikre katze",
+    "englishDefinition": "Edge case",
+    "hebrewExample": "זה מקרה קצה נדיר",
+    "transliteration": "Ze mikre katze nadir",
+    "englishExampleTranslation": "This is a rare edge case",
+    "isNative": true,
+    "complexity": "Medium"
   }
 ]
