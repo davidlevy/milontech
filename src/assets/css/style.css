@@ -611,17 +611,17 @@ html, body {
   display: none; /* Hidden on desktop */
 }
 
-/* Continuous Scrollspy Container */
 .detail-scroll-container {
   flex: 1;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
+  padding-bottom: 40vh; /* Allow scrolling past the last item */
 }
 
 .detail-block {
-  padding: 64px 48px;
+  padding: 32px 32px;
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
@@ -636,7 +636,6 @@ html, body {
 
 .detail-block:last-child {
   border-bottom: none;
-  padding-bottom: 400px; /* Generous bottom spacing for top-aligning the last item */
 }
 
 .detail-header-section {

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div id="scroll" style="height: 500px; overflow: auto;">
-  <div id="inner" style="height: 5000px;"></div>
+<div id="scroll" style="height: 500px; overflow: auto; position: relative;">
+  <div id="inner" style="height: 5000px; width: 100%;"></div>
 </div>
 <script type="module">
-  import { Virtualizer, elementScroll, observeElementRect, observeElementOffset } from "https://esm.sh/@tanstack/virtual-core@3";
+  import { Virtualizer, elementScroll, observeElementRect } from "https://esm.sh/@tanstack/virtual-core@3";
   
   const scroll = document.getElementById('scroll');
   const virtualizer = new Virtualizer({
@@ -14,11 +14,23 @@
     estimateSize: () => 50,
     scrollToFn: elementScroll,
     observeElementRect: observeElementRect,
-    observeElementOffset: observeElementOffset,
-    initialRect: { width: 800, height: 500 }
+    observeElementOffset: (instance, cb) => {
+      const el = instance.scrollElement;
+      if (!el) return;
+      const handler = () => {
+        cb(el.scrollTop, false);
+        console.log('Items after scroll:', instance.getVirtualItems().length, 'first item:', instance.getVirtualItems()[0]?.index);
+      };
+      el.addEventListener('scroll', handler, { passive: true });
+      return () => el.removeEventListener('scroll', handler);
+    },
+    initialRect: { width: 800, height: 500 },
   });
   virtualizer._didMount();
-  console.log('items with initialRect:', virtualizer.getVirtualItems().length);
+  
+  setTimeout(() => {
+    scroll.scrollTop = 500;
+  }, 500);
 </script>
 </body>
 </html>

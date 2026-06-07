@@ -39,7 +39,20 @@ let activeCategory = 'all';
 let activeComplexity = 'all';
 let searchQuery = '';
 let activeTermIndex = -1;
+let firstVisibleIndex = -1;
 let isScrollingProgrammatically = false;
+
+// Custom ResizeObserver to bypass TanStack Vanilla JS onChange bugs on Safari
+// This forces the UI to update immediately when items are measured to their true sizes.
+const itemResizeObserver = new ResizeObserver(() => {
+  if (virtualizer) {
+    // Only re-render if the size cache actually changed? 
+    // Just wrap in rAF to prevent loop.
+    requestAnimationFrame(() => {
+      if (virtualizer) renderVirtualItems(virtualizer);
+    });
+  }
+});
 
 // --- Virtual List Setup ---
 let visibleIndices = Array.from({ length: glossary.length }, (_, i) => i);
@@ -51,7 +64,7 @@ function initVirtualizer() {
   virtualizer = new Virtualizer({
     count: visibleIndices.length,
     getScrollElement: () => detailScrollContainer,
-    estimateSize: () => 350,
+    estimateSize: () => 150,
     overscan: 5,
     initialRect: { width: rect.width || 800, height: rect.height || 600 },
     scrollToFn: elementScroll,
@@ -66,9 +79,19 @@ function initVirtualizer() {
   // In Vanilla JS, we MUST call the internal _didMount to attach the observers!
   virtualizer._didMount();
 
-    // Force an initial render manually since no scroll event has fired
-    renderVirtualItems(virtualizer);
-  }
+  // Workaround for TanStack Virtual Core v3 Vanilla JS bug where onChange does not fire on scroll:
+  detailScrollContainer.addEventListener('scroll', () => {
+    if (virtualizer) {
+      // Manually update internal state and force render
+      virtualizer.scrollOffset = detailScrollContainer.scrollTop;
+      renderVirtualItems(virtualizer);
+      updateScrollspy(virtualizer);
+    }
+  }, { passive: true });
+
+  // Force an initial render manually since no scroll event has fired
+  renderVirtualItems(virtualizer);
+}
 
   function updateScrollspy(instance) {
     if (isScrollingProgrammatically) return;
@@ -122,11 +145,16 @@ function initVirtualizer() {
       node.style.position = 'absolute';
       node.style.top = 0;
       node.style.left = 0;
+      node.style.right = 0;
+      node.style.margin = '0 auto';
       node.style.width = '100%';
       node.style.transform = `translateY(${virtualItem.start}px)`;
 
       // Tell the virtualizer the actual height of this node (crucial for dynamic heights!)
       instance.measureElement(node);
+      
+      // Tell our custom observer to watch this node for height changes
+      itemResizeObserver.observe(node);
     });
   }
 
@@ -196,7 +224,7 @@ function initVirtualizer() {
       virtualizer.setOptions({
         count: visibleIndices.length,
         getScrollElement: () => detailScrollContainer,
-        estimateSize: () => 350,
+        estimateSize: () => 150,
         overscan: 5,
         initialRect: { width: rect.width || 800, height: rect.height || 600 },
         scrollToFn: elementScroll,
@@ -357,7 +385,7 @@ function initVirtualizer() {
       e.preventDefault();
       const u = 'dvid.levy+milontech';
       const d = 'gmail.com';
-      window.location.href = `mailto:${u}@${d}?subject=MilonTech%20Suggestion`;
+      window.location.href = `mailto:${u}@${d}?subject=milon.tech%20Suggestion`;
     });
   }
 

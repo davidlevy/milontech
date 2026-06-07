@@ -39,7 +39,20 @@ let activeCategory = 'all';
 let activeComplexity = 'all';
 let searchQuery = '';
 let activeTermIndex = -1;
+let firstVisibleIndex = -1;
 let isScrollingProgrammatically = false;
+
+// Custom ResizeObserver to bypass TanStack Vanilla JS onChange bugs on Safari
+// This forces the UI to update immediately when items are measured to their true sizes.
+const itemResizeObserver = new ResizeObserver(() => {
+  if (virtualizer) {
+    // Only re-render if the size cache actually changed? 
+    // Just wrap in rAF to prevent loop.
+    requestAnimationFrame(() => {
+      if (virtualizer) renderVirtualItems(virtualizer);
+    });
+  }
+});
 
 // --- Virtual List Setup ---
 let visibleIndices = Array.from({ length: glossary.length }, (_, i) => i);
@@ -139,6 +152,9 @@ function initVirtualizer() {
 
       // Tell the virtualizer the actual height of this node (crucial for dynamic heights!)
       instance.measureElement(node);
+      
+      // Tell our custom observer to watch this node for height changes
+      itemResizeObserver.observe(node);
     });
   }
 
