@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
   const termsList = document.getElementById('terms-list');
   const categoryBadges = document.querySelectorAll('.category-badge');
+  const complexityBadges = document.querySelectorAll('.complexity-badge');
   const detailPane = document.getElementById('detail-pane');
   const detailScrollContainer = document.getElementById('detail-scroll-container');
   const mobileBackBtn = document.getElementById('mobile-back-btn');
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toast = document.getElementById('toast');
 
   let activeCategory = 'all';
+  let activeComplexity = 'all';
   let searchQuery = '';
   let activeTermIndex = -1;
   let isScrollingProgrammatically = false;
@@ -71,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!card || !block) return;
 
       const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+      const itemComplexity = block.getAttribute('data-complexity');
+      const matchesComplexity = activeComplexity === 'all' || itemComplexity === activeComplexity;
       
       const query = searchQuery.toLowerCase().trim();
       const matchesSearch = !query || 
@@ -82,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fuzzyMatch(query, item.englishTerm) ||
         fuzzyMatch(query, item.transliteration);
 
-      if (matchesCategory && matchesSearch) {
+      if (matchesCategory && matchesComplexity && matchesSearch) {
         card.classList.remove('hidden');
         block.classList.remove('hidden');
         if (firstVisibleIndex === -1) {
@@ -158,34 +162,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Scrollspy Handler ---
+  let scrollTimeout = false;
+  
   detailScrollContainer.addEventListener('scroll', () => {
-    // Avoid double updates during a programmatic scroll click
     if (isScrollingProgrammatically) return;
-
-    const blocks = detailScrollContainer.querySelectorAll('.detail-block:not(.hidden)');
-    let activeBlock = null;
-    let minDiff = Infinity;
     
-    const containerTop = detailScrollContainer.getBoundingClientRect().top;
+    // Throttle to 100ms to prevent Safari iOS watchdog crash
+    if (scrollTimeout) return;
+    scrollTimeout = true;
 
-    blocks.forEach(block => {
-      const rect = block.getBoundingClientRect();
-      // Calculate how close the top of this block is to the top margin of the container
-      const diff = Math.abs(rect.top - containerTop);
-      // Give a tiny offset tolerance (150px) to highlight whichever term is currently active
-      if (diff < minDiff && rect.top - containerTop < 150) {
-        minDiff = diff;
-        activeBlock = block;
-      }
-    });
+    setTimeout(() => {
+      scrollTimeout = false;
+      
+      window.requestAnimationFrame(() => {
+        const blocks = detailScrollContainer.querySelectorAll('.detail-block:not(.hidden)');
+        let activeBlock = null;
+        let minDiff = Infinity;
+        
+        const containerTop = detailScrollContainer.getBoundingClientRect().top;
 
-    if (activeBlock) {
-      const idx = parseInt(activeBlock.getAttribute('data-id'), 10);
-      if (idx !== activeTermIndex) {
-        selectTerm(idx, false);
-      }
-    }
-  });
+        blocks.forEach(block => {
+          const rect = block.getBoundingClientRect();
+          const diff = Math.abs(rect.top - containerTop);
+          if (diff < minDiff && rect.top - containerTop < 150) {
+            minDiff = diff;
+            activeBlock = block;
+          }
+        });
+
+        if (activeBlock) {
+          const idx = parseInt(activeBlock.getAttribute('data-id'), 10);
+          if (idx !== activeTermIndex) {
+            selectTerm(idx, false);
+          }
+        }
+      });
+    }, 100);
+  }, { passive: true });
 
   function updateStats() {
     statCount.textContent = glossary.length;
@@ -339,6 +352,18 @@ document.addEventListener('DOMContentLoaded', () => {
       updateListVisibility();
     });
   });
+
+  // Complexity Badge Click
+  if (complexityBadges) {
+    complexityBadges.forEach(badge => {
+      badge.addEventListener('click', () => {
+        complexityBadges.forEach(b => b.classList.remove('active'));
+        badge.classList.add('active');
+        activeComplexity = badge.getAttribute('data-complexity');
+        updateListVisibility();
+      });
+    });
+  }
 
   // Sidebar Explorer Cards Click
   termsList.addEventListener('click', (e) => {

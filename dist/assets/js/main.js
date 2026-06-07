@@ -162,34 +162,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Scrollspy Handler ---
+  let scrollTimeout = false;
+  
   detailScrollContainer.addEventListener('scroll', () => {
-    // Avoid double updates during a programmatic scroll click
     if (isScrollingProgrammatically) return;
-
-    const blocks = detailScrollContainer.querySelectorAll('.detail-block:not(.hidden)');
-    let activeBlock = null;
-    let minDiff = Infinity;
     
-    const containerTop = detailScrollContainer.getBoundingClientRect().top;
+    // Throttle to 100ms to prevent Safari iOS watchdog crash
+    if (scrollTimeout) return;
+    scrollTimeout = true;
 
-    blocks.forEach(block => {
-      const rect = block.getBoundingClientRect();
-      // Calculate how close the top of this block is to the top margin of the container
-      const diff = Math.abs(rect.top - containerTop);
-      // Give a tiny offset tolerance (150px) to highlight whichever term is currently active
-      if (diff < minDiff && rect.top - containerTop < 150) {
-        minDiff = diff;
-        activeBlock = block;
-      }
-    });
+    setTimeout(() => {
+      scrollTimeout = false;
+      
+      window.requestAnimationFrame(() => {
+        const blocks = detailScrollContainer.querySelectorAll('.detail-block:not(.hidden)');
+        let activeBlock = null;
+        let minDiff = Infinity;
+        
+        const containerTop = detailScrollContainer.getBoundingClientRect().top;
 
-    if (activeBlock) {
-      const idx = parseInt(activeBlock.getAttribute('data-id'), 10);
-      if (idx !== activeTermIndex) {
-        selectTerm(idx, false);
-      }
-    }
-  });
+        blocks.forEach(block => {
+          const rect = block.getBoundingClientRect();
+          const diff = Math.abs(rect.top - containerTop);
+          if (diff < minDiff && rect.top - containerTop < 150) {
+            minDiff = diff;
+            activeBlock = block;
+          }
+        });
+
+        if (activeBlock) {
+          const idx = parseInt(activeBlock.getAttribute('data-id'), 10);
+          if (idx !== activeTermIndex) {
+            selectTerm(idx, false);
+          }
+        }
+      });
+    }, 100);
+  }, { passive: true });
 
   function updateStats() {
     statCount.textContent = glossary.length;
