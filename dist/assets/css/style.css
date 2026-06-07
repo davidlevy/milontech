@@ -101,10 +101,25 @@ html, body {
   margin: 0 24px;
 }
 
-.header-logo {
+.header-branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-logo-row {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.header-subtitle {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
 }
 
 .logo-text {
@@ -113,6 +128,7 @@ html, body {
   font-size: 22px;
   letter-spacing: -0.05em;
   color: var(--text-primary);
+  line-height: 1;
 }
 
 .logo-tag {
