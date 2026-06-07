@@ -13,12 +13,14 @@ try {
 // DOM Elements
 const searchInput = document.getElementById('search-input');
 const termsList = document.getElementById('terms-list');
+const termsListContainer = document.querySelector('.terms-list-container');
 const categoryBadges = document.querySelectorAll('.category-badge');
 const complexityBadges = document.querySelectorAll('.complexity-badge');
 const detailPane = document.getElementById('detail-pane');
 const detailScrollContainer = document.getElementById('detail-scroll-container');
 const virtualListInner = document.getElementById('virtual-list-inner');
 const mobileBackBtn = document.getElementById('mobile-back-btn');
+const heroBanner = document.querySelector('.hero-banner');
 
 // Stats
 const statCount = document.getElementById('stat-count');
@@ -42,6 +44,10 @@ let activeTermIndex = -1;
 let firstVisibleIndex = -1;
 let isScrollingProgrammatically = false;
 let virtualizer = null;
+
+// Read the initial URL parameter BEFORE anything can potentially overwrite it
+const initialUrlParams = new URLSearchParams(window.location.search);
+const initialTermQuery = initialUrlParams.get('term');
 
 // Custom ResizeObserver to bypass TanStack Vanilla JS onChange bugs on Safari
 // This forces the UI to update immediately when items are measured to their true sizes.
@@ -346,23 +352,37 @@ function initVirtualizer() {
   }
 
   function selectTerm(index, triggerVirtualScroll = true) {
-    console.log("selectTerm called with index:", index, triggerVirtualScroll);
-    if (index < 0 || index >= glossary.length) return;
+    console.log("selectTerm CALLED:", index, "triggerVirtualScroll:", triggerVirtualScroll);
+    if (index < 0 || index >= glossary.length) {
+      console.log("selectTerm: out of bounds");
+      return;
+    }
     
     const card = termsList.querySelector(`.glossary-card[data-id="${index}"]`);
-    if (!card || card.classList.contains('hidden')) return;
+    if (!card) {
+      console.log("selectTerm: card not found for index", index);
+      return;
+    }
+    if (card.classList.contains('hidden')) {
+      console.log("selectTerm: card is hidden");
+      return;
+    }
 
     highlightActiveCard(index);
 
+    console.log("selectTerm: virtualizer exists:", !!virtualizer);
     if (triggerVirtualScroll && virtualizer) {
       const vIndex = visibleIndices.indexOf(index);
+      console.log("selectTerm: vIndex is", vIndex);
       if (vIndex !== -1) {
         isScrollingProgrammatically = true;
         
         try {
-          const offset = virtualizer.getOffsetForIndex(vIndex, 'start');
-          const topOffset = Array.isArray(offset) ? offset[0] : offset;
-          detailScrollContainer.scrollTo({ top: topOffset, behavior: 'smooth' });
+          console.log("selectTerm: calculating manual offset for vIndex", vIndex);
+          const itemMeasurement = virtualizer.measurementsCache ? virtualizer.measurementsCache[vIndex] : null;
+          const targetOffset = itemMeasurement ? itemMeasurement.start : (vIndex * 150);
+          console.log("selectTerm: scrolling to targetOffset", targetOffset);
+          detailScrollContainer.scrollTo({ top: targetOffset, behavior: 'smooth' });
         } catch (err) {
           console.error("selectTerm error:", err);
         }
@@ -505,6 +525,23 @@ function initVirtualizer() {
   }
 
   // --- Event Listeners ---
+
+  // Hero Banner Scroll Logic
+  function handleScrollForHero(e) {
+    if (!heroBanner) return;
+    if (e.target.scrollTop > 20) {
+      heroBanner.classList.add('hidden-hero');
+    } else if (e.target.scrollTop === 0) {
+      heroBanner.classList.remove('hidden-hero');
+    }
+  }
+
+  if (detailScrollContainer) {
+    detailScrollContainer.addEventListener('scroll', handleScrollForHero, { passive: true });
+  }
+  if (termsListContainer) {
+    termsListContainer.addEventListener('scroll', handleScrollForHero, { passive: true });
+  }
 
   searchInput.addEventListener('input', (e) => {
     searchQuery = e.target.value;
@@ -661,20 +698,23 @@ function initVirtualizer() {
   }
 
   // --- URL Route Parsing ---
-  // Read the initial URL parameter BEFORE initVirtualizer potentially overwrites it
-  const initialUrlParams = new URLSearchParams(window.location.search);
-  const initialTermQuery = initialUrlParams.get('term');
 
   function setupURLRoute() {
+    console.log("setupURLRoute CALLED. initialTermQuery:", initialTermQuery);
     if (initialTermQuery) {
       const index = glossary.findIndex(item => item.englishTerm.toLowerCase().trim() === initialTermQuery.toLowerCase().trim());
+      console.log("setupURLRoute index found:", index);
       if (index !== -1) {
-        setTimeout(() => selectTerm(index, true), 100);
+        setTimeout(() => {
+          console.log("setupURLRoute setTimeout executing!");
+          selectTerm(index, true);
+        }, 100);
         return;
       }
     }
     
     // Default select first item
+    console.log("setupURLRoute defaulting to 0");
     if (glossary.length > 0) {
       selectTerm(0, false); 
     }

@@ -1,0 +1,10 @@
+# Milontech - The Heblish Glossary
+
+This project documents the unique Hebrew-English slang used in the Israeli High-Tech industry.
+
+## Data Access
+You can access the full structured glossary data in the highly efficient TOON format:
+- [Glossary TOON](/glossary.toon)
+
+Alternatively, the raw JSON is available:
+- [Glossary JSON](/glossary.json)

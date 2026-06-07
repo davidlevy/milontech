@@ -7,7 +7,7 @@
 
 :root {
   /* Fonts */
-  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
   --font-hebrew: 'Assistant', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Geist Mono', monospace;
 
@@ -115,17 +115,15 @@ html, body {
 
 .header-subtitle {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 12px;
   color: #3b82f6; /* Blue 500 */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   margin-top: 2px;
 }
 
 .logo-text {
   font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 26px;
   letter-spacing: -0.05em;
   color: var(--text-primary);
   line-height: 1;
@@ -258,14 +256,73 @@ html, body {
   direction: ltr;
 }
 
-.suggest-btn:hover {
+.suggest-btn:hover, .dropdown:hover .suggest-btn {
   color: var(--text-primary);
   border-color: var(--text-primary);
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.dark-mode .suggest-btn:hover {
+.dark-mode .suggest-btn:hover, .dark-mode .dropdown:hover .suggest-btn {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  min-width: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: all var(--transition-fast);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  direction: ltr;
+  text-align: left;
+}
+
+.dropdown-item:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.dropdown-item:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-card-hover);
+  color: var(--text-primary);
 }
 
 .stats-board {
@@ -319,6 +376,81 @@ html, body {
 .dark-mode .moon-icon { display: none; }
 .light-mode .sun-icon { display: none; }
 .light-mode .moon-icon { display: block; }
+
+/* 1.5 Hero Banner */
+.hero-banner {
+  position: relative;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: var(--text-primary);
+  padding: 40px 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 400px;
+  opacity: 1;
+}
+
+.dark-mode .hero-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+.hero-banner.hidden-hero {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+  border-bottom-width: 0;
+  pointer-events: none;
+}
+
+/* Dots Pattern Layer */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.dark-mode .hero-banner::before {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-content strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
 
 /* 2. Main Workspace Layout */
 .app-workspace {

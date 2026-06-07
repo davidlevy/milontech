@@ -1,0 +1,503 @@
+[502]{category,hebrewTerm,englishTerm,englishDefinition,hebrewExample,transliteration,englishExampleTranslation,isNative,complexity}:
+  Architecture & Infrastructure,דיסק,Disk,Disk,הדיסק מלא,Ha-disk male,The disk is full,false,Low
+  Architecture & Infrastructure,מסך,Masach,Screen,המסך שבור,Ha-masach shavur,The screen is broken,true,Low
+  Architecture & Infrastructure,מקלדת,Mikledet,Keyboard,מקלדת אלחוטית,Makledet alchutit,Wireless keyboard,true,Low
+  Architecture & Infrastructure,עכבר,Achbar,Mouse,עכבר אופטי,Achbar opti,Optical mouse,true,Low
+  Architecture & Infrastructure,שרת,Sharet,Server,השרת נפל,Ha-sharet nafal,The server is down,true,Low
+  Engineering & Development,תוכנה,Tochna,Software,תוכנה חדשה,Tochna chadasha,New software,true,Low
+  Engineering & Development,אפליקציה,Applikatzia,Application,אפליקציה מעולה,Applikatzia me'ula,Great app,false,Low
+  Engineering & Development,ורסיה,Versia,Version,איזו ורסיה זאת?,Eizo versia zot?,Which version is this?,false,Low
+  Engineering & Development,פאטצ',Patch,Patch,הוצאנו פאטצ',Hotzenu patch,We released a patch,false,Low
+  Engineering & Development,עדכון,Idkun,Update,עדכון גרסה,Idkun girsa,Version update,true,Low
+  Architecture & Infrastructure,רשת,Reshet,Network,רשת תקשורת,Reshet tikshoret,Communication network,true,Medium
+  Architecture & Infrastructure,ראוטר,Router,Router,הראוטר לא עובד,Ha-router lo oved,The router is not working,false,Medium
+  Architecture & Infrastructure,פינג,Ping,Ping,יש לי פינג גבוה,Yesh li ping gavoha,I have high ping,false,Medium
+  Architecture & Infrastructure,רוחב פס,Rochav pas,Bandwidth,חסר רוחב פס,Chaser rochav pas,Missing bandwidth,true,Medium
+  Architecture & Infrastructure,ענן,Anan,Cloud,שירותי ענן,Sherutei anan,Cloud services,true,Medium
+  Product & Design,ממשק,Mimshak,Interface,ממשק נוח,Mimsak no'ach,Comfortable interface,true,Low
+  Product & Design,דיזיין,Design,Design,הדיזיין מוכן,Ha-design muchan,The design is ready,false,Low
+  Product & Design,פיקסל,Pixel,Pixel,פיקסל פרפקט,Pixel perfect,Pixel perfect,false,Low
+  Product & Design,כפתור,Kaftor,Button,תלחץ על הכפתור,Tilchatz al ha-kaftor,Click the button,true,Low
+  Product & Design,פונט,Font,Font,פונט יפה,Font yafe,Beautiful font,false,Low
+  Data & AI,דאטה,Data,Data,הדאטה בייס נפל,Ha-data base nafal,The database fell,false,High
+  Data & AI,מסד נתונים,Masad Netunim,Database,מסד נתונים מהיר,Masad netunim mahir,Fast database,true,High
+  Data & AI,קווארי,Query,Query,הרצתי קווארי,Heratzti query,I ran a query,false,High
+  Data & AI,שאילתה,She'ilta,Query,שאילתה מורכבת,She'ilta murkevet,Complex query,true,High
+  Data & AI,טבלה,Tavla,Table,טבלה גדולה,Tavla gdola,Big table,true,High
+  Architecture & Infrastructure,אבטחה,Avtacha,Security,אבטחת מידע,Avtachat meida,Information security,true,High
+  Architecture & Infrastructure,הצפנה,Hatzpana,Encryption,הצפנה חזקה,Hatzpana chazaka,Strong encryption,true,High
+  Architecture & Infrastructure,האקר,Hacker,Hacker,האקר פרץ למערכת,Hacker paratz la-ma'arechet,A hacker broke into the system,false,High
+  Architecture & Infrastructure,פיירוול,Firewall,Firewall,הפיירוול חוסם,Ha-firewall chosem,The firewall is blocking,false,High
+  Architecture & Infrastructure,סיסמה,Sisma,Password,סיסמה שגויה,Sisma shguya,Wrong password,true,High
+  Engineering & Development,קוד,Kod,Code,קוד נקי,Kod naki,Clean code,true,Medium
+  Engineering & Development,באג,Bag,Bug,מצאתי באג,Matzati bag,I found a bug,false,Medium
+  Engineering & Development,פיצ'ר,Feature,Feature,פיצ'ר חדש,Feature chadash,New feature,false,Medium
+  Engineering & Development,ריליס,Release,Release,מתי הריליס?,Matai ha-release?,When is the release?,false,Medium
+  Engineering & Development,קומיט,Commit,Commit,עשיתי קומיט,Asiti commit,I did a commit,false,Medium
+  QA & Testing,טסט,Test,Test,הטסט נכשל,Ha-test nichshal,The test failed,false,Low
+  QA & Testing,בדיקה,Bdika,Examination,בדיקות תוכנה,Bdikot tochna,Software testing,true,Low
+  QA & Testing,אוטומציה,Otomatzia,Automation,כתבתי אוטומציה,Katavti otomatzia,I wrote automation,false,Low
+  QA & Testing,קיו איי,QA,QA,איש קיו איי,Ish QA,QA person,false,Low
+  QA & Testing,פאס,Pass,Pass,הטסט עבר פאס,Ha-test avar pass,The test passed,false,Low
+  Management & Culture,סטארטאפ,Startup,Startup,עובד בסטארטאפ,Oved be-startup,Works in a startup,false,Low
+  Management & Culture,אקזיט,Exit,Exit,עשו אקזיט,Asu exit,They did an exit,false,Low
+  Management & Culture,פרויקט,Proyekt,Project,פרויקט חדש,Proyekt chadash,New project,false,Low
+  Management & Culture,טק,Tech,Tech,הייטק,High-tech,High-tech,false,Low
+  Management & Culture,משרד,Misrad,Office,משרד חדש,Misrad chadash,New office,true,Low
+  Engineering & Development,לקנפג,Lekanpeg,To configure.,צריך לקנפג את השרת מחדש.,Tzarich lekanpeg et ha-sharet me-chadash.,The server needs to be reconfigured.,false,Medium
+  Engineering & Development,לדבג,Ledabeg,To debug.,אני יושב לדבג את הקוד הזה שעות.,Ani yoshev ledabeg et ha-kod haze sha'ot.,I've been sitting debugging this code for hours.,false,Medium
+  Engineering & Development,לקמפל,Lekampel,To compile.,הקוד לא מתקמפל לי.,Ha-kod lo mitkampel li.,The code isn't compiling for me.,false,Medium
+  Engineering & Development,לפלטר,Lefalter,To filter.,תנסה לפלטר את התוצאות לפי תאריך.,Tenase lefalter et ha-totza'ot lefi ta'arich.,Try to filter the results by date.,false,Medium
+  Engineering & Development,למרג'ג',Lemargej,To merge.,מי מממרג'ג' את הפי-אר הזה?,Mi memargej et ha-PR haze?,Who is merging this PR?,false,Medium
+  Engineering & Development,להטמיע,Lehatmi'a,To implement / To embed.,אנחנו צריכים להטמיע את המערכת החדשה.,Anachnu tzrichim lehatmi'a et ha-ma'arechet ha-chadasha.,We need to implement the new system.,false,Medium
+  Engineering & Development,לטרגט,Letarget,To target (audience).,אנחנו מטרגטים קהל יעד צעיר.,Anachnu metargetim kahal ya'ad tza'ir.,We are targeting a young audience.,false,Medium
+  Engineering & Development,לפבלש,Lefablesh,To publish.,מתי מפבלשים את המאמר?,Matai mefableshim et ha-ma'amar?,When are we publishing the article?,false,Medium
+  Engineering & Development,לפרסס,Lefarses,To parse.,צריך לפרסס את הג'ייסון הזה.,Tzarich lefarses et ha-JSON haze.,We need to parse this JSON.,false,Medium
+  Engineering & Development,לרפרש,Lerafresh,To refresh.,"תרפרש את העמוד, אולי זה יסתדר.","Terafresh et ha-amud, ulai ze yistader.","Refresh the page, maybe it will be fixed.",false,Medium
+  Engineering & Development,לאנדקס,Le'andeks,To index.,גוגל עדיין לא אינדקס את האתר שלנו.,Google adayin lo indeks et ha-atar shelanu.,Google hasn't indexed our site yet.,false,Medium
+  Engineering & Development,לקוח,Lako'ach,Client (computing).,צד הלקוח עובד לאט מדי.,Tzad ha-lako'ach oved lat midai.,The client side is working too slowly.,true,Medium
+  Engineering & Development,יישומון,Yisumon,App / Application.,הורדתי את היישומון החדש של הבנק.,Horadti et ha-yisumon ha-chadash shel ha-bank.,I downloaded the bank's new app.,true,Medium
+  Engineering & Development,אלגוריתם,Algoritm,Algorithm.,האלגוריתם שלנו יודע לזהות תבניות.,Ha-algoritm shelanu yode'a lezahot tavniyot.,Our algorithm knows how to identify patterns.,true,Medium
+  Engineering & Development,קידוד,Kidud,Coding / Encoding.,יש בעיה בקידוד של התווים.,Yesh be'aya ba-kidud shel ha-tavim.,There is a problem with the character encoding.,true,Medium
+  Engineering & Development,לגגל,Legagel,To google.,פשוט תגגל את השגיאה הזאת.,Pashut tegagel et ha-shgi'a hazot.,Just google this error.,false,Medium
+  Engineering & Development,לנטר,Lenater,To monitor.,אנחנו מנטרים את הטראפיק 24/7.,Anachnu menaterim et ha-traffic 24/7.,We monitor the traffic 24/7.,false,Medium
+  Engineering & Development,הרשאה,Harsha'a,Permission / Authorization.,אין לי הרשאה לגשת לקובץ הזה.,Ein li harsha'a lageshet la-kovetz haze.,I don't have permission to access this file.,true,Medium
+  Engineering & Development,אימות,Imut,Authentication / Verification.,צריך לעבור אימות דו-שלבי.,Tzarich la'avor imut du-shlavi.,You need to pass two-factor authentication.,true,Medium
+  Engineering & Development,פריסה,Prisa,Deployment.,הפריסה תתבצע מחר בבוקר.,Ha-prisa titbatze'a machar ba-boker.,The deployment will take place tomorrow morning.,true,Medium
+  Engineering & Development,גיבוי,Gibui,Backup.,עשית גיבוי לפני העדכון?,Asita gibui lifnei ha-idkun?,Did you make a backup before the update?,true,Medium
+  Engineering & Development,שחזור,Shichzur,Restoration / Recovery.,לקח לנו שעות לעשות שחזור למערכת.,Lakach lanu sha'ot la'asot shichzur la-ma'arechet.,It took us hours to do a system recovery.,true,Medium
+  Engineering & Development,להקצות,Lehaktzot,To allocate.,צריך להקצות יותר זיכרון לתהליך.,Tzarich lehakztot yoter zikaron la-tahalich.,We need to allocate more memory to the process.,false,Medium
+  Engineering & Development,קוד פתוח,Kod Patu'ach,Open source.,אנחנו תורמים הרבה לקוד פתוח.,Anachnu tormim harbe le-kod patu'ach.,We contribute a lot to open source.,true,Medium
+  Engineering & Development,חומרה,Chomra,Hardware.,בעיית חומרה גרמה לקריסה.,Be'ayat chomra garma la-krisa.,A hardware problem caused the crash.,true,Medium
+  Engineering & Development,לפנגג,Lefangeg,To ping.,תפנגג אותי כשאתה מסיים.,Tefangeg oti kshe-ata mesayem.,Ping me when you finish.,false,Medium
+  Engineering & Development,לסקייל,Leskayel,To scale.,אנחנו צריכים לסקייל את הארכיטקטורה.,Anachnu tzrichim lesakyel et ha-architektura.,We need to scale the architecture.,false,Medium
+  Engineering & Development,לסנכרן,Lesankren,To synchronize.,הדאטה לא מסתנכרן כמו שצריך.,Ha-data lo mistancren kmo she-tzarich.,The data is not synchronizing properly.,false,Medium
+  Engineering & Development,תרשים זרימה,Tarshim Zrima,Flowchart.,תכין תרשים זרימה של התהליך.,Tachin tarshim zrima shel ha-tahalich.,Prepare a flowchart of the process.,true,Medium
+  Engineering & Development,חווית משתמש,Chavayat Mishtamesh,User Experience (UX).,חווית המשתמש פה טעונה שיפור.,Chavayat ha-mishtamesh po te'una shipur.,The user experience here needs improvement.,true,Medium
+  Engineering & Development,בינה מלאכותית,Bina Melachutit,Artificial Intelligence (AI).,המערכת מבוססת על בינה מלאכותית.,Ha-ma'arechet mevuseset al bina melachutit.,The system is based on artificial intelligence.,true,Medium
+  Engineering & Development,וייב קודינג,Vibe Coding,Building apps by describing intent to AI,אני עושה וייב קודינג,Ani ose vibe coding,I'm doing vibe coding,false,High
+  Engineering & Development,פרומפט,Prompt,Instruction given to an AI,תכתוב פרומפט טוב,Tichtov prompt tov,Write a good prompt,false,High
+  Engineering & Development,אל-אל-אם,LLM,Large Language Model,המודל הוא אל-אל-אם,Ha-model hu LLM,The model is an LLM,false,High
+  Engineering & Development,טוקן,Token,Basic unit of text for AI processing,נגמרו לי הטוקנים,Nigmeru li ha-tokens,I ran out of tokens,false,High
+  Engineering & Development,קונטקסט,Context,The information the AI considers for a response,חסר למודל קונטקסט,Chaser la-model context,The model lacks context,false,High
+  Engineering & Development,הזיה,Hazaya,When AI generates incorrect or nonsensical info,המודל נכנס להזיה,Ha-model nichnas le-hazaya,The model started hallucinating,true,High
+  Engineering & Development,סוכן בינה מלאכותית,Sochen Bina Melachutit,Autonomous AI entity (Agent),בניתי סוכן שיעשה את זה,Baniti sochen she-ya'ase et ze,I built an agent to do that,true,High
+  Engineering & Development,בינה מלאכותית יוצרת,Bina Melachutit Yotzeret,Generative AI,זה מבוסס על בינה מלאכותית יוצרת,Ze mevusas al bina melachutit yotzeret,It's based on generative AI,true,High
+  Engineering & Development,פיין טיונינג,Fine-tuning,Adjusting a model on specific data,נעשה לזה פיין טיונינג,Na'ase le-ze fine-tuning,We will fine-tune it,false,High
+  Engineering & Development,זירו שוט,Zero-shot,AI performing a task without prior examples,ניסיתי זירו שוט וזה עבד,Nisiti zero-shot ve-ze avad,I tried zero-shot and it worked,false,High
+  Engineering & Development,הנדסת פרומפטים,Handasat Prompts,Optimizing AI instructions,הוא מומחה בהנדסת פרומפטים,Hu mumche be-handasat prompts,He is an expert in prompt engineering,true,High
+  Engineering & Development,קופיילוט,Copilot,AI coding assistant,הקופיילוט כתב את הקוד,Ha-copilot katav et ha-kod,The copilot wrote the code,false,High
+  Engineering & Development,איטרציה,Iteratzia,Repeating a process to improve results,צריך עוד איטרציה אחת,Tzarich od iteratzia achat,One more iteration is needed,false,High
+  Engineering & Development,זרימה,Zrima,The logical sequence of a process (Flow),מה הזרימה של האפליקציה?,Ma ha-zrima shel ha-applikatzia?,What is the app's flow?,true,High
+  Management & Culture,באחד על אחד,Be-echad al echad,One-on-one meeting,יש לנו אחד על אחד היום,Yesh lanu echad al echad hayom,We have a one-on-one today,false,Medium
+  Management & Culture,ולוסיטי,Velocity,Team velocity,הולוסיטי שלנו ירד הספרינט,Ha-velocity shelanu yarad ha-sprint,Our velocity dropped this sprint,false,Medium
+  Management & Culture,קפסיטי,Capacity,Team capacity,אין לנו קפסיטי לזה,Ein lanu capacity le-ze,We don't have capacity for this,false,Medium
+  Management & Culture,צוואר בקבוק,Tzavar bakbuk,Bottleneck,ה-QA הוא צוואר בקבוק עכשיו,Ha-QA hu tzavar bakbuk achshav,QA is a bottleneck right now,true,Medium
+  Management & Culture,חוב טכנולוגי,Chov technologi,Technical debt,חייבים להחזיר חוב טכנולוגי,Chayavim lehachzir chov technologi,We must pay back technical debt,true,Medium
+  Management & Culture,ריטנשן,Retention,Employee retention,אנחנו עובדים על ריטנשן,Anachnu ovdim al retention,We are working on retention,false,Medium
+  Management & Culture,אונבורדינג,Onboarding,Employee onboarding,הוא עובר אונבורדינג,Hu over onboarding,He is going through onboarding,false,Medium
+  Management & Culture,שיחת חתך,Sichat chatach,Performance review,יש לי שיחת חתך מחר,Yesh li sichat chatach machar,I have a performance review tomorrow,true,Medium
+  Management & Culture,דליברבל,Deliverable,Deliverable,מה הדליברבלס לספרינט?,Ma ha-deliverables la-sprint?,What are the deliverables for the sprint?,false,Medium
+  Management & Culture,פלנינג,Planning,Sprint planning,הפלנינג לקח שעתיים,Ha-planning lakach sha'atayim,The planning took two hours,false,Medium
+  Management & Culture,דיילי,Daily,Daily standup,נדבר על זה בדיילי,Nedaber al ze ba-daily,We'll talk about it in the daily,false,Medium
+  Management & Culture,רטרו,Retro,Retrospective,נעלה את זה ברטרו,Na'ale et ze ba-retro,We'll bring it up in the retro,false,Medium
+  Management & Culture,אליינמנט,Alignment,Alignment,אנחנו צריכים אליינמנט עם הפרודקט,Anachnu tzrichim alignment im ha-product,We need alignment with product,false,Medium
+  Management & Culture,קיי-פי-איי,KPI,Key Performance Indicator,עמדנו בכל הקיי-פי-אייז,Amadnu be-chol ha-KPIs,We met all the KPIs,false,Medium
+  Management & Culture,או-קיי-אר,OKR,Objectives and Key Results,מה האו-קיי-ארס לרבעון?,Ma ha-OKRs la-riv'on?,What are the OKRs for the quarter?,false,Medium
+  Management & Culture,אבן דרך,Even derech,Milestone,הגענו לאבן דרך חשובה,Higanu le-even derech chashuva,We reached an important milestone,true,Medium
+  Management & Culture,הערכת זמנים,Ha'arachat zmanim,Time estimation,תן לי הערכת זמנים למשימה,Ten li ha'arachat zmanim la-mesima,Give me a time estimation for the task,true,Medium
+  Management & Culture,אסקלציה,Eskalatzia,Escalation,אני עושה לזה אסקלציה,Ani ose le-ze eskalatzia,I am escalating this,false,Medium
+  Management & Culture,הנדס-און,Hands-on,Hands-on (coding),המנהל שלנו מאוד הנדס-און,Ha-menahel shelanu me'od hands-on,Our manager is very hands-on,false,Medium
+  Management & Culture,מיקרו-מנג'מנט,Micro-management,Micromanagement,הוא עושה לי מיקרו-מנג'מנט,Hu ose li micro-management,He is micromanaging me,false,Medium
+  Product & Design,רודמאפ,Roadmap,Product roadmap,זה לא ברודמאפ לרבעון הקרוב,Ze lo ba-roadmap la-riv'on ha-karov,It's not on the roadmap for the upcoming quarter,false,Medium
+  Product & Design,בקלוג,Backlog,Product backlog,נוסיף את זה לבקלוג,Nosif et ze la-backlog,We'll add it to the backlog,false,Medium
+  Product & Design,אמ-וי-פי,MVP,Minimum Viable Product,אנחנו משיקים אמ-וי-פי,Anachnu meshikim MVP,We are launching an MVP,false,Medium
+  Product & Design,יוז קייס,Use case,Use case,מה היוז קייס המרכזי?,Ma ha-use case ha-merkazi?,What is the main use case?,false,Medium
+  Product & Design,יוזר סטורי,User story,User story,כתבתי יוזר סטורי מפורט,Katavti user story meforat,I wrote a detailed user story,false,Medium
+  Product & Design,נקודת כאב,Nekudat ke'ev,Pain point,אנחנו פותרים נקודת כאב אמיתית,Anachnu potrim nekudat ke'ev amitit,We are solving a real pain point,true,Medium
+  Product & Design,הצעת ערך,Hatza'at erech,Value proposition,הצעת הערך שלנו ברורה,Hatza'at ha-erech shelanu brura,Our value proposition is clear,true,Medium
+  Product & Design,נטישה,Netisha,Customer churn,אחוז הנטישה גבוה,Achuz ha-netisha gavoha,The churn rate is high,true,Medium
+  Product & Design,מעורבות,Me'oravut,User engagement,המעורבות של המשתמשים עלתה,Ha-me'oravut shel ha-mishtameshim alta,User engagement increased,true,Medium
+  Product & Design,יחס המרה,Yachas hamara,Conversion rate,יחס ההמרה שלנו השתפר,Yachas ha-hamara shelanu hishtaper,Our conversion rate improved,true,Medium
+  Product & Design,איי-בי טסטינג,A/B testing,A/B testing,נריץ איי-בי טסטינג על הכפתור,Naritz A/B testing al ha-kaftor,We'll run A/B testing on the button,false,Medium
+  Product & Design,גו-טו-מרקט,Go-to-market,Go-to-market strategy,מה אסטרטגיית הגו-טו-מרקט?,Ma astrategyat ha-go-to-market?,What is the go-to-market strategy?,false,Medium
+  Product & Design,בעלי עניין,Ba'alei inyan,Stakeholders,צריך לעדכן את בעלי העניין,Tzarich le'adken et ba'alei ha-inyan,We need to update the stakeholders,true,Medium
+  Product & Design,סקופ,Scope,Project scope,זה מחוץ לסקופ,Ze michutz la-scope,It's out of scope,false,Medium
+  Product & Design,טרייד-אוף,Trade-off,Trade-off,יש פה טרייד-אוף בין מהירות לאיכות,Yesh po trade-off bein mehirut le-eichut,There's a trade-off here between speed and quality,false,Medium
+  Product & Design,פיבוט,Pivot,Pivot,החברה עשתה פיבוט,Ha-chevra asta pivot,The company did a pivot,false,Medium
+  Product & Design,מונטיזציה,Monetizatziya,Monetization,איך עושים לזה מונטיזציה?,Eich osim le-ze monetizatziya?,How do we monetize this?,false,Medium
+  Product & Design,קליטת משתמשים,Klitat mishtameshim,User onboarding,תהליך קליטת המשתמשים שופר,Tahalich klitat ha-mishtameshim shupar,The user onboarding process was improved,true,Medium
+  Product & Design,חיכוך,Chikuch,User friction,יש יותר מדי חיכוך בהרשמה,Yesh yoter midai chikuch ba-harshama,There is too much friction in the registration,true,Medium
+  Product & Design,וויירפריים,Wireframe,Wireframe,הכנתי וויירפריים ראשוני,Hechanti wireframe rishoni,I prepared an initial wireframe,false,Medium
+  Product & Design,מוקאפ,Mockup,Mockup,המוקאפ נראה מעולה,Ha-mockup nir'a me'ula,The mockup looks great,false,Medium
+  Product & Design,אב טיפוס,Av tipus,Prototype,בנינו אב טיפוס לבידוק,Baninu av tipus le-biduk,We built a prototype for testing,true,Medium
+  Product & Design,מסע משתמש,Masa mishtamesh,User journey,מיפינו את מסע המשתמש,Mipinu et masa ha-mishtamesh,We mapped the user journey,true,Medium
+  Product & Design,פרסונה,Persona,User persona,הגדרנו שלוש פרסונות,Higdarnu shalosh personot,We defined three personas,false,Medium
+  Product & Design,בדיקות שמישות,Bdikot shimishut,Usability testing,נעשה בדיקות שמישות בשבוע הבא,Na'ase bdikot shimishut ba-shavu'a ha-ba,We'll do usability testing next week,true,Medium
+  Product & Design,נגישות,Negishut,Accessibility,האתר עומד בתקני נגישות,Ha-atar omed be-tiknei negishut,The site meets accessibility standards,true,Medium
+  Product & Design,דיזיין סיסטם,Design system,Design system,אנחנו בונים דיזיין סיסטם חדש,Anachnu bonim design system chadash,We are building a new design system,false,Medium
+  Product & Design,קומפוננטה,Componenta,UI component,תשתמש בקומפוננטה הקיימת,Tishtamesh ba-componenta ha-kayemet,Use the existing component,false,Medium
+  Product & Design,פדינג,Padding,Padding,תוסיף קצת פדינג למעלה,Tosif ktzat padding le-mala,Add some padding at the top,false,Medium
+  Product & Design,מרג'ין,Margin,Margin,המרג'ין פה גדול מדי,Ha-margin po gadol midai,The margin here is too big,false,Medium
+  Product & Design,יישור,Yishur,Alignment (visual),היישור של הטקסט לא טוב,Ha-yishur shel ha-tekst lo tov,The text alignment is not good,true,Medium
+  Product & Design,ניגודיות,Nigudiyut,Contrast,אין מספיק ניגודיות בצבעים,Ein maspik nigudiyut ba-tzva'im,There is not enough contrast in the colors,true,Medium
+  Product & Design,חלל לבן,Chalal lavan,White space,חסר פה חלל לבן,Chaser po chalal lavan,There's a lack of white space here,true,Medium
+  Product & Design,רספונסיבי,Responsivi,Responsive design,העיצוב חייב להיות רספונסיבי,Ha-itzuv chayav lihyot responsivi,The design must be responsive,false,Medium
+  Product & Design,מובייל פירסט,Mobile first,Mobile-first approach,אנחנו מעצבים בגישת מובייל פירסט,Anachnu meatzevim be-gishat mobile first,We design with a mobile-first approach,false,Medium
+  Product & Design,דרופדאון,Dropdown,Dropdown menu,תפתח את הדרופדאון,Tiftach et ha-dropdown,Open the dropdown,false,Medium
+  Product & Design,טולטיפ,Tooltip,Tooltip,נוסיף טולטיפ להסבר,Nosif tooltip le-hesber,We'll add a tooltip for explanation,false,Medium
+  Product & Design,הובר,Hover,Hover state,מה קורה בהובר?,Ma kore ba-hover?,What happens on hover?,false,Medium
+  Product & Design,נכסים,Nechasim,Design assets,העליתי את כל הנכסים לתיקייה,He'eleti et kol ha-nechasim la-tikiya,I uploaded all the assets to the folder,true,Medium
+  Management & Culture,גיוס טאלנטים,Giyus talentim,Talent acquisition,צוות גיוס טאלנטים מחפש מפתחים,Tzevet giyus talentim mechapes mefatachim,The talent acquisition team is looking for developers,true,Low
+  Management & Culture,סורסינג,Sourcing,Sourcing candidates,אני עושה סורסינג בלינקדאין,Ani ose sourcing ba-linkedin,I am doing sourcing on LinkedIn,false,Low
+  Management & Culture,הדקאונט,Headcount,Headcount,אישרו לנו עוד הדקאונט,Ishru lanu od headcount,They approved more headcount for us,false,Low
+  Management & Culture,פייפליין,Pipeline,Candidate pipeline,הפייפליין שלנו ריק,Ha-pipeline shelanu rek,Our pipeline is empty,false,Low
+  Management & Culture,סינון,Sinun,Resume screening,עשיתי סינון קורות חיים,Asiti sinun korot chayim,I did resume screening,true,Low
+  Management & Culture,ראיון,Re'ayon,Interview,יש לו ראיון טכני מחר,Yesh lo re'ayon techni machar,He has a technical interview tomorrow,true,Low
+  Management & Culture,מטלת בית,Matalat bayit,Home assignment,שלחנו לו מטלת בית,Shalachnu lo matalat bayit,We sent him a home assignment,true,Low
+  Management & Culture,הצעת עבודה,Hatza'at avoda,Job offer,הוא קיבל הצעת עבודה,Hu kibel hatza'at avoda,He received a job offer,true,Low
+  Management & Culture,הצעת נגד,Hatza'at neged,Counter offer,החברה הקודמת נתנה לו הצעת נגד,Ha-chevra ha-kodemet natna lo hatza'at neged,The previous company gave him a counter offer,true,Low
+  Management & Culture,הטבות,Hatavot,Employee benefits,תנאים והטבות מעולים,Tna'im ve-hatavot me'ulim,Excellent terms and benefits,true,Low
+  Management & Culture,אקוויטי,Equity,Equity / Options,חלק מהשכר הוא באקוויטי,Chelek me-ha-sachar hu be-equity,Part of the salary is in equity,false,Low
+  Management & Culture,אופציות,Optzyot,Stock options,כמה אופציות קיבלת?,Kama optzyot kibalta?,How many options did you get?,true,Low
+  Management & Culture,רילוקיישן,Relocation,Relocation,התפקיד דורש רילוקיישן,Ha-tafkid doresh relocation,The role requires relocation,false,Low
+  Management & Culture,היברידי,Hibridi,Hybrid work model,אנחנו עובדים במודל היברידי,Anachnu ovdim be-model hibridi,We work in a hybrid model,true,Low
+  Management & Culture,רימוט,Remote,Remote work,אפשר לעבוד ברימוט מלא,Efshar la'avod be-remote male,You can work fully remote,false,Low
+  Management & Culture,התאמה תרבותית,Hat'ama tarbutit,Culture fit,הוא לא עבר את ראיון ההתאמה התרבותית,Hu lo avar et re'ayon ha-hat'ama ha-tarbutit,He didn't pass the culture fit interview,true,Low
+  Management & Culture,אוף-בורדינג,Offboarding,Employee offboarding,תהליך האוף-בורדינג שלו הסתיים,Tahalich ha-offboarding shelo histayem,His offboarding process has ended,false,Low
+  Management & Culture,חבר מביא חבר,Chaver mevi chaver,Employee referral,גייסנו אותו דרך חבר מביא חבר,Giyasnu oto derech chaver mevi chaver,We hired him through an employee referral,true,Low
+  Management & Culture,מיתוג מעסיק,Mitug ma'asik,Employer branding,אנחנו משקיעים במיתוג מעסיק,Anachnu mashki'im be-mitug ma'asik,We are investing in employer branding,true,Low
+  Management & Culture,וול-ביאינג,Well-being,Employee well-being,יש לנו תקציב וול-ביאינג,Yesh lanu taktziv well-being,We have a well-being budget,false,Low
+  Management & Culture,בוטקמפ,Bootcamp,Bootcamp,הוא בוגר בוטקמפ,Hu boger bootcamp,He is a bootcamp graduate,false,Low
+  Management & Culture,מבחן קוד,Mivchan kod,Coding test,שלחנו לו מבחן קוד,Shalachnu lo mivchan kod,We sent him a coding test,true,Low
+  Management & Culture,ראיון התנהגותי,Re'ayon hitnahaguti,Behavioral interview,עברתי את הראיון ההתנהגותי,Avarti et ha-re'ayon ha-hitnahaguti,I passed the behavioral interview,true,Low
+  Management & Culture,הד-האנטר,Headhunter,Headhunter,פנה אליי הד-האנטר,Pana elay headhunter,A headhunter reached out to me,false,Low
+  Management & Culture,בונוס חתימה,Bonus chatima,Sign-on bonus,הציעו לי בונוס חתימה,Hitzi'u li bonus chatima,They offered me a sign-on bonus,true,Low
+  Management & Culture,שאלת לוח,She'elat lu'ach,Whiteboard question,נתנו לי שאלת לוח קשה,Natnu li she'elat lu'ach kasha,They gave me a hard whiteboard question,true,Low
+  Management & Culture,מגייס,Megayes,Recruiter,המגייס יחזור אליך,Ha-megayes yachzor elecha,The recruiter will get back to you,true,Low
+  Management & Culture,ממליצים,Mamlitzim,References,אנחנו צריכים לדבר עם ממליצים,Anachnu tzrichim ledaber im mamlitzim,We need to speak with references,true,Low
+  Management & Culture,תקופת ניסיון,Tkufat nisayon,Probation period,הוא עדיין בתקופת ניסיון,Hu adayin be-tkufat nisayon,He is still in the probation period,true,Low
+  Management & Culture,שכר בסיס,Sachar basis,Base salary,שכר הבסיס גבוה,Sachar ha-basis gavoha,The base salary is high,true,Low
+  Management & Culture,ראיון משאבי אנוש,Re'ayon mash'abei enosh,HR interview,עברתי את ראיון משאבי אנוש,Avarti et re'ayon mash'abei enosh,I passed the HR interview,true,Low
+  Management & Culture,הצעת שכר,Hatza'at sachar,Salary offer,קיבלתי הצעת שכר,Kibalti hatza'at sachar,I received a salary offer,true,Low
+  Management & Culture,בדיקת רקע,Bdikat reka,Background check,אנחנו עושים בדיקת רקע,Anachnu osim bdikat reka,We are doing a background check,true,Low
+  Management & Culture,שעות גמישות,Sha'ot gmishot,Flexible hours,יש אצלנו שעות גמישות,Yesh etzlenu sha'ot gmishot,We have flexible hours,true,Low
+  Management & Culture,עבודה מהבית,Avoda me-ha-bayit,Work from home,אני עובד מהבית היום,Ani oved me-ha-bayit hayom,I am working from home today,true,Low
+  Management & Culture,תן ביס,Ten Bis,Food delivery allowance (Ten Bis),יש לכם תן ביס?,Yesh lachem Ten Bis?,Do you have Ten Bis?,true,Low
+  Management & Culture,סיבוס,Cibus,Food delivery allowance (Cibus),אנחנו עובדים עם סיבוס,Anachnu ovdim im Cibus,We work with Cibus,true,Low
+  Management & Culture,חופשה שנתית,Chufsha shnatit,Annual leave,כמה ימי חופשה שנתית יש?,Kama yemei chufsha shnatit yesh?,How many annual leave days are there?,true,Low
+  Management & Culture,קרן השתלמות,Keren hishtalmut,Education fund,יש קרן השתלמות מהיום הראשון,Yesh keren hishtalmut me-ha-yom ha-rishon,There is an education fund from day one,true,Low
+  Management & Culture,ביטוח מנהלים,Bitu'ach menahalim,Executive insurance,פתחו לי ביטוח מנהלים,Ptechu li bitu'ach menahalim,They opened executive insurance for me,true,Low
+  Management & Culture,אר-אס-יו,RSU,Restricted Stock Units,קיבלתי הרבה אר-אס-יו,Kibalti harbe RSU,I received a lot of RSUs,false,Low
+  Management & Culture,וסטינג,Vesting,Vesting schedule,הוסטינג שלי מתחיל מחר,Ha-vesting sheli matchil machar,My vesting starts tomorrow,false,Low
+  Management & Culture,קליף,Cliff,Vesting cliff,יש לי קליף של שנה,Yesh li cliff shel shana,I have a one-year cliff,false,Low
+  Management & Culture,ברן רייט,Burn rate,Capital burn rate,הברן רייט שלנו גבוה מדי,Ha-burn rate shelanu gavoha midai,Our burn rate is too high,false,Low
+  Management & Culture,ראנוויי,Runway,Financial runway,יש לנו ראנוויי לשנתיים,Yesh lanu runway le-shnatayim,We have runway for two years,false,Low
+  Management & Culture,פיץ' דק,Pitch deck,Investor presentation,אני מכין את הפיץ' דק,Ani mechin et ha-pitch deck,I'm preparing the pitch deck,false,Low
+  Management & Culture,סבב איי,Round A,Series A funding,גייסנו סבב איי,גייסנו סבב איי,We raised a Series A,false,Low
+  Management & Culture,סיד,Seed,Seed funding,אנחנו בשלב הסיד,Anachnu be-shlav ha-seed,We are in the seed stage,false,Low
+  Management & Culture,בוטסטראפ,Bootstrap,Bootstrapped company,החברה היא בוטסטראפ,Ha-chevra hi bootstrap,The company is bootstrapped,false,Low
+  Management & Culture,יוניקורן,Unicorn,Unicorn startup,הפכנו ליוניקורן,Hafachnu le-unicorn,We became a unicorn,false,Low
+  Management & Culture,ולואציה,Valuation,Company valuation,הולואציה ירדה,Ha-valuation yarda,The valuation dropped,false,Low
+  Management & Culture,ישיבת בורד,Yeshivat board,Board meeting,יש ישיבת בורד מחר,Yesh yeshivat board machar,There is a board meeting tomorrow,true,Low
+  Management & Culture,פאונדר,Founder,Founder,הוא הפאונדר של החברה,Hu ha-founder shel ha-chevra,He is the founder of the company,false,Low
+  Management & Culture,קו-פאונדר,Co-founder,Co-founder,אני מחפש קו-פאונדר,Ani mechapes co-founder,I'm looking for a co-founder,false,Low
+  Management & Culture,"מנכ\"ל",Mankal,CEO,"המנכ\"ל דיבר היום",Ha-mankal diber hayom,The CEO spoke today,true,Low
+  Management & Culture,סי-טי-או,CTO,Chief Technology Officer,הסי-טי-או אישר את זה,Ha-CTO isher et ze,The CTO approved it,false,Low
+  Management & Culture,וי-פי אר-אנד-די,VP R&D,VP of R&D,הוי-פי אר-אנד-די התפטר,Ha-VP R&D hitpater,The VP R&D resigned,false,Low
+  Management & Culture,אול הנדס,All-hands,All-hands meeting,יש לנו אול הנדס בראשון,Yesh lanu all-hands be-rishon,We have an all-hands on Sunday,false,Low
+  Management & Culture,טאון הול,Town hall,Town hall meeting,שאלות לטאון הול,She'elot la-town hall,Questions for the town hall,false,Low
+  Management & Culture,אופסייט,Offsite,Company offsite,האופסייט היה מעולה,Ha-offsite haya me'ula,The offsite was great,false,Low
+  Management & Culture,האפי האוור,Happy hour,Happy hour,בוא להאפי האוור,Bo la-happy hour,Come to the happy hour,false,Low
+  Management & Culture,סוואג,Swag,Company swag,חילקו לנו סוואג,Chilku lanu swag,They handed out swag to us,false,Low
+  Management & Culture,אוף דה שלף,Off-the-shelf,Off-the-shelf product,נקנה פתרון אוף דה שלף,Nikne pitaron off-the-shelf,We'll buy an off-the-shelf solution,false,Low
+  Management & Culture,בי-טו-בי,B2B,B2B,אנחנו חברת בי-טו-בי,Anachnu chevrat B2B,We are a B2B company,false,Low
+  Management & Culture,בי-טו-סי,B2C,B2C,עברנו לבי-טו-סי,Avarnu le-B2C,We moved to B2C,false,Low
+  Management & Culture,פיפ,PIP,Performance Improvement Plan,הוא הוכנס לפיפ,Hu huchnas le-PIP,He was put on a PIP,false,Medium
+  Management & Culture,קידום,Kidum,Promotion,קיבלתי קידום,Kibalti kidum,I got a promotion,true,Medium
+  Management & Culture,העלאה,Ha'ala'a,Raise,ביקשתי העלאה,Bikashti ha'ala'a,I asked for a raise,true,Medium
+  Management & Culture,פיטורים,Piturim,Layoffs,היו פיטורים בחברה,Hayu piturim ba-chevra,There were layoffs in the company,true,Medium
+  Management & Culture,הודעה מוקדמת,Hoda'a mukdemet,Notice period,אני בתקופת הודעה מוקדמת,Ani be-tkufat hoda'a mukdemet,I am in my notice period,true,Medium
+  Management & Culture,בונוס,Bonus,Bonus,הבונוס נכנס למשכורת,Ha-bonus nichnas la-maskoret,The bonus went into the salary,false,Medium
+  Management & Culture,מנטורינג,Mentoring,Mentorship,אני עושה לו מנטורינג,Ani ose lo mentoring,I am mentoring him,false,Medium
+  Management & Culture,קיי-טי,KT,Knowledge Transfer,צריך לעשות קיי-טי,Tzarich la'asot KT,We need to do a KT,false,Medium
+  Management & Culture,סינק,Sync,Sync meeting,בוא נעשה סינק קצר,Bo na'ase sync katzar,Let's do a quick sync,false,Medium
+  Management & Culture,אופליין,Offline,Offline,נדבר על זה אופליין,Nedaber al ze offline,We'll talk about it offline,false,Medium
+  Management & Culture,בלופ,Ba-loop,In the loop,תשאיר אותי בלופ,Tash'ir oti ba-loop,Keep me in the loop,false,Medium
+  Management & Culture,ניקח את זה אופליין,Nikach et ze offline,Let's take it offline,ניקח את זה אופליין כדי לא לעכב,Nikach et ze offline kedei lo le'akev,Let's take it offline so we don't hold things up,true,Medium
+  Management & Culture,אקשן אייטם,Action item,Action item,מה האקשן אייטמס?,Ma ha-action items?,What are the action items?,false,Medium
+  Management & Culture,פולו אפ,Follow up,Follow up,אני אעשה על זה פולו אפ,Ani e'ese al ze follow up,I'll do a follow up on this,false,Medium
+  Management & Culture,טאץ' בייס,Touch base,Touch base,רציתי לעשות טאץ' בייס,Ratziti la'asot touch base,I wanted to touch base,false,Medium
+  Management & Culture,ביי-אין,Buy-in,Buy-in,אנחנו צריכים את הביי-אין שלהם,Anachnu tzrichim et ha-buy-in shelahem,We need their buy-in,false,Medium
+  Management & Culture,פושבק,Pushback,Pushback,קיבלנו פושבק מהלקוח,Kibalnu pushback me-ha-lako'ach,We got pushback from the client,false,Medium
+  Management & Culture,בלוקד,Blocked,Blocked,אני בלוקד על המשימה הזאת,Ani blocked al ha-mesima hazot,I am blocked on this task,false,Medium
+  Management & Culture,סופט סקילס,Soft skills,Soft skills,יש לו סופט סקילס טובים,Yesh lo soft skills tovim,He has good soft skills,false,Low
+  Management & Culture,הארד סקילס,Hard skills,Hard skills,ההארד סקילס שלו חזקים,Ha-hard skills shelo chazakim,His hard skills are strong,false,Low
+  Management & Culture,לייב קודינג,Live coding,Live coding interview,יש לי ראיון לייב קודינג,Yesh li re'ayon live coding,I have a live coding interview,false,Low
+  Management & Culture,סיסטם דיזיין,System design,System design interview,איך מתכוננים לסיסטם דיזיין?,Eich mitkonanim le-system design?,How do you prepare for system design?,false,Low
+  Management & Culture,וייב צ'ק,Vibe check,Vibe check,זה רק וייב צ'ק,Ze rak vibe check,It's just a vibe check,false,Low
+  Management & Culture,דגל אדום,Degel adom,Red flag,זה דגל אדום בראיון,Ze degel adom ba-re'ayon,That's a red flag in an interview,true,Low
+  Management & Culture,הצעה,Hatza'a,Offer,הם נתנו לי הצעה,Hem natnu li hatza'a,They gave me an offer,true,Low
+  Management & Culture,אג'ייל,Agile,Agile methodology,אנחנו עובדים באג'ייל,Anachnu ovdim be-agile,We work in agile,false,Low
+  Management & Culture,סקראם,Scrum,Scrum framework,יש לנו צוות סקראם,Yesh lanu tzevet scrum,We have a scrum team,false,Low
+  Management & Culture,ספרינט,Sprint,Sprint iteration,הספרינט נגמר מחר,Ha-sprint nigmar machar,The sprint ends tomorrow,false,Low
+  Management & Culture,סטנדאפ,Standup,Daily standup meeting,בואו לסטנדאפ,Bo'u la-standup,Come to the standup,false,Low
+  Management & Culture,דיילי סינק,Daily sync,Daily synchronization,יש לי דיילי סינק עכשיו,Yesh li daily sync achshav,I have a daily sync now,false,Low
+  Management & Culture,ספרינט פלנינג,Sprint planning,Sprint planning meeting,הספרינט פלנינג היה ארוך,Ha-sprint planning haya aroch,The sprint planning was long,false,Low
+  Management & Culture,פוסט מורטם,Post-mortem,Post-mortem meeting,נעשה פוסט מורטם על התקלה,Na'ase post-mortem al ha-takala,We will do a post-mortem on the incident,false,Low
+  Management & Culture,גרומינג,Grooming,Backlog grooming,יש לנו ישיבת גרומינג,Yesh lanu yeshivat grooming,We have a grooming meeting,false,Low
+  Management & Culture,ריפיינמנט,Refinement,Backlog refinement,צריך לעשות ריפיינמנט לטיקטים,Tzarich la'asot refinement la-tickets,We need to do refinement for the tickets,false,Low
+  Management & Culture,סטורי פוינטס,Story points,Story points,כמה סטורי פוינטס זה?,Kama story points ze?,How many story points is this?,false,Low
+  Management & Culture,טי-שירט סייזינג,T-shirt sizing,T-shirt size estimation,נעשה טי-שירט סייזינג למשימות,Na'ase t-shirt sizing la-mesimot,We will do t-shirt sizing for the tasks,false,Low
+  Management & Culture,אפיק,Epic,Epic (large user story),זה אפיק גדול מדי,Ze epic gadol midai,This epic is too big,false,Low
+  Management & Culture,טאסק,Task,Task,לקחתי את הטאסק הזה,Lakachti et ha-task haze,I took this task,false,Low
+  Management & Culture,טיקט,Ticket,Jira ticket,תפתח לי טיקט,Tiftach li ticket,Open a ticket for me,false,Low
+  Management & Culture,ג'ירה,Jira,Jira software,תעדכן את זה בג'ירה,Te'adken et ze ba-jira,Update it in Jira,false,Low
+  Management & Culture,בורד,Board,Kanban/Scrum board,תסתכל על הבורד,Tistakel al ha-board,Look at the board,false,Low
+  Management & Culture,קנבן,Kanban,Kanban methodology,עברנו לעבוד בקנבן,Avarnu la'avod be-kanban,We moved to working in Kanban,false,Low
+  Management & Culture,ספרינט בקלוג,Sprint backlog,Sprint backlog,זה לא בספרינט בקלוג שלנו,Ze lo ba-sprint backlog shelanu,It's not in our sprint backlog,false,Low
+  Management & Culture,ברנדאון צ'ארט,Burndown chart,Burndown chart,הברנדאון צ'ארט נראה רע,Ha-burndown chart nir'a ra,The burndown chart looks bad,false,Low
+  Management & Culture,קפסיטי פלנינג,Capacity planning,Capacity planning,צריך לעשות קפסיטי פלנינג לספרינט הבא,Tzarich la'asot capacity planning la-sprint ha-ba,We need to do capacity planning for the next sprint,false,Low
+  Management & Culture,סקראם מאסטר,Scrum master,Scrum master,הוא הסקראם מאסטר החדש,Hu ha-scrum master ha-chadash,He is the new scrum master,false,Low
+  Management & Culture,פי-או,PO,Product Owner,הפי-או צריך לאשר את זה,Ha-PO tzarich le'asher et ze,The PO needs to approve it,false,Low
+  Management & Culture,די-או-די,DoD,Definition of Done,זה לא עומד בדי-או-די,Ze lo omed ba-DoD,It doesn't meet the DoD,false,Low
+  Management & Culture,די-או-אר,DoR,Definition of Ready,הטיקט לא עומד בדי-או-אר,Ha-ticket lo omed ba-DoR,The ticket doesn't meet the DoR,false,Low
+  Management & Culture,אקספטנס קרייטריה,Acceptance criteria,Acceptance criteria,מה האקספטנס קרייטריה של המשימה?,Ma ha-acceptance criteria shel ha-mesima?,What are the acceptance criteria of the task?,false,Low
+  Management & Culture,פי-או-סי,POC,Proof of Concept,אנחנו עושים פי-או-סי לטכנולוגיה החדשה,Anachnu osim POC la-technologia ha-chadasha,We are doing a POC for the new technology,false,Low
+  Management & Culture,אימפדימנט,Impediment,Impediment,יש לנו אימפדימנט רציני,Yesh lanu impediment retzini,We have a serious impediment,false,Low
+  Management & Culture,תקוע,Takua,Stuck,אני תקוע על הבאג הזה,Ani takua al ha-bag haze,I am stuck on this bug,true,Low
+  Management & Culture,וויפ,WIP,Work in Progress,יש לנו יותר מדי וויפ,Yesh lanu yoter midai WIP,We have too much WIP,false,Low
+  Management & Culture,וויפ לימיט,WIP limit,Work in Progress limit,הגענו לוויפ לימיט,Higanu la-WIP limit,We reached the WIP limit,false,Low
+  Management & Culture,טיים בוקס,Timebox,Timebox,בוא ניתן לזה טיים בוקס של שעה,Bo niten le-ze timebox shel sha'a,Let's give it a timebox of an hour,false,Low
+  Management & Culture,ספייק,Spike,Spike (research task),אני אקח ספייק לבדוק את זה,Ani ekach spike livdok et ze,I'll take a spike to check this,false,Low
+  Management & Culture,ריפקטורינג,Refactoring,Refactoring,הקוד הזה צריך ריפקטורינג,Ha-kod haze tzarich refactoring,This code needs refactoring,false,Low
+  Management & Culture,הוטפיקס,Hotfix,Hotfix,הוצאנו הוטפיקס ללקוח,Hotzenu hotfix la-lako'ach,We released a hotfix to the client,false,Low
+  Management & Culture,פרוד,Prod,Production environment,זה כבר בפרוד,Ze kvar ba-prod,It's already in prod,false,Low
+  Management & Culture,רולבק,Rollback,Rollback,עשינו רולבק לגרסה הקודמת,Asinu rollback la-girsa ha-kodemet,We did a rollback to the previous version,false,Low
+  Management & Culture,פיצ'ר פלאג,Feature flag,Feature flag,נפתח את זה מאחורי פיצ'ר פלאג,Niftach et ze me'achorei feature flag,We'll open it behind a feature flag,false,Low
+  Management & Culture,טוגל,Toggle,Toggle,תדליק את הטוגל,Tadlik et ha-toggle,Turn on the toggle,false,Low
+  Management & Culture,קנרי רליס,Canary release,Canary release,נעשה קנרי רליס לחמישה אחוזים,Na'ase canary release le-chamisha achuzim,We'll do a canary release to five percent,false,Low
+  Management & Culture,סי-איי סי-די,CI/CD,CI/CD,הסי-איי סי-די נפל,Ha-CI/CD nafal,The CI/CD failed,false,Low
+  Management & Culture,בילד,Build,Build process,הבילד לוקח המון זמן,Ha-build loke'ach hamon zman,The build takes a lot of time,false,Low
+  Management & Culture,בילד שבור,Broken build,Broken build,מישהו השאיר בילד שבור,Mishehu hish'ir build shavur,Someone left a broken build,false,Low
+  Management & Culture,סביבה,Sviva,Environment,באיזו סביבה אתה בודק?,Be-eizo sviva ata bodek?,Which environment are you testing in?,true,Low
+  Management & Culture,סטייג'ינג,Staging,Staging environment,זה עובד בסטייג'ינג,Ze oved be-staging,It works in staging,false,Low
+  Management & Culture,סביבת קיו-איי,Svivat QA,QA environment,העליתי את זה לסביבת קיו-איי,He'eleti et ze le-svivat QA,I uploaded it to the QA environment,true,Low
+  Management & Culture,לוקאלהוסט,Localhost,Localhost,זה עובד לי בלוקאלהוסט,Ze oved li ba-localhost,It works for me on localhost,false,Low
+  Management & Culture,אינטגרציה,Integration,Integration,יש בעיית אינטגרציה,Yesh be'ayat integratzia,There is an integration problem,false,Low
+  Management & Culture,אי-טו-אי,E2E,End-to-End,הטסטים של האי-טו-אי נפלו,Ha-testim shel ha-E2E naflu,The E2E tests failed,false,Low
+  Management & Culture,יו-איי-טי,UAT,User Acceptance Testing,הלקוח עושה עכשיו יו-איי-טי,Ha-lako'ach ose achshav UAT,The client is doing UAT now,false,Low
+  Management & Culture,סיין אוף,Sign off,Sign off,קיבלנו סיין אוף מהפרודקט,Kibalnu sign off me-ha-product,We got sign off from the product,false,Low
+  Engineering & Development,פי-אר,PR,Pull Request,פתחתי פי-אר,Patachti PR,I opened a PR,false,Medium
+  Engineering & Development,אמ-אר,MR,Merge Request,תאשר לי את האמ-אר,Te'asher li et ha-MR,Approve my MR,false,Medium
+  Engineering & Development,קוד רוויו,Code review,Code review,מי עושה לי קוד רוויו?,Mi ose li code review?,Who is doing my code review?,false,Medium
+  Engineering & Development,אל-ג'י-טי-אמ,LGTM,Looks Good To Me,קיבלתי אל-ג'י-טי-אמ,Kibalti LGTM,I got an LGTM,false,Medium
+  Engineering & Development,אפרוב,Approve,Approve (PR),נתתי לך אפרוב,Natati lecha approve,I gave you an approve,false,Medium
+  Engineering & Development,קומנט,Comment,Comment (in code or PR),השארתי לך קומנט,Hish'arti lecha comment,I left you a comment,false,Medium
+  Engineering & Development,ניטס,Nits,Nitpicks (minor comments),זה רק כמה ניטס,Ze rak kama nits,It's just a few nits,false,Medium
+  Engineering & Development,מרג',Merge,Merge,אפשר לעשות מרג',Efshar la'asot merge,We can do a merge,false,Medium
+  Engineering & Development,קונפליקט,Conflict,Merge conflict,יש לי קונפליקט בגיט,Yesh li conflict ba-git,I have a conflict in git,false,Medium
+  Engineering & Development,ריבייס,Rebase,Git rebase,תעשה ריבייס מול המאסטר,Ta'ase rebase mul ha-master,Do a rebase against the master,false,Medium
+  Engineering & Development,צ'רי-פיק,Cherry-pick,Git cherry-pick,נעשה לזה צ'רי-פיק,Na'ase le-ze cherry-pick,We will cherry-pick this,false,Medium
+  Engineering & Development,סקוואש,Squash,Git squash,תעשה סקוואש לקומיטים,Ta'ase squash la-commits,Squash the commits,false,Medium
+  Engineering & Development,בראנץ',Branch,Git branch,באיזה בראנץ' אתה עובד?,Be-eize branch ata oved?,Which branch are you working on?,false,Medium
+  Engineering & Development,מאסטר,Master,Master/Main branch,דחפתי למאסטר,Dachafti la-master,I pushed to master,false,Medium
+  Engineering & Development,גיט,Git,Git version control,הגיט עושה לי בעיות,Ha-git ose li be'ayot,Git is giving me problems,false,Medium
+  Engineering & Development,ריפו,Repo,Repository,איזה ריפו זה?,Eize repo ze?,Which repo is this?,false,Medium
+  Engineering & Development,קלון,Clone,Git clone,עשיתי קלון לפרויקט,Asiti clone la-proyekt,I cloned the project,false,Medium
+  Engineering & Development,פורק,Fork,Git fork,תעשה פורק לריפו,Ta'ase fork la-repo,Fork the repo,false,Medium
+  Engineering & Development,פוש,Push,Git push,עשיתי פוש לקוד,Asiti push la-kod,I pushed the code,false,Medium
+  Engineering & Development,פול,Pull,Git pull,תעשה פול לפני שאתה מתחיל,Ta'ase pull lifnei she-ata matchil,Do a pull before you start,false,Medium
+  Engineering & Development,פץ',Fetch,Git fetch,תעשה פץ' מהשרת,Ta'ase fetch me-ha-sharet,Do a fetch from the server,false,Medium
+  Engineering & Development,סטאש,Stash,Git stash,שמתי את זה בסטאש,Samti et ze ba-stash,I put it in stash,false,Medium
+  Engineering & Development,היסטוריית קומיטים,Historyat commits,Commit history,תסתכל בהיסטוריית קומיטים,Tistakel be-historyat commits,Look at the commit history,true,Medium
+  Engineering & Development,בליים,Blame,Git blame,תעשה גיט בליים,Ta'ase git blame,Do a git blame,false,Medium
+  Engineering & Development,דיף,Diff,Git diff,תבדוק את הדיף,Tivdok et ha-diff,Check the diff,false,Medium
+  Engineering & Development,סינטקס,Syntax,Syntax,יש לך טעות סינטקס,Yesh lecha ta'ut syntax,You have a syntax error,false,Medium
+  Engineering & Development,אינדנטציה,Indentation,Indentation,האינדנטציה פה לא נכונה,Ha-indentatzia po lo nechona,The indentation here is wrong,false,Medium
+  Engineering & Development,ניימינג קונבנשן,Naming convention,Naming convention,זה לא לפי הניימינג קונבנשן,Ze lo lefi ha-naming convention,It's not according to the naming convention,false,Medium
+  Engineering & Development,בוילרפלייט,Boilerplate,Boilerplate code,זה סתם קוד בוילרפלייט,Ze stam kod boilerplate,It's just boilerplate code,false,Medium
+  Engineering & Development,קוד ספגטי,Kod spaghetti,Spaghetti code,הקוד הזה הוא קוד ספגטי,Ha-kod haze hu kod spaghetti,This code is spaghetti code,true,Medium
+  Engineering & Development,הארדקודד,Hardcoded,Hardcoded,אל תשאיר את זה הארדקודד,Al tash'ir et ze hardcoded,Don't leave it hardcoded,false,Medium
+  Engineering & Development,מספר קסם,Mispar kesem,Magic number,יש פה מספר קסם,Yesh po mispar kesem,There is a magic number here,true,Medium
+  Engineering & Development,בסט פרקטיס,Best practice,Best practice,זה לא בסט פרקטיס,Ze lo best practice,That's not best practice,false,Medium
+  Engineering & Development,וורקאראונד,Workaround,Workaround,מצאתי לזה וורקאראונד,Matzati le-ze workaround,I found a workaround for it,false,Medium
+  Engineering & Development,האק,Hack,Hack (quick fix),זה סתם האק מלוכלך,Ze stam hack meluchlach,It's just a dirty hack,false,Medium
+  Engineering & Development,דיפריקייטד,Deprecated,Deprecated,הפונקציה הזאת דיפריקייטד,Ha-funktzia hazot deprecated,This function is deprecated,false,Medium
+  Engineering & Development,לגאסי קוד,Legacy code,Legacy code,אף אחד לא רוצה לגעת בלגאסי קוד,Af echad lo rotze laga'at ba-legacy code,Nobody wants to touch the legacy code,false,Medium
+  Engineering & Development,פריימוורק,Framework,Framework,באיזה פריימוורק אנחנו משתמשים?,Be-eize framework anachnu mishtameshim?,Which framework are we using?,false,Medium
+  Engineering & Development,ספריה,Sifriya,Library,הוספתי ספריה חדשה,Hosafti sifriya chadasha,I added a new library,true,Medium
+  Engineering & Development,איי-פי-איי,API,API,האיי-פי-איי לא מגיב,Ha-API lo megiv,The API is not responding,false,Medium
+  Engineering & Development,אנדפוינט,Endpoint,API endpoint,קראתי לאנדפוינט הלא נכון,Karati la-endpoint ha-lo nachon,I called the wrong endpoint,false,Medium
+  Engineering & Development,פיילוד,Payload,Payload,הפיילוד גדול מדי,Ha-payload gadol midai,The payload is too big,false,Medium
+  Engineering & Development,ג'ייסון,JSON,JSON,תחזיר לי את זה בג'ייסון,Tachzir li et ze be-JSON,Return it to me in JSON,false,Medium
+  Engineering & Development,פרמטר,Parameter,Parameter,חסר פה פרמטר,Chaser po parameter,A parameter is missing here,true,Medium
+  Engineering & Development,קולבק,Callback,Callback function,הקולבק לא נקרא,Ha-callback lo nikra,The callback is not called,false,Medium
+  Engineering & Development,אסינכרוני,Asinchroni,Asynchronous,הקריאה היא אסינכרונית,Ha-kri'a hi asinchronit,The call is asynchronous,true,Medium
+  Engineering & Development,סינכרוני,Sinchroni,Synchronous,זה תהליך סינכרוני,Ze tahalich sinchroni,It's a synchronous process,true,Medium
+  Engineering & Development,מולטי-תרדינג,Multithreading,Multithreading,יש פה בעיית מולטי-תרדינג,Yesh po be'ayat multithreading,There is a multithreading problem here,false,Medium
+  Engineering & Development,דליפת זיכרון,Dlifat zikaron,Memory leak,נראה שיש דליפת זיכרון,Nir'a she-yesh dlifat zikaron,It looks like there is a memory leak,true,Medium
+  Engineering & Development,סטאק אוברפלו,Stack overflow,Stack overflow,קיבלתי שגיאת סטאק אוברפלו,Kibalti shgi'at stack overflow,I got a stack overflow error,false,Medium
+  Architecture & Infrastructure,פרודקשן,Production,Production environment,העלינו לפרודקשן,He'elinu le-production,We deployed to production,false,High
+  Architecture & Infrastructure,אינסידנט,Incident,Production incident,יש לנו אינסידנט פתוח,Yesh lanu incident patu'ach,We have an open incident,false,High
+  Architecture & Infrastructure,דאונטיים,Downtime,System downtime,היה לנו דאונטיים של שעה,Haya lanu downtime shel sha'a,We had a downtime of an hour,false,High
+  Architecture & Infrastructure,קריסה,Krisa,System crash,הייתה קריסה של השרת,Hayta krisa shel ha-sharet,There was a server crash,true,High
+  Architecture & Infrastructure,באג קריטי,Bag kriti,Critical bug,מצאנו באג קריטי,Matzanu bag kriti,We found a critical bug,true,High
+  Architecture & Infrastructure,סב-וואן,Sev-1,Severity 1 incident,פתחו אינסידנט סב-וואן,Patchu incident sev-1,They opened a sev-1 incident,false,High
+  Architecture & Infrastructure,און-קול,On-call,On-call duty,"אני און-קול הסופ\"ש",Ani on-call ha-sofash,I am on-call this weekend,false,High
+  Architecture & Infrastructure,פייג'ר דיוטי,PagerDuty,PagerDuty alert,קיבלתי פייג'ר דיוטי בלילה,Kibalti pager duty ba-laila,I got a PagerDuty at night,false,High
+  Architecture & Infrastructure,אס-אל-איי,SLA,Service Level Agreement,לא עמדנו באס-אל-איי,Lo amadnu ba-SLA,We didn't meet the SLA,false,High
+  Architecture & Infrastructure,אס-אל-או,SLO,Service Level Objective,מה האס-אל-או שלנו?,Ma ha-SLO shelanu?,What is our SLO?,false,High
+  Architecture & Infrastructure,לייטנסי,Latency,Network latency,יש לייטנסי גבוה,Yesh latency gavoha,There is high latency,false,High
+  Architecture & Infrastructure,תרופוט,Throughput,System throughput,התרופוט ירד,Ha-throughput yarad,The throughput dropped,false,High
+  Architecture & Infrastructure,עומס,Omes,System load,יש עומס על השרתים,Yesh omes al ha-sharatim,There is load on the servers,true,High
+  Architecture & Infrastructure,טראפיק,Traffic,Network traffic,הטראפיק עלה פתאום,Ha-traffic ala pit'om,The traffic suddenly went up,false,High
+  Architecture & Infrastructure,לואוד באלנסר,Load balancer,Load balancer,הלואוד באלנסר קרס,Ha-load balancer karas,The load balancer crashed,false,High
+  Architecture & Infrastructure,מיקרוסרביסס,Microservices,Microservices architecture,עברנו למיקרוסרביסס,Avarnu le-microservices,We moved to microservices,false,High
+  Architecture & Infrastructure,מונולית,Monolith,Monolithic architecture,המונולית קשה לתחזוקה,Ha-monolith kashe le-tachzuka,The monolith is hard to maintain,false,High
+  Architecture & Infrastructure,ארכיטקטורה,Architektura,System architecture,שינינו את הארכיטקטורה,Shininu et ha-architektura,We changed the architecture,true,High
+  Architecture & Infrastructure,סקיילביליות,Scalability,Scalability,יש בעיית סקיילביליות,Yesh be'ayat scalability,There is a scalability problem,false,High
+  Architecture & Infrastructure,סקייל אפ,Scale up,Vertical scaling,צריך לעשות סקייל אפ לשרת,Tzarich la'asot scale up la-sharet,We need to scale up the server,false,High
+  Architecture & Infrastructure,סקייל אאוט,Scale out,Horizontal scaling,נעשה סקייל אאוט לדאטאבייס,Na'ase scale out la-database,We will scale out the database,false,High
+  Architecture & Infrastructure,קלאוד נייטיב,Cloud native,Cloud native,האפליקציה היא קלאוד נייטיב,Ha-applikatzia hi cloud native,The application is cloud native,false,High
+  Architecture & Infrastructure,ספק ענן,Sapak Anan,Cloud Provider,הכל יושב אצל ספק הענן,Hakol yoshev etzel sapak ha-anan,Everything sits with the cloud provider,true,High
+  Architecture & Infrastructure,תשתית ענן,Tashtit Anan,Cloud Infrastructure,אנחנו עובדים עם תשתית ענן,Anachnu ovdim im tashtit anan,We work with cloud infrastructure,true,High
+  Architecture & Infrastructure,אחסון ענן,Ichsun Anan,Cloud Storage,הם עברו לאחסון ענן,Hem avru le-ichsun anan,They moved to cloud storage,true,High
+  Architecture & Infrastructure,קוברנטיס,Kubernetes,Kubernetes,הקוברנטיס מנהל את הקונטיינרים,Ha-kubernetes menahel et ha-containers,Kubernetes manages the containers,false,High
+  Architecture & Infrastructure,קייטס,K8s,Kubernetes (abbreviation),יש בעיה בקייטס,Yesh be'aya ba-k8s,There is a problem in k8s,false,High
+  Architecture & Infrastructure,דוקר,Docker,Docker,תבנה אימג' של דוקר,Tivne image shel docker,Build a Docker image,false,High
+  Architecture & Infrastructure,קונטיינר,Container,Container,הקונטיינר נפל,Ha-container nafal,The container crashed,false,High
+  Architecture & Infrastructure,פוד,Pod,Kubernetes pod,הפוד עושה ריסטרט,Ha-pod ose restart,The pod is restarting,false,High
+  Architecture & Infrastructure,קלאסטר,Cluster,Cluster,הוספנו נודים לקלאסטר,Hosafnu nodes la-cluster,We added nodes to the cluster,false,High
+  Architecture & Infrastructure,נוד,Node,Node,הנוד הזה למטה,Ha-node haze lemata,This node is down,false,High
+  Architecture & Infrastructure,אובזרבביליטי,Observability,Observability,חסר לנו אובזרבביליטי במערכת,Chaser lanu observability ba-ma'arechet,We lack observability in the system,false,High
+  Architecture & Infrastructure,מוניטורינג,Monitoring,Monitoring,המוניטורינג התריע על הבעיה,Ha-monitoring hitria al ha-be'aya,The monitoring alerted about the problem,false,High
+  Architecture & Infrastructure,התראה,Hatra'a,Alert,קפצה לי התראה,Kaftza li hatra'a,An alert popped up for me,true,High
+  Architecture & Infrastructure,לוג,Log,Log,תסתכל בלוגים,Tistakel ba-logim,Look at the logs,false,High
+  Architecture & Infrastructure,טרייס,Trace,Trace,יש לך את הטרייס של הבקשה?,Yesh lecha et ha-trace shel ha-bakasha?,Do you have the trace of the request?,false,High
+  Architecture & Infrastructure,מטריקות,Metrikot,Metrics,המטריקות מראות ירידה,Ha-metrikot mar'ot yerida,The metrics show a decrease,true,High
+  Architecture & Infrastructure,דשבורד,Dashboard,Dashboard,בניתי דשבורד חדש,Baniti dashboard chadash,I built a new dashboard,false,High
+  Architecture & Infrastructure,כלי ניטור,Kli Nitur,Monitoring Tool,כלי הניטור לא מתעדכן,Kli ha-nitur lo mit'adken,The monitoring tool is not updating,true,High
+  Architecture & Infrastructure,מערכת לוגים,Ma'arechet Logim,Log System,חיפשתי את זה במערכת הלוגים,Chipasti et ze be-ma'arechet ha-logim,I searched for it in the log system,true,High
+  Architecture & Infrastructure,מערכת התראות,Ma'arechet Hatra'ot,Alert System,יש התראה במערכת ההתראות,Yesh hatra'a be-ma'arechet ha-hatra'ot,There is an alert in the alert system,true,High
+  Architecture & Infrastructure,רוט קוז,Root cause,Root cause,מה היה הרוט קוז?,Ma haya ha-root cause?,What was the root cause?,false,High
+  Architecture & Infrastructure,אר-סי-איי,RCA,Root Cause Analysis,צריך לכתוב אר-סי-איי,Tzarich lichtov RCA,We need to write an RCA,false,High
+  Architecture & Infrastructure,מיטיגציה,Mitigation,Mitigation,עשינו מיטיגציה לבעיה,Asinu mitigation la-be'aya,We did a mitigation for the problem,false,High
+  Architecture & Infrastructure,פתרון זמני,Pitaron zmani,Temporary solution,זה רק פתרון זמני,Ze rak pitaron zmani,It's just a temporary solution,true,High
+  Architecture & Infrastructure,פייל-אובר,Failover,Failover,היה פייל-אובר אוטומטי,Haya failover otomati,There was an automatic failover,false,High
+  Architecture & Infrastructure,יתירות,Yeti'rut,Redundancy,אין לנו מספיק יתירות,Ein lanu maspik yeti'rut,We don't have enough redundancy,true,High
+  Architecture & Infrastructure,היי אביילביליטי,High availability,High availability,המערכת תומכת בהיי אביילביליטי,Ha-ma'arechet tomechet be-high availability,The system supports high availability,false,High
+  Architecture & Infrastructure,די-אר,DR,Disaster Recovery,עשינו תרגיל די-אר,Asinu targil DR,We did a DR drill,false,High
+  Engineering & Development,ארכיטקטורת תוכנה,Architekturat tochna,Software architecture,ארכיטקטורת התוכנה מורכבת,Architekturat ha-tochna murkevet,The software architecture is complex,true,High
+  Engineering & Development,תכנון מונחה עצמים,Tichnun munche atzamim,Object-oriented design,נשתמש בתכנון מונחה עצמים,Nishtamesh be-tichnun munche atzamim,We will use object-oriented design,true,High
+  Engineering & Development,דפוס עיצוב,Dfus itzuv,Design pattern,זהו דפוס עיצוב מוכר,Zehu dfus itzuv mukar,This is a known design pattern,true,High
+  Engineering & Development,מקביליות,Makbiliyut,Concurrency,יש בעיית מקביליות,Yesh be'ayat makbiliyut,There is a concurrency problem,true,High
+  Engineering & Development,ניהול זיכרון,Nihul zikaron,Memory management,ניהול זיכרון לקוי,Nihul zikaron lakui,Poor memory management,true,High
+  Engineering & Development,איסוף זבל,Isuf zevel,Garbage collection,איסוף הזבל רץ עכשיו,Isuf ha-zevel ratz achshav,Garbage collection is running now,true,High
+  Engineering & Development,מורכבות חישובית,Murkavut chishuvit,Computational complexity,המורכבות החישובית גבוהה,Ha-murkavut ha-chishuvit gavoha,The computational complexity is high,true,High
+  Engineering & Development,ביצועים,Bitzu'im,Performance,שיפרנו את הביצועים,Shiparnu et ha-bitzu'im,We improved the performance,true,High
+  Engineering & Development,אופטימיזציה,Optimizatzia,Optimization,עשינו אופטימיזציה לקוד,Asinu optimizatzia la-kod,We did optimization to the code,false,High
+  Engineering & Development,שרידות,Sridut,Survivability / Fault tolerance,המערכת דורשת שרידות גבוהה,Ha-ma'arechet doreshet sridut gavoha,The system requires high survivability,true,High
+  Engineering & Development,הזרמת נתונים,Hazramat netunim,Data streaming,אנו משתמשים בהזרמת נתונים,Anu mishtameshim be-hazramat netunim,We use data streaming,true,High
+  Engineering & Development,אבטחת מידע,Avtachat meida,Information security,אבטחת מידע היא קריטית,Avtachat meida hi kritit,Information security is critical,true,High
+  Engineering & Development,הרשאות גישה,Harsha'ot gisha,Access permissions,בדוק את הרשאות הגישה,Bdok et harsha'ot ha-gisha,Check the access permissions,true,High
+  Engineering & Development,ניתוח מערכות,Nitu'ach ma'arachot,Systems analysis,סיימנו את ניתוח המערכות,Siyamnu et nitu'ach ha-ma'arachot,We finished the systems analysis,true,High
+  Engineering & Development,בדיקות יחידה,Bdikot yechida,Unit testing,כתבתי בדיקות יחידה,Katavti bdikot yechida,I wrote unit tests,true,High
+  Engineering & Development,שילוב מתמשך,Shiluv matmesh,Continuous integration,השילוב המתמשך נכשל,Ha-shiluv ha-matmesh nichshal,The continuous integration failed,true,High
+  Engineering & Development,פריסה מתמשכת,Prisa matmeshet,Continuous deployment,עברנו לפריסה מתמשכת,Avarnu le-prisa matmeshet,We moved to continuous deployment,true,High
+  Engineering & Development,סביבת פיתוח,Svibat pitu'ach,Development environment,הקמתי סביבת פיתוח,Hekamti svibat pitu'ach,I set up a development environment,true,High
+  Engineering & Development,סביבת ייצור,Svibat yitzur,Production environment,העלינו לסביבת ייצור,He'elinu le-svibat yitzur,We uploaded to the production environment,true,High
+  Engineering & Development,בקרת גרסאות,Bakarat girsa'ot,Version control,נשתמש בבקרת גרסאות,Nishtamesh be-bakarat girsa'ot,We will use version control,true,High
+  Tech Slang,קומפילציה,Compilatziya,Compilation,הקומפילציה נפלה,Ha-compilatziya nafla,The compilation failed,false,Medium
+  Tech Slang,פלואו,Flow,Flow / Process,הפלואו לא ברור,Ha-flow lo barur,The flow is unclear,false,Medium
+  Tech Slang,דדליין,Deadline,Deadline,יש לנו דדליין מחר,Yesh lanu deadline machar,We have a deadline tomorrow,false,Low
+  Tech Slang,פול רקווסט,Pull Request,Pull Request (PR),פתחתי פול רקווסט,Pataxti pull request,I opened a pull request,false,Medium
+  Tech Slang,ברנצ',Branch,Branch,תעשה מרג' לברנצ',Ta'ase merge la-branch,Merge the branch,false,Medium
+  Tech Slang,לוגים,Logim,Logs,תבדוק בלוגים,Tivdok ba-logim,Check the logs,false,Medium
+  Tech Slang,קראנצ',Crunch,Crunch time,אנחנו בקראנצ' מטורף,Anachnu be-crunch metoraf,We are in a crazy crunch,false,Low
+  Tech Slang,באג פיקס,Bug fix,Bug fix,זה רק באג פיקס קטן,Ze rak bug fix katan,It's just a small bug fix,false,Medium
+  Tech Slang,קונפיגורציה,Configuratzia,Configuration,שיניתי את הקונפיגורציה,Shiniti et ha-configuratzia,I changed the configuration,false,Medium
+  Tech Slang,בנצ'מרק,Benchmark,Benchmark,הרצנו בנצ'מרק לביצועים,Heratznu benchmark la-bitzu'im,We ran a performance benchmark,false,High
+  Tech Slang,דאמפ,Dump,Data dump / Core dump,תוציא דאמפ של הדי-בי,Totzi dump shel ha-DB,Extract a DB dump,false,High
+  Tech Slang,אובר-אנג'ינירינג,Over-engineering,Over-engineering,זה נראה לי אובר-אנג'ינירינג,Ze nir'a li over-engineering,This looks like over-engineering to me,false,High
+  Tech Slang,טסטים,Testim,Tests,הרצת טסטים?,Heratzta testim?,Did you run tests?,false,Medium
+  Tech Slang,פיילוט,Pilot,Pilot project,אנחנו מתחילים פיילוט,Anachnu matchilim pilot,We are starting a pilot,false,Low
+  Tech Slang,בוטלנק,Bottleneck,Bottleneck,הדי-בי הוא הבוטלנק,Ha-DB hu ha-bottleneck,The DB is the bottleneck,false,Medium
+  Data & AI,ראג,RAG,Retrieval-Augmented Generation,יישמנו ארכיטקטורת ראג כדי להקטין הזיות.,Yisamnu architekturat RAG kedei lehaktin hazayot.,We implemented a RAG architecture to reduce hallucinations.,false,High
+  Data & AI,מסד נתונים וקטורי,Masad netunim vektori,Vector Database,אנחנו מאחסנים את האמבדינגס במסד נתונים וקטורי.,Anachnu me'achsenim et ha-embeddings be-masad netunim vektori.,We store the embeddings in a vector database.,true,High
+  Data & AI,אמבדינגס,Embeddings,Embeddings,המודל מייצר אמבדינגס לכל מסמך.,Ha-model meyatzer embeddings le-chol mismach.,The model generates embeddings for each document.,false,High
+  Data & AI,חיפוש סמנטי,Chipus semanti,Semantic Search,החיפוש הסמנטי מחזיר תוצאות הרבה יותר מדויקות.,Ha-chipus ha-semanti machzir totza'ot harbe yoter meduyakot.,The semantic search returns much more accurate results.,true,High
+  Data & AI,סוכן אוטונומי,Sochen otonomi,Autonomous Agent,בנינו סוכן אוטונומי שמריץ סקריפטים בעצמו.,Baninu sochen otonomi she-meritz skriptim be-atzmo.,We built an autonomous agent that runs scripts by itself.,true,High
+  Data & AI,מערכת מרובת סוכנים,Ma'arechet merubat sochnim,Multi-Agent System,הארכיטקטורה מבוססת על מערכת מרובת סוכנים.,Ha-architektura mevuseset al ma'arechet merubat sochnim.,The architecture is based on a multi-agent system.,true,High
+  Data & AI,פרומפט מערכת,Prompt ma'arechet,System Prompt,צריך לעדכן את פרומפט המערכת כדי להגביל את המודל.,Tzarich le'adken et prompt ha-ma'arechet kedei lehagbil et ha-model.,We need to update the system prompt to constrain the model.,false,High
+  Data & AI,חלון קונטקסט,Chalon context,Context Window,חלון הקונטקסט של המודל הזה הוא מאה עשרים ושמונה קיי.,Chalon ha-context shel ha-model haze hu me'a esrim u-shmone K.,The context window of this model is 128K.,false,High
+  Data & AI,פיו-שוט,Few-shot,Few-Shot Learning,הוספנו דוגמאות לפרומפט בגישת פיו-שוט.,Hosafnu dugma'ot la-prompt be-gishat few-shot.,We added examples to the prompt in a few-shot approach.,false,High
+  Data & AI,שרשרת מחשבה,Sharsheret machshava,Chain of Thought,הכרחנו את המודל להשתמש בשרשרת מחשבה.,Hichrachnu et ha-model lehishtamesh be-sharsheret machshava.,We forced the model to use chain of thought.,true,High
+  Data & AI,פפט,PEFT,Parameter-Efficient Fine-Tuning,אנחנו משתמשים בשיטות פפט כדי לחסוך משאבי חישוב.,Anachnu mishtameshim be-shitot PEFT kedei lachsoch mash'avei chishuv.,We use PEFT methods to save computational resources.,false,High
+  Data & AI,לורה,LoRA,Low-Rank Adaptation,אימנו מודל לורה ספציפי למשימה הזו.,Imanu model LoRA spetzifi la-mesima ha-zo.,We trained a specific LoRA model for this task.,false,High
+  Data & AI,אר-אל-אייצ'-אף,RLHF,Reinforcement Learning from Human Feedback,המודל עבר תהליך אר-אל-אייצ'-אף לשיפור הבטיחות.,Ha-model avar tahalich RLHF le-shipur ha-betichut.,The model went through an RLHF process to improve safety.,false,High
+  Data & AI,קצב הזיות,Ketzev hazayot,Hallucination Rate,אנחנו מודדים את קצב ההזיות בפרודקשן.,Anachnu modedim et ketzev ha-hazayot be-production.,We measure the hallucination rate in production.,true,High
+  Data & AI,הזרקת פרומפט,Hazrakat prompt,Prompt Injection,המערכת פגיעה למתקפת הזרקת פרומפט.,Ha-ma'arechet pgi'a le-mitkefet hazrakat prompt.,The system is vulnerable to a prompt injection attack.,true,High
+  Data & AI,טמפרטורה,Temperatura,Temperature,הורדנו את הטמפרטורה לאפס כדי לקבל פלט דטרמיניסטי.,Horadnu et ha-temperatura le-efes kedei lekabel pelet deterministi.,We lowered the temperature to zero to get deterministic output.,true,High
+  Data & AI,טוקניזציה,Tokenizatzia,Tokenization,יש באג בתהליך הטוקניזציה של טקסט בעברית.,Yesh bug be-tahalich ha-tokenizatzia shel tekst be-ivrit.,There is a bug in the tokenization process of Hebrew text.,false,High
+  Data & AI,ניתוב מודל,Nituv model,Model Steering,אנחנו חוקרים טכניקות חדשות של ניתוב מודל.,Anachnu chokrim technikot chadashot shel nituv model.,We are researching new model steering techniques.,true,High
+  Data & AI,אינפרנס,Inference,Inference,שרת האינפרנס קורס תחת העומס.,Sharet ha-inference kores tachat ha-omes.,The inference server is crashing under the load.,false,High
+  Engineering & Development,לדפלג,Ledeploy / Ledapleg,To deploy,אני מדפלג את הגרסה,Ani medapleg et ha-girsa,I am deploying the version,false,Medium
+  Engineering & Development,לקמט,Lekamet,To commit,צריך לקמט את הקוד,Tzarich lekamet et ha-kod,Need to commit the code,false,Medium
+  Engineering & Development,לפלש,Leflesh,To flash,אני מפלש את הזיכרון,Ani meflesh et ha-zikaron,I am flashing the memory,false,Medium
+  Engineering & Development,לפרסר,Lefarser,To parse,המערכת מפרסרת את הנתונים,Ha-ma'arechet mefarseret et ha-netunim,The system parses the data,false,Medium
+  Engineering & Development,לרנדר,Lerander,To render,לוקח זמן לרנדר את התמונה,Loke'ach zman lerander et ha-tmuna,It takes time to render the image,false,Medium
+  Architecture & Infrastructure,לעשות ריסטארט,La'asot restart,To restart,תעשה ריסטארט לשרת,Ta'ase restart la-sharet,Restart the server,false,Low
+  Management & Culture,לפתוח טיקט,Liftoach ticket,To open a ticket,פתחתי טיקט על הבאג,Patachti ticket al ha-bug,I opened a ticket for the bug,false,Low
+  QA & Testing,לסגור באג,Lisgor bug,To close a bug,סגרנו חמישה באגים היום,Sagarnu chamisha bagim hayom,We closed five bugs today,false,Low
+  Architecture & Infrastructure,להרים שרת,Leharim sharet,To spin up a server,צריך להרים שרת חדש,Tzarich leharim sharet chadash,Need to spin up a new server,true,Medium
+  Tech Slang,זה נפל בפרוד,Ze nafal be-prod,It crashed in production,"הכל קרס, זה נפל בפרוד","Hakol karas, ze nafal be-prod","Everything crashed, it failed in production",false,Medium
+  Tech Slang,זה רץ בלוקאל,Ze ratz be-local,It runs locally,"מוזר, אצלי זה רץ בלוקאל","Muzar, etzli ze ratz be-local","Weird, it runs locally for me",false,Low
+  Engineering & Development,תעשה פוש,Ta'ase push,Do a push,תעשה פוש לקוד עכשיו,Ta'ase push la-kod achshav,Push the code now,false,Low
+  Engineering & Development,תעשה פול,Ta'ase pull,Do a pull,תעשה פול לפני שאתה עובד,Ta'ase pull lifnei she-ata oved,Pull before you work,false,Low
+  Engineering & Development,תעשה ריבייס,Ta'ase rebase,Do a rebase,תעשה ריבייס מול המאסטר,Ta'ase rebase mul ha-master,Rebase against master,false,Medium
+  Engineering & Development,אני ממרג׳ג׳,Ani memargej,I am merging,אני ממרג׳ג׳ את הענף שלי,Ani memargej et ha-anaf sheli,I am merging my branch,false,Medium
+  Architecture & Infrastructure,קובץ,Kovetz,File,תפתח את הקובץ,Tiftach et ha-kovetz,Open the file,true,Low
+  Architecture & Infrastructure,תיקייה,Tikiya,Folder,תיקייה חדשה,Tikiya chadasha,New folder,true,Low
+  Engineering & Development,לשמור,Lishmor,To save,תשמור את השינויים,Tishmor et ha-shinuyim,Save the changes,true,Low
+  Engineering & Development,להעתיק,Leha'atik,To copy,תעתיק את הטקסט,Ta'atik et ha-tekst,Copy the text,true,Low
+  Engineering & Development,להדביק,Lehadbik,To paste,תדביק פה,Tadbik po,Paste here,true,Low
+  Engineering & Development,לגזור,Ligzor,To cut,תגזור את זה,Tigzor et ze,Cut this,true,Low
+  Engineering & Development,למחוק,Limchok,To delete,תמחק את הקובץ,Timchok et ha-kovetz,Delete the file,true,Low
+  Product & Design,הגדרות,Hagdarot,Settings,תשנה בהגדרות,Teshane ba-hagdarot,Change in the settings,true,Low
+  Architecture & Infrastructure,דפדפן,Dafdefan,Browser,איזה דפדפן אתה משתמש?,Eize dafdefan ata mishtamesh?,Which browser are you using?,true,Low
+  Product & Design,קישור,Kishur,Link,תשלח לי קישור,Tishlach li kishur,Send me a link,true,Low
+  Tech Slang,לינק,Link,Link,תשלח לי לינק,Tishlach li link,Send me a link,false,Low
+  Engineering & Development,להוריד,Lehorid,To download,אני מוריד את הקובץ,Ani morid et ha-kovetz,I am downloading the file,true,Low
+  Engineering & Development,להעלות,Leha'alot,To upload,תעלה את זה לענן,Ta'ale et ze la-anan,Upload it to the cloud,true,Low
+  Product & Design,לשונית,Leshonit,Tab,תפתח לשונית חדשה,Tiftach leshonit chadasha,Open a new tab,true,Low
+  Tech Slang,טאב,Tab,Tab,תפתח טאב חדש,Tiftach tab chadash,Open a new tab,false,Low
+  Architecture & Infrastructure,חלון,Chalon,Window,תסגור את החלון,Tisgor et ha-chalon,Close the window,true,Low
+  Engineering & Development,לרענן,Lera'anen,To refresh,תרענן את העמוד,Tera'anen et ha-amud,Refresh the page,true,Low
+  Engineering & Development,שילוב רציף,Shiluv retzif,Continuous Integration,הטמענו שילוב רציף במערכת.,Hitmanu shiluv retzif ba-ma'arechet.,We implemented continuous integration in the system.,true,High
+  Engineering & Development,מסירה רציפה,Mesira retzifa,Continuous Delivery,אנחנו עובדים במודל של מסירה רציפה.,Anachnu ovdim be-model shel mesira retzifa.,We work in a continuous delivery model.,true,High
+  Engineering & Development,פריסה רציפה,Prisa retzifa,Continuous Deployment,הפריסה הרציפה חוסכת לנו זמן.,Ha-prisa ha-retzifa chosechet lanu zman.,Continuous deployment saves us time.,true,High
+  Architecture & Infrastructure,תשתית כקוד,Tashtit ke-kod,Infrastructure as Code,אנחנו מנהלים את השרתים עם תשתית כקוד.,Anachnu menahalim et ha-sharatim im tashtit ke-kod.,We manage the servers with infrastructure as code.,true,High
+  Architecture & Infrastructure,זמינות גבוהה,Zminut gvoha,High Availability,המערכת דורשת זמינות גבוהה.,Ha-ma'arechet doreshet zminut gvoha.,The system requires high availability.,true,Medium
+  Architecture & Infrastructure,יתירות,Yetirut,Redundancy,הוספנו יתירות לשרתי מסד הנתונים.,Hosafnu yetirut le-sharetei masad ha-netunim.,We added redundancy to the database servers.,true,High
+  Architecture & Infrastructure,שרידות,Sridut,Resilience,שרידות המערכת נבדקה בהצלחה.,Sridut ha-ma'arechet nibdeka be-hatzlacha.,The system's resilience was tested successfully.,true,High
+  Architecture & Infrastructure,התאוששות מאסון,Hit'osheshut me-ason,Disaster Recovery,יש לנו תוכנית התאוששות מאסון מפורטת.,Yesh lanu tochnit hit'osheshut me-ason meforetet.,We have a detailed disaster recovery plan.,true,High
+  Architecture & Infrastructure,ניטור,Nitur,Monitoring,מערכת הניטור התריעה על עומס.,Ma'arechet ha-nitur hitri'a al omes.,The monitoring system alerted about high load.,true,Medium
+  Architecture & Infrastructure,רישום,Rishum,Logging,הרישום עוזר לנו למצוא שגיאות.,Ha-rishum ozer lanu limtzo shgi'ot.,Logging helps us find errors.,true,Medium
+  Engineering & Development,עקיבות,Akivut,Traceability,עקיבות היא קריטית בסביבת מיקרו-שירותים.,Akivut hi kritit be-svivat mikro-sherutim.,Traceability is critical in a microservices environment.,true,High
+  Engineering & Development,ניהול תצורה,Nihul tzura,Configuration Management,אנחנו משתמשים בכלי לניהול תצורה.,Anachnu mishtameshim be-kli le-nihul tzura.,We use a configuration management tool.,true,High
+  Architecture & Infrastructure,אוטומציה של תשתיות,Otomatzia shel tashtiyot,Infrastructure Automation,אוטומציה של תשתיות מקטינה טעויות אנוש.,Otomatzia shel tashtiyot maktina ta'uyot enosh.,Infrastructure automation reduces human errors.,true,High
+  Architecture & Infrastructure,סביבת ייצור,Svivat yitzur,Production Environment,אל תעשה שינויים ישירות בסביבת ייצור.,Al ta'ase shinuyim yeshirot be-svivat yitzur.,Don't make changes directly in the production environment.,true,Medium
+  Engineering & Development,סביבת פיתוח,Svivat pituach,Development Environment,סביבת הפיתוח שלי מוכנה.,Svivat ha-pituach sheli muchana.,My development environment is ready.,true,Medium
+  QA & Testing,סביבת בדיקות,Svivat bdikot,Test Environment,העלינו את הגרסה לסביבת בדיקות.,He'elinu et ha-girsa le-svivat bdikot.,We deployed the version to the test environment.,true,Medium
+  Architecture & Infrastructure,איזון עומסים,Izun omasim,Load Balancing,איזון עומסים מונע קריסת שרתים.,Izun omasim mone krisat sharatim.,Load balancing prevents server crashes.,true,High
+  Architecture & Infrastructure,הרחבה אוטומטית,Harchava otomatit,Auto-scaling,הגדרנו הרחבה אוטומטית לענן.,Higdarnu harchava otomatit la-anan.,We configured auto-scaling for the cloud.,true,High
+  Architecture & Infrastructure,זמן השבתה,Zman hashbata,Downtime,היה לנו זמן השבתה של דקה.,Haya lanu zman hashbata shel daka.,We had a downtime of one minute.,true,Medium
+  Engineering & Development,מדדי ביצועים,Madadei bitzu'im,Performance Metrics,אנחנו עוקבים אחרי מדדי ביצועים יומיים.,Anachnu okvim acharei madadei bitzu'im yomiyim.,We track daily performance metrics.,true,Medium
+  Engineering & Development,ניהול גרסאות,Nihul girsot,Version Control,ניהול גרסאות מאפשר חזרה לאחור.,Nihul girsot me'afsher chazara le-achor.,Version control allows rolling back.,true,Medium
+  Architecture & Infrastructure,תזמור,Tizmur,Orchestration,כלי התזמור מנהל את כל הקונטיינרים.,Kli ha-tizmur menahel et kol ha-containers.,The orchestration tool manages all containers.,true,High
+  Architecture & Infrastructure,סביבה מבודדת,Svivah mevudetet,Isolated Environment,הבדיקות רצות בסביבה מבודדת.,Ha-bdikot ratzot be-svivah mevudetet.,The tests run in an isolated environment.,true,High
+  Architecture & Infrastructure,הקצאת משאבים,Haktza'at mash'abim,Resource Allocation,הקצאת המשאבים מתבצעת אוטומטית.,Haktza'at ha-mash'abim mitbatza'at otomatit.,Resource allocation is done automatically.,true,High
+  Architecture & Infrastructure,קצירת נתונים,Ktzirat netunim,Data Harvesting,קצירת הנתונים מתבצעת כל לילה.,Ktzirat ha-netunim mitbatza'at kol layla.,Data harvesting is performed every night.,true,High
+  Engineering & Development,גירסה,Girsa,Version,איזו גירסה זאת?,Eizo girsa zot?,Which version is this?,true,Low
+  QA & Testing,מקרה קצה,Mikre katze,Edge case,זה מקרה קצה נדיר,Ze mikre katze nadir,This is a rare edge case,true,Medium
