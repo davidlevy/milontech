@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "fetch": "node scripts/fetch_sheet.js",
-    "build": "node scripts/generate.js",
+    "build": "npm run fetch && node scripts/generate.js",
     "dev": "npx -y http-server dist -p 3000"
   },
   "keywords": [
