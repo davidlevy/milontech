@@ -206,6 +206,23 @@ html, body {
   justify-content: center;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gh-star-wrapper-header {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 170px;
+}
+
+.gh-star-wrapper-header iframe {
+  display: block;
+}
+
 .stats-board {
   display: flex;
   align-items: center;
@@ -1006,6 +1023,9 @@ html, body {
     max-width: 140px;
   }
   .logo-tag {
+    display: none;
+  }
+  .gh-star-wrapper-header {
     display: none;
   }
 }

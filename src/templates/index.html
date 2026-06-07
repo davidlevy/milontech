@@ -36,9 +36,6 @@
           <div class="credits-tooltip">
             <p>Made with ☀️ from Raanana</p>
             <p>by <a href="https://github.com/davidlevy" target="_blank">@davidlevy</a></p>
-            <div class="gh-star-wrapper">
-              <iframe src="https://ghbtns.com/github-btn.html?user=davidlevy&repo=milontech&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-            </div>
           </div>
         </div>
       </div>
@@ -52,24 +49,31 @@
         </div>
       </div>
       
-      <!-- Stats Board -->
-      <div class="stats-board">
-        <div class="stat-item">
-          <span class="stat-label">TERMS</span>
-          <span class="stat-value" id="stat-count">0</span>
+      <div class="header-actions">
+        <!-- Stats Board -->
+        <div class="stats-board">
+          <div class="stat-item">
+            <span class="stat-label">TERMS</span>
+            <span class="stat-value" id="stat-count">0</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-label">CATEGORIES</span>
+            <span class="stat-value" id="stat-categories">0</span>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-label">CATEGORIES</span>
-          <span class="stat-value" id="stat-categories">0</span>
+        
+        <!-- GitHub Star -->
+        <div class="gh-star-wrapper-header">
+          <iframe src="https://ghbtns.com/github-btn.html?user=davidlevy&repo=milontech&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
         </div>
+        
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </button>
       </div>
-      
-      <!-- Theme Switcher -->
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
-      </button>
     </header>
 
     <!-- Main Workspace -->
