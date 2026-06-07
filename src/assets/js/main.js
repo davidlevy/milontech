@@ -661,12 +661,13 @@ function initVirtualizer() {
   }
 
   // --- URL Route Parsing ---
+  // Read the initial URL parameter BEFORE initVirtualizer potentially overwrites it
+  const initialUrlParams = new URLSearchParams(window.location.search);
+  const initialTermQuery = initialUrlParams.get('term');
+
   function setupURLRoute() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const termQuery = urlParams.get('term');
-    
-    if (termQuery) {
-      const index = glossary.findIndex(item => item.englishTerm.toLowerCase() === termQuery.toLowerCase());
+    if (initialTermQuery) {
+      const index = glossary.findIndex(item => item.englishTerm.toLowerCase().trim() === initialTermQuery.toLowerCase().trim());
       if (index !== -1) {
         setTimeout(() => selectTerm(index, true), 100);
         return;

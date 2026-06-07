@@ -665,8 +665,11 @@ function initVirtualizer() {
     const urlParams = new URLSearchParams(window.location.search);
     const termQuery = urlParams.get('term');
     
+    console.log("setupURLRoute: termQuery is", termQuery);
+    
     if (termQuery) {
-      const index = glossary.findIndex(item => item.englishTerm.toLowerCase() === termQuery.toLowerCase());
+      const index = glossary.findIndex(item => item.englishTerm.toLowerCase().trim() === termQuery.toLowerCase().trim());
+      console.log("setupURLRoute: found index", index);
       if (index !== -1) {
         setTimeout(() => selectTerm(index, true), 100);
         return;
