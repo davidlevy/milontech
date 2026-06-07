@@ -1,46 +1,139 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // --- State & DOM References ---
-  const dbElement = document.getElementById('glossary-db');
-  let glossary = [];
-  try {
-    glossary = JSON.parse(dbElement.textContent.trim());
-  } catch (e) {
-    console.error('Failed to parse glossary JSON database:', e);
+import { Virtualizer, elementScroll, observeElementRect, observeElementOffset } from "https://esm.sh/@tanstack/virtual-core@3";
+
+// Remove DOMContentLoaded listener because type="module" executes after HTML parsing is complete.
+// --- State & DOM References ---
+const dbElement = document.getElementById('glossary-db');
+let glossary = [];
+try {
+  glossary = JSON.parse(dbElement.textContent.trim());
+} catch (e) {
+  console.error('Failed to parse glossary JSON database:', e);
+}
+
+// DOM Elements
+const searchInput = document.getElementById('search-input');
+const termsList = document.getElementById('terms-list');
+const categoryBadges = document.querySelectorAll('.category-badge');
+const complexityBadges = document.querySelectorAll('.complexity-badge');
+const detailPane = document.getElementById('detail-pane');
+const detailScrollContainer = document.getElementById('detail-scroll-container');
+const virtualListInner = document.getElementById('virtual-list-inner');
+const mobileBackBtn = document.getElementById('mobile-back-btn');
+
+// Stats
+const statCount = document.getElementById('stat-count');
+const statCategories = document.getElementById('stat-categories');
+
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+
+// Commander Modal Elements
+const commanderModal = document.getElementById('commander-modal');
+const commanderInput = document.getElementById('commander-input');
+const commanderResults = document.getElementById('commander-results');
+
+// Toast Alert
+const toast = document.getElementById('toast');
+
+let activeCategory = 'all';
+let activeComplexity = 'all';
+let searchQuery = '';
+let activeTermIndex = -1;
+let isScrollingProgrammatically = false;
+
+// --- Virtual List Setup ---
+let visibleIndices = Array.from({ length: glossary.length }, (_, i) => i);
+let renderedNodes = {};
+let virtualizer = null;
+
+function initVirtualizer() {
+  const rect = detailScrollContainer.getBoundingClientRect();
+  virtualizer = new Virtualizer({
+    count: visibleIndices.length,
+    getScrollElement: () => detailScrollContainer,
+    estimateSize: () => 350,
+    overscan: 5,
+    initialRect: { width: rect.width || 800, height: rect.height || 600 },
+    scrollToFn: elementScroll,
+    observeElementRect: observeElementRect,
+    observeElementOffset: observeElementOffset,
+    onChange: (instance) => {
+      renderVirtualItems(instance);
+      updateScrollspy(instance);
+    }
+  });
+
+  // In Vanilla JS, we MUST call the internal _didMount to attach the observers!
+  virtualizer._didMount();
+
+    // Force an initial render manually since no scroll event has fired
+    renderVirtualItems(virtualizer);
   }
 
-  // DOM Elements
-  const searchInput = document.getElementById('search-input');
-  const termsList = document.getElementById('terms-list');
-  const categoryBadges = document.querySelectorAll('.category-badge');
-  const complexityBadges = document.querySelectorAll('.complexity-badge');
-  const detailPane = document.getElementById('detail-pane');
-  const detailScrollContainer = document.getElementById('detail-scroll-container');
-  const mobileBackBtn = document.getElementById('mobile-back-btn');
-  
-  // Stats
-  const statCount = document.getElementById('stat-count');
-  const statCategories = document.getElementById('stat-categories');
-  
-  // Theme Toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  
-  // Commander Modal Elements
-  const commanderModal = document.getElementById('commander-modal');
-  const commanderInput = document.getElementById('commander-input');
-  const commanderResults = document.getElementById('commander-results');
-  
-  // Toast Alert
-  const toast = document.getElementById('toast');
+  function updateScrollspy(instance) {
+    if (isScrollingProgrammatically) return;
+    const items = instance.getVirtualItems();
+    if (items.length > 0) {
+      // Find the first visible item that takes up a meaningful part of the view
+      const firstVisible = items[0];
+      const actualIndex = visibleIndices[firstVisible.index];
+      if (actualIndex !== undefined && actualIndex !== activeTermIndex) {
+        highlightActiveCard(actualIndex);
+      }
+    }
+  }
 
-  let activeCategory = 'all';
-  let activeComplexity = 'all';
-  let searchQuery = '';
-  let activeTermIndex = -1;
-  let isScrollingProgrammatically = false;
+  function renderVirtualItems(instance) {
+    if (!virtualListInner) return;
+    
+    // Set total scroll height
+    virtualListInner.style.height = `${instance.getTotalSize()}px`;
+
+    const items = instance.getVirtualItems();
+    console.log('Virtual items count:', items.length, 'Total size:', instance.getTotalSize(), 'Container height:', detailScrollContainer.getBoundingClientRect().height);
+    const currentItemIndices = new Set(items.map(i => i.index));
+
+    // Cleanup old nodes
+    for (const vIndex in renderedNodes) {
+      if (!currentItemIndices.has(parseInt(vIndex, 10))) {
+        renderedNodes[vIndex].remove();
+        delete renderedNodes[vIndex];
+      }
+    }
+
+    // Render new nodes or update positions
+    items.forEach(virtualItem => {
+      const vIndex = virtualItem.index;
+      const actualIndex = visibleIndices[vIndex];
+      const itemData = glossary[actualIndex];
+      
+      let node = renderedNodes[vIndex];
+      if (!node) {
+        node = document.createElement('div');
+        node.className = 'detail-block active';
+        node.setAttribute('data-id', actualIndex);
+        node.setAttribute('data-index', vIndex);
+        node.innerHTML = generateDetailHtml(itemData, actualIndex);
+        virtualListInner.appendChild(node);
+        renderedNodes[vIndex] = node;
+      }
+      
+      // Position it exactly where TanStack says it belongs
+      node.style.position = 'absolute';
+      node.style.top = 0;
+      node.style.left = 0;
+      node.style.width = '100%';
+      node.style.transform = `translateY(${virtualItem.start}px)`;
+
+      // Tell the virtualizer the actual height of this node (crucial for dynamic heights!)
+      instance.measureElement(node);
+    });
+  }
 
   // --- Initial Setup ---
   updateStats();
   initTheme();
+  initVirtualizer();
   setupURLRoute();
 
   // --- Fuzzy Match Helper ---
@@ -63,17 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Search & Filter Logic ---
   function updateListVisibility() {
     const cards = termsList.querySelectorAll('.glossary-card');
-    const blocks = detailScrollContainer.querySelectorAll('.detail-block');
-    let visibleCount = 0;
+    visibleIndices = [];
     let firstVisibleIndex = -1;
 
     glossary.forEach((item, idx) => {
       const card = cards[idx];
-      const block = blocks[idx];
-      if (!card || !block) return;
+      if (!card) return;
 
       const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-      const itemComplexity = block.getAttribute('data-complexity');
+      const itemComplexity = item.complexity; // Since block doesn't exist statically anymore
       const matchesComplexity = activeComplexity === 'all' || itemComplexity === activeComplexity;
       
       const query = searchQuery.toLowerCase().trim();
@@ -88,23 +179,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (matchesCategory && matchesComplexity && matchesSearch) {
         card.classList.remove('hidden');
-        block.classList.remove('hidden');
+        visibleIndices.push(idx);
         if (firstVisibleIndex === -1) {
           firstVisibleIndex = idx;
         }
-        visibleCount++;
       } else {
         card.classList.add('hidden');
-        block.classList.add('hidden');
       }
     });
 
-    // Update active count stat
-    statCount.textContent = visibleCount;
+    statCount.textContent = visibleIndices.length;
+
+    // Update Virtualizer options to new filtered count
+    if (virtualizer) {
+      const rect = detailScrollContainer.getBoundingClientRect();
+      virtualizer.setOptions({
+        count: visibleIndices.length,
+        getScrollElement: () => detailScrollContainer,
+        estimateSize: () => 350,
+        overscan: 5,
+        initialRect: { width: rect.width || 800, height: rect.height || 600 },
+        scrollToFn: elementScroll,
+        observeElementRect: observeElementRect,
+        observeElementOffset: observeElementOffset,
+        onChange: (instance) => {
+          renderVirtualItems(instance);
+          updateScrollspy(instance);
+        }
+      });
+      // Force render since options changed
+      renderVirtualItems(virtualizer);
+    }
 
     // Automatically navigate to the first visible term on search input
     if (firstVisibleIndex !== -1 && searchQuery !== '') {
-      selectTerm(firstVisibleIndex, true);
+      selectTerm(firstVisibleIndex);
     }
   }
 
@@ -125,81 +234,90 @@ document.addEventListener('DOMContentLoaded', () => {
     return 'בינוני';
   }
 
-  function selectTerm(index) {
-    if (index < 0 || index >= glossary.length) return;
-    
-    // Guard against selecting hidden elements
-    const card = termsList.querySelector(`.glossary-card[data-id="${index}"]`);
-    if (!card || card.classList.contains('hidden')) return;
+  function generateDetailHtml(item, index) {
+    return `
+      <div class="detail-header-section">
+        <div class="detail-meta">
+          <div class="detail-tags">
+            <span class="detail-category-tag">${escapeHTML(item.category)}</span>
+            <span class="detail-origin-tag ${item.isNative ? 'tag-native' : 'tag-heblish'}">${item.isNative ? 'Native' : 'Heblish'}</span>
+            <span class="detail-complexity-tag tag-${item.complexity.toLowerCase()}">${getComplexityLabel(item.complexity)}</span>
+          </div>
+          <button class="action-btn share-permalink-btn" data-term="${escapeHTML(item.englishTerm)}" title="Copy shareable link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            <span>העתק קישור</span>
+          </button>
+        </div>
+        
+        <div class="active-term-group" dir="ltr">
+          <h2 class="active-term-title">
+            <span class="active-term-he" dir="rtl">${escapeHTML(item.hebrewTerm)}</span>
+            <span class="active-term-en">${escapeHTML(item.englishTerm)}</span>
+          </h2>
+          <p class="active-term-definition">${escapeHTML(item.englishDefinition)}</p>
+        </div>
+      </div>
 
+      <div class="detail-body-section">
+        ${item.hebrewExample ? `
+          <div class="section-block">
+            <h4 class="section-title">USAGE EXAMPLE // דוגמת שימוש</h4>
+            <div class="context-usage">
+              <p class="example-he" dir="rtl">"${escapeHTML(item.hebrewExample)}"</p>
+              ${item.transliteration ? `<p class="example-translit" dir="ltr">${escapeHTML(item.transliteration)}</p>` : ''}
+              ${item.englishExampleTranslation ? `<p class="example-en" dir="ltr">"${escapeHTML(item.englishExampleTranslation)}"</p>` : ''}
+            </div>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  function highlightActiveCard(index) {
     activeTermIndex = index;
-    const item = glossary[index];
-
-    // Highlight active card in explorer sidebar
     const cards = termsList.querySelectorAll('.glossary-card');
     cards.forEach(c => {
       const cid = parseInt(c.getAttribute('data-id'), 10);
       if (cid === index) {
         c.classList.add('selected');
-        // Ensure card is visible in the sidebar list when navigating by keyboard
+        // Ensure card is visible in the sidebar list when navigating
         c.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } else {
         c.classList.remove('selected');
       }
     });
+    
+    const item = glossary[index];
+    if (item) {
+      const url = new URL(window.location);
+      url.searchParams.set('term', item.englishTerm);
+      window.history.replaceState({}, '', url);
+    }
+  }
 
-    // Render detail block dynamically
-    const dynamicView = document.getElementById('dynamic-detail-view');
-    if (dynamicView) {
-      dynamicView.innerHTML = `
-      <div class="detail-block active" data-id="${index}" data-category="${escapeHTML(item.category)}" data-complexity="${escapeHTML(item.complexity)}">
-        <div class="detail-header-section">
-          <div class="detail-meta">
-            <div class="detail-tags">
-              <span class="detail-category-tag">${escapeHTML(item.category)}</span>
-              <span class="detail-origin-tag ${item.isNative ? 'tag-native' : 'tag-heblish'}">${item.isNative ? 'Native' : 'Heblish'}</span>
-              <span class="detail-complexity-tag tag-${item.complexity.toLowerCase()}">${getComplexityLabel(item.complexity)}</span>
-            </div>
-            <button class="action-btn share-permalink-btn" data-term="${escapeHTML(item.englishTerm)}" title="Copy shareable link">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-              <span>העתק קישור</span>
-            </button>
-          </div>
-          
-          <div class="active-term-group" dir="ltr">
-            <h2 class="active-term-title">
-              <span class="active-term-he" dir="rtl">${escapeHTML(item.hebrewTerm)}</span>
-              <span class="active-term-en">${escapeHTML(item.englishTerm)}</span>
-            </h2>
-            <p class="active-term-definition">${escapeHTML(item.englishDefinition)}</p>
-          </div>
-        </div>
+  function selectTerm(index, triggerVirtualScroll = true) {
+    if (index < 0 || index >= glossary.length) return;
+    
+    const card = termsList.querySelector(`.glossary-card[data-id="${index}"]`);
+    if (!card || card.classList.contains('hidden')) return;
 
-        <div class="detail-body-section">
-          ${item.hebrewExample ? `
-            <div class="section-block">
-              <h4 class="section-title">USAGE EXAMPLE // דוגמת שימוש</h4>
-              <div class="context-usage">
-                <p class="example-he" dir="rtl">"${escapeHTML(item.hebrewExample)}"</p>
-                ${item.transliteration ? `<p class="example-translit" dir="ltr">${escapeHTML(item.transliteration)}</p>` : ''}
-                ${item.englishExampleTranslation ? `<p class="example-en" dir="ltr">"${escapeHTML(item.englishExampleTranslation)}"</p>` : ''}
-              </div>
-            </div>
-          ` : ''}
-        </div>
-      </div>
-      `;
-      // Scroll the details pane back to top for the new term
-      detailScrollContainer.scrollTop = 0;
+    highlightActiveCard(index);
+
+    if (triggerVirtualScroll && virtualizer) {
+      const vIndex = visibleIndices.indexOf(index);
+      if (vIndex !== -1) {
+        isScrollingProgrammatically = true;
+        virtualizer.scrollToIndex(vIndex, { align: 'start', behavior: 'smooth' });
+        
+        // Reset flag after expected scroll duration
+        setTimeout(() => {
+          isScrollingProgrammatically = false;
+        }, 700);
+      }
     }
 
     // Slide in details pane on mobile
     detailPane.classList.add('mobile-active');
-
-    // Update URL parameters
-    const url = new URL(window.location);
-    url.searchParams.set('term', item.englishTerm);
-    window.history.replaceState({}, '', url);
   }
 
   function updateStats() {
@@ -244,49 +362,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Keyboard & Arrow Key Navigation ---
-  function getVisibleIndices() {
-    const visible = [];
-    const cards = termsList.querySelectorAll('.glossary-card');
-    cards.forEach(card => {
-      if (!card.classList.contains('hidden')) {
-        visible.push(parseInt(card.getAttribute('data-id'), 10));
-      }
-    });
-    return visible;
-  }
-
   function navigateToNextTerm() {
-    const visible = getVisibleIndices();
-    if (visible.length === 0) return;
+    if (visibleIndices.length === 0) return;
     
-    let nextIdx = visible[0];
-    const currentPos = visible.indexOf(activeTermIndex);
-    if (currentPos !== -1 && currentPos + 1 < visible.length) {
-      nextIdx = visible[currentPos + 1];
+    let nextIdx = visibleIndices[0];
+    const currentPos = visibleIndices.indexOf(activeTermIndex);
+    if (currentPos !== -1 && currentPos + 1 < visibleIndices.length) {
+      nextIdx = visibleIndices[currentPos + 1];
     }
     selectTerm(nextIdx, true);
   }
 
   function navigateToPrevTerm() {
-    const visible = getVisibleIndices();
-    if (visible.length === 0) return;
+    if (visibleIndices.length === 0) return;
     
-    let prevIdx = visible[visible.length - 1];
-    const currentPos = visible.indexOf(activeTermIndex);
-    if (currentPos !== -1 && currentPos - 1 >= 0) {
-      prevIdx = visible[currentPos - 1];
+    let prevIdx = visibleIndices[visibleIndices.length - 1];
+    const currentPos = visibleIndices.indexOf(activeTermIndex);
+    if (currentPos > 0) {
+      prevIdx = visibleIndices[currentPos - 1];
     }
     selectTerm(prevIdx, true);
   }
 
   window.addEventListener('keydown', (e) => {
-    // Escape closes modal
     if (e.key === 'Escape') {
       closeCommander();
       return;
     }
     
-    // '/' or 'Cmd+K' to search / open commander
     if ((e.key === '/' && document.activeElement !== searchInput && document.activeElement !== commanderInput) || 
         (e.key === 'k' && (e.metaKey || e.ctrlKey))) {
       e.preventDefault();
@@ -294,7 +397,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Arrow navigation
     if (commanderModal.classList.contains('hidden') && document.activeElement !== searchInput) {
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         e.preventDefault();
@@ -320,10 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   function handleSwipe() {
-    // Only execute on mobile screens and when detail pane is NOT active
     if (window.innerWidth > 860 || detailPane.classList.contains('mobile-active')) return;
 
-    const threshold = 60; // Minimum swipe distance
+    const threshold = 60; 
     const diffX = touchEndX - touchStartX;
 
     if (Math.abs(diffX) < threshold) return;
@@ -333,14 +434,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (currentIndex === -1) return;
 
-    // In RTL, swiping right (diffX > 0) reveals items to the left (next index)
     if (diffX > 0) {
       if (currentIndex < badges.length - 1) {
         badges[currentIndex + 1].click();
         badges[currentIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       }
     } else {
-      // Swiping left (diffX < 0)
       if (currentIndex > 0) {
         badges[currentIndex - 1].click();
         badges[currentIndex - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -350,13 +449,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Event Listeners ---
 
-  // Search input change
   searchInput.addEventListener('input', (e) => {
     searchQuery = e.target.value;
     updateListVisibility();
   });
 
-  // Category Badge Click
   categoryBadges.forEach(badge => {
     badge.addEventListener('click', () => {
       categoryBadges.forEach(b => b.classList.remove('active'));
@@ -366,7 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Complexity Badge Click
   if (complexityBadges) {
     complexityBadges.forEach(badge => {
       badge.addEventListener('click', () => {
@@ -378,7 +474,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sidebar Explorer Cards Click
   termsList.addEventListener('click', (e) => {
     const card = e.target.closest('.glossary-card');
     if (!card) return;
@@ -386,12 +481,11 @@ document.addEventListener('DOMContentLoaded', () => {
     selectTerm(idx, true);
   });
 
-  // Mobile Back Button
   mobileBackBtn.addEventListener('click', () => {
     detailPane.classList.remove('mobile-active');
   });
 
-  // Copy Permalink functionality (Delegated for dynamically lists)
+  // Delegated Copy Permalink
   detailScrollContainer.addEventListener('click', (e) => {
     const shareBtn = e.target.closest('.share-permalink-btn');
     if (!shareBtn) return;
@@ -524,7 +618,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Default select first item
     if (glossary.length > 0) {
-      selectTerm(0, false); // highlight but don't force smooth scroll on load
+      selectTerm(0, false); 
     }
   }
-});

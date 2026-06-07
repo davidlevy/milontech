@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="scroll" style="height: 500px; overflow: auto;">
+  <div id="inner" style="height: 5000px;"></div>
+</div>
+<script type="module">
+  import { Virtualizer, elementScroll, observeElementRect, observeElementOffset } from "https://esm.sh/@tanstack/virtual-core@3";
+  
+  const scroll = document.getElementById('scroll');
+  const virtualizer = new Virtualizer({
+    count: 100,
+    getScrollElement: () => scroll,
+    estimateSize: () => 50,
+    scrollToFn: elementScroll,
+    observeElementRect: observeElementRect,
+    observeElementOffset: observeElementOffset,
+    initialRect: { width: 800, height: 500 }
+  });
+  virtualizer._didMount();
+  console.log('items with initialRect:', virtualizer.getVirtualItems().length);
+</script>
+</body>
+</html>

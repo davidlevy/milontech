@@ -4,32 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MilonTech High-Tech Glossary | מילון מונחי הייטק בעברית</title>
+  <title>milon.tech High-Tech Glossary | מילון מונחי הייטק בעברית</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
+    content="milon.tech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
   <meta name="keywords"
-    content="MilonTech, הייטק, סלנג הייטק, מילון הייטק, AI, בינה מלאכותית, פיתוח תוכנה, Heblish, Israeli tech, Start-Up Nation, High-Tech Slang">
+    content="milon.tech, הייטק, סלנג הייטק, מילון הייטק, AI, בינה מלאכותית, פיתוח תוכנה, Heblish, Israeli tech, Start-Up Nation, High-Tech Slang">
   <meta name="author" content="David Levy">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://milontech.vercel.app/">
-  <meta property="og:title" content="MilonTech | Your Heblish Israeli High Tech Kit">
+  <meta property="og:title" content="milon.tech - Israeli High-Tech Dictionary" />
   <meta property="og:description"
-    content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
+    content="milon.tech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
   <meta property="og:image" content="https://milontech.vercel.app/assets/images/og-image.png">
-  <meta property="og:site_name" content="MilonTech">
+  <meta property="og:site_name" content="milon.tech">
   <meta property="og:locale" content="he_IL">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://milontech.vercel.app/">
-  <meta property="twitter:title" content="MilonTech | Your Heblish Israeli High Tech Kit">
+  <meta property="twitter:title" content="milon.tech | Your Heblish Israeli High Tech Kit">
   <meta property="twitter:description"
-    content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
+    content="milon.tech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
   <meta property="twitter:image" content="https://milontech.vercel.app/assets/images/og-image.png">
   <meta property="twitter:creator" content="@davidlevy">
 
@@ -165,8 +165,8 @@
         </button>
 
         <div class="detail-scroll-container" id="detail-scroll-container">
-          <div id="dynamic-detail-view">
-            <!-- Dynamic term details will be rendered here by JS -->
+          <div id="virtual-list-inner" style="position: relative; width: 100%;">
+            <!-- Virtualized list items will be injected here -->
           </div>
         </div>
       </section>
@@ -199,7 +199,7 @@
   </script>
 
   <!-- Main Scripts -->
-  <script src="assets/js/main.js?v=9"></script>
+  <script type="module" src="assets/js/main.js?v=11"></script>
 </body>
 
 </html>

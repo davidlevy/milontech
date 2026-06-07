@@ -15,5 +15,8 @@
     "static-site-generator"
   ],
   "author": "Antigravity",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^24.43.1"
+  }
 }
