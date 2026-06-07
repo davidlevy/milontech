@@ -51,7 +51,7 @@ function initVirtualizer() {
   virtualizer = new Virtualizer({
     count: visibleIndices.length,
     getScrollElement: () => detailScrollContainer,
-    estimateSize: () => 350,
+    estimateSize: () => 150,
     overscan: 5,
     initialRect: { width: rect.width || 800, height: rect.height || 600 },
     scrollToFn: elementScroll,
@@ -66,9 +66,19 @@ function initVirtualizer() {
   // In Vanilla JS, we MUST call the internal _didMount to attach the observers!
   virtualizer._didMount();
 
-    // Force an initial render manually since no scroll event has fired
-    renderVirtualItems(virtualizer);
-  }
+  // Workaround for TanStack Virtual Core v3 Vanilla JS bug where onChange does not fire on scroll:
+  detailScrollContainer.addEventListener('scroll', () => {
+    if (virtualizer) {
+      // Manually update internal state and force render
+      virtualizer.scrollOffset = detailScrollContainer.scrollTop;
+      renderVirtualItems(virtualizer);
+      updateScrollspy(virtualizer);
+    }
+  }, { passive: true });
+
+  // Force an initial render manually since no scroll event has fired
+  renderVirtualItems(virtualizer);
+}
 
   function updateScrollspy(instance) {
     if (isScrollingProgrammatically) return;
@@ -122,6 +132,8 @@ function initVirtualizer() {
       node.style.position = 'absolute';
       node.style.top = 0;
       node.style.left = 0;
+      node.style.right = 0;
+      node.style.margin = '0 auto';
       node.style.width = '100%';
       node.style.transform = `translateY(${virtualItem.start}px)`;
 
@@ -196,7 +208,7 @@ function initVirtualizer() {
       virtualizer.setOptions({
         count: visibleIndices.length,
         getScrollElement: () => detailScrollContainer,
-        estimateSize: () => 350,
+        estimateSize: () => 150,
         overscan: 5,
         initialRect: { width: rect.width || 800, height: rect.height || 600 },
         scrollToFn: elementScroll,
