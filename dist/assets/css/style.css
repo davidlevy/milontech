@@ -537,7 +537,7 @@ html, body {
 
 .active-term-he {
   font-family: var(--font-hebrew);
-  font-size: 64px;
+  font-size: 52px;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -546,7 +546,7 @@ html, body {
 
 .active-term-en {
   font-family: var(--font-sans);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text-accent);
 }
@@ -616,7 +616,7 @@ html, body {
 
 .example-he {
   font-family: var(--font-hebrew);
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 800;
   color: var(--text-primary);
   line-height: 1.4;
@@ -624,14 +624,14 @@ html, body {
 
 .example-translit {
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: 20px;
   color: var(--text-secondary);
   direction: ltr;
 }
 
 .example-en {
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-muted);
   direction: ltr;
   font-style: italic;
@@ -838,12 +838,24 @@ html, body {
   }
   
   .active-term-he {
-    font-size: 40px;
+    font-size: 36px;
+  }
+  
+  .active-term-en {
+    font-size: 24px;
   }
   
   .active-term-definition {
     font-size: 18px;
     margin-top: 12px;
+  }
+  
+  .example-he {
+    font-size: 28px;
+  }
+  
+  .example-en {
+    font-size: 20px;
   }
 }
 
