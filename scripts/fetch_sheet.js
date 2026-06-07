@@ -58,7 +58,8 @@ function parseCSV(csvContent) {
       hebrewExample,
       transliteration,
       englishExampleTranslation,
-      isNative
+      isNative,
+      complexity
     ] = columns;
 
     // Skip headers or empty rows
@@ -73,7 +74,8 @@ function parseCSV(csvContent) {
       hebrewExample: hebrewExample || '',
       transliteration: transliteration || '',
       englishExampleTranslation: englishExampleTranslation || '',
-      isNative: isNative === 'TRUE'
+      isNative: isNative === 'TRUE',
+      complexity: complexity || 'Medium'
     });
   }
 
@@ -86,6 +88,7 @@ function fetchSheet(url = SHEET_URL) {
       // Follow HTTP redirects
       if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
         console.log(`Following redirect to: ${res.headers.location}`);
+        res.resume(); // Clear the buffer to prevent Node.js socket hang
         fetchSheet(res.headers.location).then(resolve).catch(reject);
         return;
       }
