@@ -74,53 +74,9 @@ function generateHTML(glossary, template) {
     })
     .join('\n');
 
-  // Pre-render continuous detailed blocks for the main workspace pane
-  const detailsHtml = glossary
-    .map((item, index) => {
-      return `
-      <div class="detail-block" id="detail-term-${index}" data-id="${index}" data-category="${escape(item.category)}" data-complexity="${escape(item.complexity)}">
-        <div class="detail-header-section">
-          <div class="detail-meta">
-            <div class="detail-tags">
-              <span class="detail-category-tag">${escape(item.category)}</span>
-              <span class="detail-origin-tag ${item.isNative ? 'tag-native' : 'tag-heblish'}">${item.isNative ? 'Native' : 'Heblish'}</span>
-              <span class="detail-complexity-tag tag-${item.complexity.toLowerCase()}">${getComplexityLabel(item.complexity)}</span>
-            </div>
-            <button class="action-btn share-permalink-btn" data-term="${escape(item.englishTerm)}" title="Copy shareable link">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-              <span>העתק קישור</span>
-            </button>
-          </div>
-          
-          <div class="active-term-group" dir="ltr">
-            <h2 class="active-term-title">
-              <span class="active-term-he" dir="rtl">${escape(item.hebrewTerm)}</span>
-              <span class="active-term-en">${escape(item.englishTerm)}</span>
-            </h2>
-            <p class="active-term-definition">${escape(item.englishDefinition)}</p>
-          </div>
-        </div>
-
-        <div class="detail-body-section">
-          ${item.hebrewExample ? `
-            <div class="section-block">
-              <h4 class="section-title">USAGE EXAMPLE // דוגמת שימוש</h4>
-              <div class="context-usage">
-                <p class="example-he" dir="rtl">"${escape(item.hebrewExample)}"</p>
-                ${item.transliteration ? `<p class="example-translit" dir="ltr">${escape(item.transliteration)}</p>` : ''}
-                ${item.englishExampleTranslation ? `<p class="example-en" dir="ltr">"${escape(item.englishExampleTranslation)}"</p>` : ''}
-              </div>
-            </div>
-          ` : ''}
-        </div>
-      </div>`;
-    })
-    .join('\n');
-
   // Inject variables into template
   let output = template;
   output = output.replace('{{GLOSSARY_ITEMS}}', cardsHtml);
-  output = output.replace('{{GLOSSARY_DETAILS}}', detailsHtml);
   output = output.replace('{{CATEGORY_BADGES}}', categoryBadgesHtml);
   
   // Inject the raw JSON database so frontend JS has access to it for search/filter and interactive features

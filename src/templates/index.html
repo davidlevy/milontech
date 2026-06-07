@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MilonTech High-Tech Glossary | מילון מונחי הייטק בעברית</title>
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
-  <meta name="keywords" content="MilonTech, הייטק, סלנג הייטק, מילון הייטק, AI, בינה מלאכותית, פיתוח תוכנה, Heblish, Israeli tech, Start-Up Nation, High-Tech Slang">
+  <meta name="description"
+    content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
+  <meta name="keywords"
+    content="MilonTech, הייטק, סלנג הייטק, מילון הייטק, AI, בינה מלאכותית, פיתוח תוכנה, Heblish, Israeli tech, Start-Up Nation, High-Tech Slang">
   <meta name="author" content="David Levy">
   <meta name="robots" content="index, follow">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://milontech.vercel.app/">
   <meta property="og:title" content="MilonTech | Your Heblish Israeli High Tech Kit">
-  <meta property="og:description" content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
+  <meta property="og:description"
+    content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
   <meta property="og:image" content="https://milontech.vercel.app/assets/images/og-image.png">
   <meta property="og:site_name" content="MilonTech">
   <meta property="og:locale" content="he_IL">
-  
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://milontech.vercel.app/">
   <meta property="twitter:title" content="MilonTech | Your Heblish Israeli High Tech Kit">
-  <meta property="twitter:description" content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
+  <meta property="twitter:description"
+    content="MilonTech - The ultimate Heblish Israeli High-Tech Glossary. Your complete dictionary for modern Israeli tech slang, AI terminology, and software engineering jargon.">
   <meta property="twitter:image" content="https://milontech.vercel.app/assets/images/og-image.png">
   <meta property="twitter:creator" content="@davidlevy">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
+
 <body class="dark-mode">
   <div class="app-container">
-    
+
     <!-- Top Header -->
     <header class="app-header">
       <div class="header-branding" dir="ltr">
         <div class="header-logo-row">
-          <span class="logo-text">MILONTECH.</span>
-          <span class="logo-tag">v2026.1</span>
+          <span class="logo-text">milon.tech</span>
+          <!-- <span class="logo-tag">v2026.1</span> -->
           <div class="credits-wrapper">
-            <svg class="info-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <svg class="info-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
             <div class="credits-tooltip">
               <p>Made with ☀️ from Raanana</p>
               <p>by <a href="https://github.com/davidlevy" target="_blank">@davidlevy</a></p>
@@ -55,16 +68,20 @@
         </div>
         <div class="header-subtitle">Your Heblish Israeli High Tech Kit</div>
       </div>
-      
+
       <!-- Top Header Search Bar -->
       <div class="top-search-container">
         <div class="search-box">
-          <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
           <input type="text" id="search-input" placeholder="חפש מונח... (Press / or ⌘K)" dir="rtl">
           <kbd class="kbd-hint">/</kbd>
         </div>
       </div>
-      
+
       <div class="header-actions">
         <!-- Stats Board -->
         <div class="stats-board">
@@ -80,26 +97,39 @@
         </div>
         <!-- Suggest Edit Button -->
         <a href="#" class="suggest-btn" id="suggest-btn" aria-label="Suggest Modification">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
           <span>Suggest Edit</span>
         </a>
-        
+
         <!-- GitHub Star -->
         <div class="gh-star-wrapper-header">
-          <iframe src="https://ghbtns.com/github-btn.html?user=davidlevy&repo=milontech&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=davidlevy&repo=milontech&type=star&count=true&size=large"
+            frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
         </div>
-        
+
         <!-- Theme Switcher -->
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
-          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
-          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+            </path>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
         </button>
       </div>
     </header>
 
     <!-- Main Workspace -->
     <main class="app-workspace">
-      
+
       <!-- Left Sidebar: Explorer Pane -->
       <section class="explorer-pane">
 
@@ -128,12 +158,16 @@
       <section class="detail-pane" id="detail-pane">
         <!-- Close button for mobile views -->
         <button class="mobile-back-btn" id="mobile-back-btn" aria-label="חזרה לרשימה">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
           <span>חזרה</span>
         </button>
 
         <div class="detail-scroll-container" id="detail-scroll-container">
-          {{GLOSSARY_DETAILS}}
+          <div id="dynamic-detail-view">
+            <!-- Dynamic term details will be rendered here by JS -->
+          </div>
         </div>
       </section>
     </main>
@@ -142,7 +176,10 @@
     <div class="commander-overlay hidden" id="commander-modal">
       <div class="commander-dialog">
         <div class="commander-header">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
           <input type="text" id="commander-input" placeholder="סוג מונח לחיפוש מהיר..." dir="rtl">
           <kbd class="kbd-hint">ESC</kbd>
         </div>
@@ -162,6 +199,7 @@
   </script>
 
   <!-- Main Scripts -->
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/main.js?v=9"></script>
 </body>
+
 </html>

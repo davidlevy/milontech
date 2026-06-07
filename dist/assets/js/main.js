@@ -108,82 +108,99 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function selectTerm(index, triggerScroll = true) {
+  // Helper to escape HTML to prevent XSS
+  function escapeHTML(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function getComplexityLabel(comp) {
+    if (comp === 'Low') return 'קל';
+    if (comp === 'High') return 'מורכב';
+    return 'בינוני';
+  }
+
+  function selectTerm(index) {
     if (index < 0 || index >= glossary.length) return;
     
     // Guard against selecting hidden elements
-    const block = document.getElementById(`detail-term-${index}`);
-    if (!block || block.classList.contains('hidden')) return;
+    const card = termsList.querySelector(`.glossary-card[data-id="${index}"]`);
+    if (!card || card.classList.contains('hidden')) return;
 
     activeTermIndex = index;
+    const item = glossary[index];
 
     // Highlight active card in explorer sidebar
     const cards = termsList.querySelectorAll('.glossary-card');
-    cards.forEach(card => {
-      const cid = parseInt(card.getAttribute('data-id'), 10);
+    cards.forEach(c => {
+      const cid = parseInt(c.getAttribute('data-id'), 10);
       if (cid === index) {
-        card.classList.add('selected');
+        c.classList.add('selected');
+        // Ensure card is visible in the sidebar list when navigating by keyboard
+        c.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } else {
-        card.classList.remove('selected');
+        c.classList.remove('selected');
       }
     });
 
-    // Highlight active block in details pane
-    const blocks = detailScrollContainer.querySelectorAll('.detail-block');
-    blocks.forEach(b => {
-      const bid = parseInt(b.getAttribute('data-id'), 10);
-      if (bid === index) {
-        b.classList.add('active');
-      } else {
-        b.classList.remove('active');
-      }
-    });
+    // Render detail block dynamically
+    const dynamicView = document.getElementById('dynamic-detail-view');
+    if (dynamicView) {
+      dynamicView.innerHTML = `
+      <div class="detail-block active" data-id="${index}" data-category="${escapeHTML(item.category)}" data-complexity="${escapeHTML(item.complexity)}">
+        <div class="detail-header-section">
+          <div class="detail-meta">
+            <div class="detail-tags">
+              <span class="detail-category-tag">${escapeHTML(item.category)}</span>
+              <span class="detail-origin-tag ${item.isNative ? 'tag-native' : 'tag-heblish'}">${item.isNative ? 'Native' : 'Heblish'}</span>
+              <span class="detail-complexity-tag tag-${item.complexity.toLowerCase()}">${getComplexityLabel(item.complexity)}</span>
+            </div>
+            <button class="action-btn share-permalink-btn" data-term="${escapeHTML(item.englishTerm)}" title="Copy shareable link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              <span>העתק קישור</span>
+            </button>
+          </div>
+          
+          <div class="active-term-group" dir="ltr">
+            <h2 class="active-term-title">
+              <span class="active-term-he" dir="rtl">${escapeHTML(item.hebrewTerm)}</span>
+              <span class="active-term-en">${escapeHTML(item.englishTerm)}</span>
+            </h2>
+            <p class="active-term-definition">${escapeHTML(item.englishDefinition)}</p>
+          </div>
+        </div>
 
-    // Smoothly scroll the selected block to top of container
-    if (triggerScroll && block) {
-      isScrollingProgrammatically = true;
-      block.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Reset flag after transition finishes
-      setTimeout(() => {
-        isScrollingProgrammatically = false;
-      }, 700);
+        <div class="detail-body-section">
+          ${item.hebrewExample ? `
+            <div class="section-block">
+              <h4 class="section-title">USAGE EXAMPLE // דוגמת שימוש</h4>
+              <div class="context-usage">
+                <p class="example-he" dir="rtl">"${escapeHTML(item.hebrewExample)}"</p>
+                ${item.transliteration ? `<p class="example-translit" dir="ltr">${escapeHTML(item.transliteration)}</p>` : ''}
+                ${item.englishExampleTranslation ? `<p class="example-en" dir="ltr">"${escapeHTML(item.englishExampleTranslation)}"</p>` : ''}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+      `;
+      // Scroll the details pane back to top for the new term
+      detailScrollContainer.scrollTop = 0;
     }
 
     // Slide in details pane on mobile
     detailPane.classList.add('mobile-active');
 
     // Update URL parameters
-    const item = glossary[index];
-    if (item) {
-      const url = new URL(window.location);
-      url.searchParams.set('term', item.englishTerm);
-      window.history.replaceState({}, '', url);
-    }
+    const url = new URL(window.location);
+    url.searchParams.set('term', item.englishTerm);
+    window.history.replaceState({}, '', url);
   }
-
-  // --- Scrollspy Handler ---
-  const scrollspyOptions = {
-    root: detailScrollContainer,
-    rootMargin: '-10px 0px -80% 0px',
-    threshold: 0
-  };
-
-  const scrollspyObserver = new IntersectionObserver((entries) => {
-    if (isScrollingProgrammatically) return;
-
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const idx = parseInt(entry.target.getAttribute('data-id'), 10);
-        if (idx !== activeTermIndex) {
-          selectTerm(idx, false);
-        }
-      }
-    });
-  }, scrollspyOptions);
-
-  // Observe all detail blocks
-  const detailBlocks = document.querySelectorAll('.detail-block');
-  detailBlocks.forEach(block => scrollspyObserver.observe(block));
 
   function updateStats() {
     statCount.textContent = glossary.length;
@@ -229,10 +246,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Keyboard & Arrow Key Navigation ---
   function getVisibleIndices() {
     const visible = [];
-    const blocks = detailScrollContainer.querySelectorAll('.detail-block');
-    blocks.forEach(block => {
-      if (!block.classList.contains('hidden')) {
-        visible.push(parseInt(block.getAttribute('data-id'), 10));
+    const cards = termsList.querySelectorAll('.glossary-card');
+    cards.forEach(card => {
+      if (!card.classList.contains('hidden')) {
+        visible.push(parseInt(card.getAttribute('data-id'), 10));
       }
     });
     return visible;
