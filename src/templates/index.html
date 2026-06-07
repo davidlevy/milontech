@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heblish High-Tech Glossary | מילון מונחי הייטק בעברית</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="מילון מונחי הייטק ובינה מלאכותית מודרני - עברית, אנגלית ותרגום פונטי. כל הסלנג של עולם הטכנולוגיה במקום אחד.">
+  <meta name="keywords" content="Heblish, הייטק, סלנג הייטק, מילון הייטק, AI, בינה מלאכותית, פיתוח תוכנה, ג׳ירה, גיט, פרומפט">
+  <meta name="author" content="Antigravity">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Heblish High-Tech Glossary | מילון מונחי הייטק">
+  <meta property="og:description" content="מילון מונחי הייטק ובינה מלאכותית מודרני - עברית, אנגלית ותרגום פונטי.">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark-mode">
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <span class="logo-text">HEBLISH.</span>
+        <span class="logo-tag">v2026.1</span>
+      </div>
+      
+      <!-- Top Header Search Bar -->
+      <div class="top-search-container">
+        <div class="search-box">
+          <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input type="text" id="search-input" placeholder="חפש מונח... (Press / or ⌘K)" dir="rtl">
+          <kbd class="kbd-hint">/</kbd>
+        </div>
+      </div>
+      
+      <!-- Stats Board -->
+      <div class="stats-board">
+        <div class="stat-item">
+          <span class="stat-label">TERMS</span>
+          <span class="stat-value" id="stat-count">0</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-label">CATEGORIES</span>
+          <span class="stat-value" id="stat-categories">0</span>
+        </div>
+      </div>
+      
+      <!-- Theme Switcher -->
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+      </button>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="app-workspace">
+      
+      <!-- Left Sidebar: Explorer Pane -->
+      <section class="explorer-pane">
+
+        <!-- Filter Badges Pane -->
+        <div class="filters-pane" dir="rtl">
+          <button class="category-badge active" data-category="all">הכל</button>
+          {{CATEGORY_BADGES}}
+        </div>
+
+        <!-- Terms List -->
+        <div class="terms-list-container" dir="rtl">
+          <div class="terms-list" id="terms-list">
+            <!-- Server-rendered fallback lists for SEO -->
+            {{GLOSSARY_ITEMS}}
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Panel: Editor/Workspace Detail Pane -->
+      <section class="detail-pane" id="detail-pane">
+        <!-- Close button for mobile views -->
+        <button class="mobile-back-btn" id="mobile-back-btn" aria-label="חזרה לרשימה">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg>
+          <span>חזרה</span>
+        </button>
+
+        <div class="detail-scroll-container" id="detail-scroll-container">
+          {{GLOSSARY_DETAILS}}
+        </div>
+      </section>
+    </main>
+
+    <!-- Commander Overlay (CMD+K / Search Command Palette) -->
+    <div class="commander-overlay hidden" id="commander-modal">
+      <div class="commander-dialog">
+        <div class="commander-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input type="text" id="commander-input" placeholder="סוג מונח לחיפוש מהיר..." dir="rtl">
+          <kbd class="kbd-hint">ESC</kbd>
+        </div>
+        <div class="commander-results" id="commander-results">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Clipboard Alert -->
+    <div class="toast hidden" id="toast">הקישור הועתק ללוח!</div>
+  </div>
+
+  <!-- Embed JSON DB from static generator -->
+  <script id="glossary-db" type="application/json">
+    {{GLOSSARY_JSON_DB}}
+  </script>
+
+  <!-- Main Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

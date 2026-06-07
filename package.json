@@ -1,0 +1,19 @@
+{
+  "name": "hebrew-hightech-kit",
+  "version": "1.0.0",
+  "description": "Super sleek monochrome static website showing Heblish high-tech glossary.",
+  "main": "scripts/generate.js",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch_sheet.js",
+    "build": "node scripts/generate.js",
+    "dev": "npx -y http-server dist -p 3000"
+  },
+  "keywords": [
+    "heblish",
+    "glossary",
+    "static-site-generator"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
