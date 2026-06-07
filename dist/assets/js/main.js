@@ -41,6 +41,7 @@ let searchQuery = '';
 let activeTermIndex = -1;
 let firstVisibleIndex = -1;
 let isScrollingProgrammatically = false;
+let virtualizer = null;
 
 // Custom ResizeObserver to bypass TanStack Vanilla JS onChange bugs on Safari
 // This forces the UI to update immediately when items are measured to their true sizes.
@@ -54,10 +55,16 @@ const itemResizeObserver = new ResizeObserver(() => {
   }
 });
 
+function customElementScroll(offset, canAnimate, instance) {
+  console.log("customElementScroll called with offset:", offset);
+  if (detailScrollContainer) {
+    detailScrollContainer.scrollTo({ top: offset, behavior: canAnimate ? 'smooth' : 'auto' });
+  }
+}
+
 // --- Virtual List Setup ---
 let visibleIndices = Array.from({ length: glossary.length }, (_, i) => i);
 let renderedNodes = {};
-let virtualizer = null;
 
 function initVirtualizer() {
   const rect = detailScrollContainer.getBoundingClientRect();
@@ -67,7 +74,7 @@ function initVirtualizer() {
     estimateSize: () => 150,
     overscan: 5,
     initialRect: { width: rect.width || 800, height: rect.height || 600 },
-    scrollToFn: elementScroll,
+    scrollToFn: customElementScroll,
     observeElementRect: observeElementRect,
     observeElementOffset: observeElementOffset,
     onChange: (instance) => {
@@ -240,7 +247,7 @@ function initVirtualizer() {
         estimateSize: () => 150,
         overscan: 5,
         initialRect: { width: rect.width || 800, height: rect.height || 600 },
-        scrollToFn: elementScroll,
+        scrollToFn: customElementScroll,
         observeElementRect: observeElementRect,
         observeElementOffset: observeElementOffset,
         onChange: (instance) => {
@@ -339,6 +346,7 @@ function initVirtualizer() {
   }
 
   function selectTerm(index, triggerVirtualScroll = true) {
+    console.log("selectTerm called with index:", index, triggerVirtualScroll);
     if (index < 0 || index >= glossary.length) return;
     
     const card = termsList.querySelector(`.glossary-card[data-id="${index}"]`);
@@ -350,9 +358,15 @@ function initVirtualizer() {
       const vIndex = visibleIndices.indexOf(index);
       if (vIndex !== -1) {
         isScrollingProgrammatically = true;
-        virtualizer.scrollToIndex(vIndex, { align: 'start', behavior: 'smooth' });
         
-        // Reset flag after expected scroll duration
+        try {
+          const offset = virtualizer.getOffsetForIndex(vIndex, 'start');
+          const topOffset = Array.isArray(offset) ? offset[0] : offset;
+          detailScrollContainer.scrollTo({ top: topOffset, behavior: 'smooth' });
+        } catch (err) {
+          console.error("selectTerm error:", err);
+        }
+        
         setTimeout(() => {
           isScrollingProgrammatically = false;
         }, 700);
@@ -654,7 +668,7 @@ function initVirtualizer() {
     if (termQuery) {
       const index = glossary.findIndex(item => item.englishTerm.toLowerCase() === termQuery.toLowerCase());
       if (index !== -1) {
-        selectTerm(index, true);
+        setTimeout(() => selectTerm(index, true), 100);
         return;
       }
     }

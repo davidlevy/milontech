@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
 const DATA_PATH = path.resolve('data/glossary.json');
 const TEMPLATE_PATH = path.resolve('src/templates/index.html');
@@ -112,6 +113,37 @@ function main() {
   const htmlContent = generateHTML(glossary, template);
   fs.writeFileSync(path.join(DIST_PATH, 'index.html'), htmlContent, 'utf8');
   console.log('Successfully generated index.html');
+
+  // Copy glossary.json to dist
+  const distJsonPath = path.join(DIST_PATH, 'glossary.json');
+  fs.copyFileSync(DATA_PATH, distJsonPath);
+  console.log('Successfully copied glossary.json to dist');
+
+  // Generate TOON format using @toon-format/cli
+  try {
+    console.log('Generating TOON format...');
+    const distToonPath = path.join(DIST_PATH, 'glossary.toon');
+    execSync(`npx -y @toon-format/cli "${DATA_PATH}" -o "${distToonPath}"`);
+    console.log('Successfully generated glossary.toon');
+  } catch (error) {
+    console.error('Error generating TOON format:', error.message);
+  }
+
+  // Generate llms.txt
+  const llmsTxtPath = path.join(DIST_PATH, 'llms.txt');
+  const llmsTxtContent = `# Milontech - The Heblish Glossary
+
+This project documents the unique Hebrew-English slang used in the Israeli High-Tech industry.
+
+## Data Access
+You can access the full structured glossary data in the highly efficient TOON format:
+- [Glossary TOON](/glossary.toon)
+
+Alternatively, the raw JSON is available:
+- [Glossary JSON](/glossary.json)
+`;
+  fs.writeFileSync(llmsTxtPath, llmsTxtContent, 'utf8');
+  console.log('Successfully generated llms.txt');
 
   // Copy assets
   const srcAssetsPath = path.resolve('src/assets');
