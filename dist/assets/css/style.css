@@ -161,8 +161,8 @@ html, body {
 .credits-tooltip {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  right: -8px;
+  transform: translateY(8px);
   background-color: var(--text-primary);
   color: var(--bg-app);
   padding: 12px 16px;
@@ -187,7 +187,7 @@ html, body {
 .credits-wrapper:focus-within .credits-tooltip {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(12px);
+  transform: translateY(12px);
   pointer-events: auto;
 }
 
@@ -195,8 +195,7 @@ html, body {
   content: '';
   position: absolute;
   top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 12px;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-bottom: 6px solid var(--text-primary);
