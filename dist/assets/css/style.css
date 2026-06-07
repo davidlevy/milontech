@@ -533,7 +533,7 @@ html, body {
   font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-accent);
   direction: ltr;
 }
 
@@ -541,7 +541,7 @@ html, body {
   font-family: var(--font-hebrew);
   font-weight: 800;
   font-size: 16px;
-  color: var(--text-accent);
+  color: var(--text-primary);
 }
 
 .term-def-preview {
