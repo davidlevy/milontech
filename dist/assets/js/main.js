@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
   const termsList = document.getElementById('terms-list');
   const categoryBadges = document.querySelectorAll('.category-badge');
+  const complexityBadges = document.querySelectorAll('.complexity-badge');
   const detailPane = document.getElementById('detail-pane');
   const detailScrollContainer = document.getElementById('detail-scroll-container');
   const mobileBackBtn = document.getElementById('mobile-back-btn');
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toast = document.getElementById('toast');
 
   let activeCategory = 'all';
+  let activeComplexity = 'all';
   let searchQuery = '';
   let activeTermIndex = -1;
   let isScrollingProgrammatically = false;
@@ -71,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!card || !block) return;
 
       const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+      const itemComplexity = block.getAttribute('data-complexity');
+      const matchesComplexity = activeComplexity === 'all' || itemComplexity === activeComplexity;
       
       const query = searchQuery.toLowerCase().trim();
       const matchesSearch = !query || 
@@ -82,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fuzzyMatch(query, item.englishTerm) ||
         fuzzyMatch(query, item.transliteration);
 
-      if (matchesCategory && matchesSearch) {
+      if (matchesCategory && matchesComplexity && matchesSearch) {
         card.classList.remove('hidden');
         block.classList.remove('hidden');
         if (firstVisibleIndex === -1) {
@@ -339,6 +343,18 @@ document.addEventListener('DOMContentLoaded', () => {
       updateListVisibility();
     });
   });
+
+  // Complexity Badge Click
+  if (complexityBadges) {
+    complexityBadges.forEach(badge => {
+      badge.addEventListener('click', () => {
+        complexityBadges.forEach(b => b.classList.remove('active'));
+        badge.classList.add('active');
+        activeComplexity = badge.getAttribute('data-complexity');
+        updateListVisibility();
+      });
+    });
+  }
 
   // Sidebar Explorer Cards Click
   termsList.addEventListener('click', (e) => {

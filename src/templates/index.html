@@ -31,6 +31,16 @@
       <div class="header-logo">
         <span class="logo-text">MILONTECH.</span>
         <span class="logo-tag">v2026.1</span>
+        <div class="credits-wrapper">
+          <svg class="info-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <div class="credits-tooltip">
+            <p>Made with ☀️ from Raanana</p>
+            <p>by <a href="https://github.com/davidlevy" target="_blank">@davidlevy</a></p>
+            <div class="gh-star-wrapper">
+              <iframe src="https://ghbtns.com/github-btn.html?user=davidlevy&repo=milontech&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
       
       <!-- Top Header Search Bar -->
@@ -72,6 +82,12 @@
         <div class="filters-pane" dir="rtl">
           <button class="category-badge active" data-category="all">הכל</button>
           {{CATEGORY_BADGES}}
+        </div>
+        <div class="complexity-filters" dir="rtl">
+          <button class="complexity-badge active" data-complexity="all">כל הרמות</button>
+          <button class="complexity-badge tag-low" data-complexity="Low">קל</button>
+          <button class="complexity-badge tag-medium" data-complexity="Medium">בינוני</button>
+          <button class="complexity-badge tag-high" data-complexity="High">מורכב</button>
         </div>
 
         <!-- Terms List -->
