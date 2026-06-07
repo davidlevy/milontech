@@ -496,17 +496,6 @@
   },
   {
     "category": "Engineering & Development",
-    "hebrewTerm": "שאילתה",
-    "englishTerm": "She'ilta",
-    "englishDefinition": "Database query.",
-    "hebrewExample": "הרצתי שאילתה על הדי-בי.",
-    "transliteration": "Heratzti she'ilta al ha-DB.",
-    "englishExampleTranslation": "I ran a query on the DB.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
     "hebrewTerm": "לקנפג",
     "englishTerm": "Lekanpeg",
     "englishDefinition": "To configure.",
@@ -628,39 +617,6 @@
   },
   {
     "category": "Engineering & Development",
-    "hebrewTerm": "ממשק",
-    "englishTerm": "Mimshak",
-    "englishDefinition": "Interface.",
-    "hebrewExample": "הממשק משתמש פה לא אינטואיטיבי.",
-    "transliteration": "Ha-mimsak mishtamesh po lo intuitivi.",
-    "englishExampleTranslation": "The user interface here is not intuitive.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "מסד נתונים",
-    "englishTerm": "Masad Netunim",
-    "englishDefinition": "Database.",
-    "hebrewExample": "העברנו את הכל למסד נתונים חדש.",
-    "transliteration": "He'evarnu et hakol le-masad netunim chadash.",
-    "englishExampleTranslation": "We moved everything to a new database.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "שרת",
-    "englishTerm": "Sharet",
-    "englishDefinition": "Server.",
-    "hebrewExample": "השרת נפל באמצע הלילה.",
-    "transliteration": "Ha-sharet nafal be-emtza ha-laila.",
-    "englishExampleTranslation": "The server crashed in the middle of the night.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
     "hebrewTerm": "לקוח",
     "englishTerm": "Lako'ach",
     "englishDefinition": "Client (computing).",
@@ -689,17 +645,6 @@
     "hebrewExample": "האלגוריתם שלנו יודע לזהות תבניות.",
     "transliteration": "Ha-algoritm shelanu yode'a lezahot tavniyot.",
     "englishExampleTranslation": "Our algorithm knows how to identify patterns.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "הצפנה",
-    "englishTerm": "Hatzpana",
-    "englishDefinition": "Encryption.",
-    "hebrewExample": "ההצפנה שלנו היא מקצה לקצה.",
-    "transliteration": "Ha-hatzpana shelanu hi mikatze le-katze.",
-    "englishExampleTranslation": "Our encryption is end-to-end.",
     "isNative": true,
     "complexity": "Medium"
   },
@@ -804,28 +749,6 @@
   },
   {
     "category": "Engineering & Development",
-    "hebrewTerm": "רוחב פס",
-    "englishTerm": "Rochav Pas",
-    "englishDefinition": "Bandwidth.",
-    "hebrewExample": "חסר לנו רוחב פס כדי לתמוך בזה.",
-    "transliteration": "Chaser lanu rochav pas kedei litmoch be-ze.",
-    "englishExampleTranslation": "We lack the bandwidth to support this.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "ענן",
-    "englishTerm": "Anan",
-    "englishDefinition": "Cloud.",
-    "hebrewExample": "כל המידע שלנו מגובה בענן.",
-    "transliteration": "Kol ha-meida shelanu megube ba-anan.",
-    "englishExampleTranslation": "All our data is backed up in the cloud.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
     "hebrewTerm": "קוד פתוח",
     "englishTerm": "Kod Patu'ach",
     "englishDefinition": "Open source.",
@@ -843,28 +766,6 @@
     "hebrewExample": "בעיית חומרה גרמה לקריסה.",
     "transliteration": "Be'ayat chomra garma la-krisa.",
     "englishExampleTranslation": "A hardware problem caused the crash.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "תוכנה",
-    "englishTerm": "Tochna",
-    "englishDefinition": "Software.",
-    "hebrewExample": "עדכון התוכנה יצא מחר.",
-    "transliteration": "Idkun ha-tochna yetze machar.",
-    "englishExampleTranslation": "The software update will be released tomorrow.",
-    "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "רשת",
-    "englishTerm": "Reshet",
-    "englishDefinition": "Network.",
-    "hebrewExample": "יש בעיות התחברות לרשת.",
-    "transliteration": "Yesh be'ayot hitchabrut la-reshet.",
-    "englishExampleTranslation": "There are network connection issues.",
     "isNative": true,
     "complexity": "Medium"
   },
@@ -1085,17 +986,6 @@
     "hebrewExample": "מה הזרימה של האפליקציה?",
     "transliteration": "Ma ha-zrima shel ha-applikatzia?",
     "englishExampleTranslation": "What is the app's flow?",
-    "isNative": true,
-    "complexity": "High"
-  },
-  {
-    "category": "Engineering & Development",
-    "hebrewTerm": "פריסה",
-    "englishTerm": "Prisa",
-    "englishDefinition": "Releasing code to production (Deployment)",
-    "hebrewExample": "הפריסה עברה בהצלחה",
-    "transliteration": "Ha-prisa avra be-hatzlacha",
-    "englishExampleTranslation": "The deployment was successful",
     "isNative": true,
     "complexity": "High"
   },
@@ -1526,17 +1416,6 @@
     "transliteration": "Yesh yoter midai chikuch ba-harshama",
     "englishExampleTranslation": "There is too much friction in the registration",
     "isNative": true,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Product & Design",
-    "hebrewTerm": "איטרציה",
-    "englishTerm": "Iteratzia",
-    "englishDefinition": "Iteration",
-    "hebrewExample": "נשחרר את זה באיטרציות",
-    "transliteration": "Neshachrer et ze be-iteratziyot",
-    "englishExampleTranslation": "We will release it in iterations",
-    "isNative": false,
     "complexity": "Medium"
   },
   {
@@ -4676,17 +4555,6 @@
   },
   {
     "category": "Tech Slang",
-    "hebrewTerm": "טיקט",
-    "englishTerm": "Ticket",
-    "englishDefinition": "Jira/Task Ticket",
-    "hebrewExample": "פתחתי טיקט על הבאג",
-    "transliteration": "Pataxti ticket al ha-bug",
-    "englishExampleTranslation": "I opened a ticket for the bug",
-    "isNative": false,
-    "complexity": "Low"
-  },
-  {
-    "category": "Tech Slang",
     "hebrewTerm": "לוגים",
     "englishTerm": "Logim",
     "englishDefinition": "Logs",
@@ -4709,17 +4577,6 @@
   },
   {
     "category": "Tech Slang",
-    "hebrewTerm": "פוסט מורטם",
-    "englishTerm": "Post mortem",
-    "englishDefinition": "Post mortem",
-    "hebrewExample": "נעשה פוסט מורטם אחרי הריליס",
-    "transliteration": "Na'ase post mortem acharei ha-release",
-    "englishExampleTranslation": "We'll do a post mortem after the release",
-    "isNative": false,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Tech Slang",
     "hebrewTerm": "באג פיקס",
     "englishTerm": "Bug fix",
     "englishDefinition": "Bug fix",
@@ -4731,56 +4588,12 @@
   },
   {
     "category": "Tech Slang",
-    "hebrewTerm": "פרודקשן",
-    "englishTerm": "Production",
-    "englishDefinition": "Production environment",
-    "hebrewExample": "אל תיגע בפרודקשן בשישי",
-    "transliteration": "Al tiga be-production be-shishi",
-    "englishExampleTranslation": "Don't touch production on Friday",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Tech Slang",
-    "hebrewTerm": "דאונטיים",
-    "englishTerm": "Downtime",
-    "englishDefinition": "Downtime",
-    "hebrewExample": "היה לנו דאונטיים של שעה",
-    "transliteration": "Haya lanu downtime shel sha'a",
-    "englishExampleTranslation": "We had an hour of downtime",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Tech Slang",
-    "hebrewTerm": "סקיילביליות",
-    "englishTerm": "Scalability",
-    "englishDefinition": "Scalability",
-    "hebrewExample": "חסר למערכת סקיילביליות",
-    "transliteration": "Chaser la-ma'arechet scalability",
-    "englishExampleTranslation": "The system lacks scalability",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Tech Slang",
     "hebrewTerm": "קונפיגורציה",
     "englishTerm": "Configuratzia",
     "englishDefinition": "Configuration",
     "hebrewExample": "שיניתי את הקונפיגורציה",
     "transliteration": "Shiniti et ha-configuratzia",
     "englishExampleTranslation": "I changed the configuration",
-    "isNative": false,
-    "complexity": "Medium"
-  },
-  {
-    "category": "Tech Slang",
-    "hebrewTerm": "וורקאראונד",
-    "englishTerm": "Workaround",
-    "englishDefinition": "Workaround",
-    "hebrewExample": "מצאתי וורקאראונד זמני",
-    "transliteration": "Matzati workaround zmani",
-    "englishExampleTranslation": "I found a temporary workaround",
     "isNative": false,
     "complexity": "Medium"
   },
@@ -4797,56 +4610,12 @@
   },
   {
     "category": "Tech Slang",
-    "hebrewTerm": "רולבק",
-    "englishTerm": "Rollback",
-    "englishDefinition": "Rollback",
-    "hebrewExample": "עשינו רולבק לגרסה הקודמת",
-    "transliteration": "Asinu rollback la-girsa ha-kodemet",
-    "englishExampleTranslation": "We did a rollback to the previous version",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Tech Slang",
     "hebrewTerm": "דאמפ",
     "englishTerm": "Dump",
     "englishDefinition": "Data dump / Core dump",
     "hebrewExample": "תוציא דאמפ של הדי-בי",
     "transliteration": "Totzi dump shel ha-DB",
     "englishExampleTranslation": "Extract a DB dump",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Tech Slang",
-    "hebrewTerm": "הוטפיקס",
-    "englishTerm": "Hotfix",
-    "englishDefinition": "Hotfix",
-    "hebrewExample": "דחפנו הוטפיקס לפרודקשן",
-    "transliteration": "Dachafnu hotfix le-production",
-    "englishExampleTranslation": "We pushed a hotfix to production",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Tech Slang",
-    "hebrewTerm": "סטנדאפ",
-    "englishTerm": "Standup",
-    "englishDefinition": "Daily standup meeting",
-    "hebrewExample": "נדבר על זה בסטנדאפ",
-    "transliteration": "Nedaber al ze ba-standup",
-    "englishExampleTranslation": "We'll talk about it in the standup",
-    "isNative": false,
-    "complexity": "Low"
-  },
-  {
-    "category": "Tech Slang",
-    "hebrewTerm": "ריפקטורינג",
-    "englishTerm": "Refactoring",
-    "englishDefinition": "Refactoring",
-    "hebrewExample": "הקוד הזה דורש ריפקטורינג",
-    "transliteration": "Ha-kod haze doresh refactoring",
-    "englishExampleTranslation": "This code requires refactoring",
     "isNative": false,
     "complexity": "High"
   },
@@ -5039,17 +4808,6 @@
   },
   {
     "category": "Data & AI",
-    "hebrewTerm": "אליינמנט",
-    "englishTerm": "Alignment",
-    "englishDefinition": "Alignment",
-    "hebrewExample": "יש בעיית אליינמנט עם הפלט של המודל.",
-    "transliteration": "Yesh be'ayat alignment im ha-pelet shel ha-model.",
-    "englishExampleTranslation": "There is an alignment problem with the model's output.",
-    "isNative": false,
-    "complexity": "High"
-  },
-  {
-    "category": "Data & AI",
     "hebrewTerm": "קצב הזיות",
     "englishTerm": "Ketzev hazayot",
     "englishDefinition": "Hallucination Rate",
@@ -5113,5 +4871,170 @@
     "englishExampleTranslation": "The inference server is crashing under the load.",
     "isNative": false,
     "complexity": "High"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לדפלג",
+    "englishTerm": "Ledeploy / Ledapleg",
+    "englishDefinition": "To deploy",
+    "hebrewExample": "אני מדפלג את הגרסה",
+    "transliteration": "Ani medapleg et ha-girsa",
+    "englishExampleTranslation": "I am deploying the version",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לקמט",
+    "englishTerm": "Lekamet",
+    "englishDefinition": "To commit",
+    "hebrewExample": "צריך לקמט את הקוד",
+    "transliteration": "Tzarich lekamet et ha-kod",
+    "englishExampleTranslation": "Need to commit the code",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לפלש",
+    "englishTerm": "Leflesh",
+    "englishDefinition": "To flash",
+    "hebrewExample": "אני מפלש את הזיכרון",
+    "transliteration": "Ani meflesh et ha-zikaron",
+    "englishExampleTranslation": "I am flashing the memory",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לפרסר",
+    "englishTerm": "Lefarser",
+    "englishDefinition": "To parse",
+    "hebrewExample": "המערכת מפרסרת את הנתונים",
+    "transliteration": "Ha-ma'arechet mefarseret et ha-netunim",
+    "englishExampleTranslation": "The system parses the data",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לרנדר",
+    "englishTerm": "Lerander",
+    "englishDefinition": "To render",
+    "hebrewExample": "לוקח זמן לרנדר את התמונה",
+    "transliteration": "Loke'ach zman lerander et ha-tmuna",
+    "englishExampleTranslation": "It takes time to render the image",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Architecture & Infrastructure",
+    "hebrewTerm": "לעשות ריסטארט",
+    "englishTerm": "La'asot restart",
+    "englishDefinition": "To restart",
+    "hebrewExample": "תעשה ריסטארט לשרת",
+    "transliteration": "Ta'ase restart la-sharet",
+    "englishExampleTranslation": "Restart the server",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Management & Culture",
+    "hebrewTerm": "לפתוח טיקט",
+    "englishTerm": "Liftoach ticket",
+    "englishDefinition": "To open a ticket",
+    "hebrewExample": "פתחתי טיקט על הבאג",
+    "transliteration": "Patachti ticket al ha-bug",
+    "englishExampleTranslation": "I opened a ticket for the bug",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "QA & Testing",
+    "hebrewTerm": "לסגור באג",
+    "englishTerm": "Lisgor bug",
+    "englishDefinition": "To close a bug",
+    "hebrewExample": "סגרנו חמישה באגים היום",
+    "transliteration": "Sagarnu chamisha bagim hayom",
+    "englishExampleTranslation": "We closed five bugs today",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Architecture & Infrastructure",
+    "hebrewTerm": "להרים שרת",
+    "englishTerm": "Leharim sharet",
+    "englishDefinition": "To spin up a server",
+    "hebrewExample": "צריך להרים שרת חדש",
+    "transliteration": "Tzarich leharim sharet chadash",
+    "englishExampleTranslation": "Need to spin up a new server",
+    "isNative": true,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Tech Slang",
+    "hebrewTerm": "זה נפל בפרוד",
+    "englishTerm": "Ze nafal be-prod",
+    "englishDefinition": "It crashed in production",
+    "hebrewExample": "הכל קרס, זה נפל בפרוד",
+    "transliteration": "Hakol karas, ze nafal be-prod",
+    "englishExampleTranslation": "Everything crashed, it failed in production",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Tech Slang",
+    "hebrewTerm": "זה רץ בלוקאל",
+    "englishTerm": "Ze ratz be-local",
+    "englishDefinition": "It runs locally",
+    "hebrewExample": "מוזר, אצלי זה רץ בלוקאל",
+    "transliteration": "Muzar, etzli ze ratz be-local",
+    "englishExampleTranslation": "Weird, it runs locally for me",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "תעשה פוש",
+    "englishTerm": "Ta'ase push",
+    "englishDefinition": "Do a push",
+    "hebrewExample": "תעשה פוש לקוד עכשיו",
+    "transliteration": "Ta'ase push la-kod achshav",
+    "englishExampleTranslation": "Push the code now",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "תעשה פול",
+    "englishTerm": "Ta'ase pull",
+    "englishDefinition": "Do a pull",
+    "hebrewExample": "תעשה פול לפני שאתה עובד",
+    "transliteration": "Ta'ase pull lifnei she-ata oved",
+    "englishExampleTranslation": "Pull before you work",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "תעשה ריבייס",
+    "englishTerm": "Ta'ase rebase",
+    "englishDefinition": "Do a rebase",
+    "hebrewExample": "תעשה ריבייס מול המאסטר",
+    "transliteration": "Ta'ase rebase mul ha-master",
+    "englishExampleTranslation": "Rebase against master",
+    "isNative": false,
+    "complexity": "Medium"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "אני ממרג׳ג׳",
+    "englishTerm": "Ani memargej",
+    "englishDefinition": "I am merging",
+    "hebrewExample": "אני ממרג׳ג׳ את הענף שלי",
+    "transliteration": "Ani memargej et ha-anaf sheli",
+    "englishExampleTranslation": "I am merging my branch",
+    "isNative": false,
+    "complexity": "Medium"
   }
 ]
