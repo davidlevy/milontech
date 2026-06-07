@@ -239,6 +239,36 @@ html, body {
   display: block;
 }
 
+.suggest-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  direction: ltr;
+}
+
+.suggest-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .suggest-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .stats-board {
   display: flex;
   align-items: center;
@@ -1043,6 +1073,12 @@ html, body {
   }
   .gh-star-wrapper-header {
     display: none;
+  }
+  .suggest-btn span {
+    display: none;
+  }
+  .suggest-btn {
+    padding: 4px;
   }
 }
 

@@ -230,6 +230,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Suggest Edit Button (Obfuscated) ---
+  const suggestBtn = document.getElementById('suggest-btn');
+  if (suggestBtn) {
+    suggestBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const u = 'dvid.levy+milontech';
+      const d = 'gmail.com';
+      window.location.href = `mailto:${u}@${d}?subject=MilonTech%20Suggestion`;
+    });
+  }
+
   // --- Keyboard & Arrow Key Navigation ---
   function getVisibleIndices() {
     const visible = [];
