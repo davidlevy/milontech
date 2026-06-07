@@ -5036,5 +5036,192 @@
     "englishExampleTranslation": "I am merging my branch",
     "isNative": false,
     "complexity": "Medium"
+  },
+  {
+    "category": "Architecture & Infrastructure",
+    "hebrewTerm": "קובץ",
+    "englishTerm": "Kovetz",
+    "englishDefinition": "File",
+    "hebrewExample": "תפתח את הקובץ",
+    "transliteration": "Tiftach et ha-kovetz",
+    "englishExampleTranslation": "Open the file",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Architecture & Infrastructure",
+    "hebrewTerm": "תיקייה",
+    "englishTerm": "Tikiya",
+    "englishDefinition": "Folder",
+    "hebrewExample": "תיקייה חדשה",
+    "transliteration": "Tikiya chadasha",
+    "englishExampleTranslation": "New folder",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לשמור",
+    "englishTerm": "Lishmor",
+    "englishDefinition": "To save",
+    "hebrewExample": "תשמור את השינויים",
+    "transliteration": "Tishmor et ha-shinuyim",
+    "englishExampleTranslation": "Save the changes",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "להעתיק",
+    "englishTerm": "Leha'atik",
+    "englishDefinition": "To copy",
+    "hebrewExample": "תעתיק את הטקסט",
+    "transliteration": "Ta'atik et ha-tekst",
+    "englishExampleTranslation": "Copy the text",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "להדביק",
+    "englishTerm": "Lehadbik",
+    "englishDefinition": "To paste",
+    "hebrewExample": "תדביק פה",
+    "transliteration": "Tadbik po",
+    "englishExampleTranslation": "Paste here",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לגזור",
+    "englishTerm": "Ligzor",
+    "englishDefinition": "To cut",
+    "hebrewExample": "תגזור את זה",
+    "transliteration": "Tigzor et ze",
+    "englishExampleTranslation": "Cut this",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "למחוק",
+    "englishTerm": "Limchok",
+    "englishDefinition": "To delete",
+    "hebrewExample": "תמחק את הקובץ",
+    "transliteration": "Timchok et ha-kovetz",
+    "englishExampleTranslation": "Delete the file",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Product & Design",
+    "hebrewTerm": "הגדרות",
+    "englishTerm": "Hagdarot",
+    "englishDefinition": "Settings",
+    "hebrewExample": "תשנה בהגדרות",
+    "transliteration": "Teshane ba-hagdarot",
+    "englishExampleTranslation": "Change in the settings",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Architecture & Infrastructure",
+    "hebrewTerm": "דפדפן",
+    "englishTerm": "Dafdefan",
+    "englishDefinition": "Browser",
+    "hebrewExample": "איזה דפדפן אתה משתמש?",
+    "transliteration": "Eize dafdefan ata mishtamesh?",
+    "englishExampleTranslation": "Which browser are you using?",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Product & Design",
+    "hebrewTerm": "קישור",
+    "englishTerm": "Kishur",
+    "englishDefinition": "Link",
+    "hebrewExample": "תשלח לי קישור",
+    "transliteration": "Tishlach li kishur",
+    "englishExampleTranslation": "Send me a link",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Tech Slang",
+    "hebrewTerm": "לינק",
+    "englishTerm": "Link",
+    "englishDefinition": "Link",
+    "hebrewExample": "תשלח לי לינק",
+    "transliteration": "Tishlach li link",
+    "englishExampleTranslation": "Send me a link",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "להוריד",
+    "englishTerm": "Lehorid",
+    "englishDefinition": "To download",
+    "hebrewExample": "אני מוריד את הקובץ",
+    "transliteration": "Ani morid et ha-kovetz",
+    "englishExampleTranslation": "I am downloading the file",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "להעלות",
+    "englishTerm": "Leha'alot",
+    "englishDefinition": "To upload",
+    "hebrewExample": "תעלה את זה לענן",
+    "transliteration": "Ta'ale et ze la-anan",
+    "englishExampleTranslation": "Upload it to the cloud",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Product & Design",
+    "hebrewTerm": "לשונית",
+    "englishTerm": "Leshonit",
+    "englishDefinition": "Tab",
+    "hebrewExample": "תפתח לשונית חדשה",
+    "transliteration": "Tiftach leshonit chadasha",
+    "englishExampleTranslation": "Open a new tab",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Tech Slang",
+    "hebrewTerm": "טאב",
+    "englishTerm": "Tab",
+    "englishDefinition": "Tab",
+    "hebrewExample": "תפתח טאב חדש",
+    "transliteration": "Tiftach tab chadash",
+    "englishExampleTranslation": "Open a new tab",
+    "isNative": false,
+    "complexity": "Low"
+  },
+  {
+    "category": "Architecture & Infrastructure",
+    "hebrewTerm": "חלון",
+    "englishTerm": "Chalon",
+    "englishDefinition": "Window",
+    "hebrewExample": "תסגור את החלון",
+    "transliteration": "Tisgor et ha-chalon",
+    "englishExampleTranslation": "Close the window",
+    "isNative": true,
+    "complexity": "Low"
+  },
+  {
+    "category": "Engineering & Development",
+    "hebrewTerm": "לרענן",
+    "englishTerm": "Lera'anen",
+    "englishDefinition": "To refresh",
+    "hebrewExample": "תרענן את העמוד",
+    "transliteration": "Tera'anen et ha-amud",
+    "englishExampleTranslation": "Refresh the page",
+    "isNative": true,
+    "complexity": "Low"
   }
 ]
