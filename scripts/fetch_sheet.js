@@ -66,6 +66,11 @@ function parseCSV(csvContent) {
     if (hebrewTerm === 'Column 2' || category === 'Column 1') continue;
     if (!hebrewTerm && !englishTerm) continue;
 
+    // Normalize complexity (1 -> Low, 2 -> Medium, 3 -> High)
+    let normComplexity = 'Medium';
+    if (complexity === '1' || String(complexity).toLowerCase() === 'low') normComplexity = 'Low';
+    if (complexity === '3' || String(complexity).toLowerCase() === 'high') normComplexity = 'High';
+
     glossary.push({
       category: category || 'General',
       hebrewTerm: hebrewTerm || '',
@@ -75,7 +80,7 @@ function parseCSV(csvContent) {
       transliteration: transliteration || '',
       englishExampleTranslation: englishExampleTranslation || '',
       isNative: isNative === 'TRUE',
-      complexity: complexity || 'Medium'
+      complexity: normComplexity
     });
   }
 

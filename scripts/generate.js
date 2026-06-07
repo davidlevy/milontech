@@ -39,6 +39,13 @@ function generateHTML(glossary, template) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 
+  // Translate complexity levels
+  const getComplexityLabel = (comp) => {
+    if (comp === 'Low') return 'קל';
+    if (comp === 'High') return 'מורכב';
+    return 'בינוני';
+  };
+
   // Pre-render glossary cards for SEO and non-JS fallback (Sidebar Explorer)
   const cardsHtml = glossary
     .map((item, index) => {
@@ -47,11 +54,13 @@ function generateHTML(glossary, template) {
            data-id="${index}" 
            data-category="${escape(item.category)}" 
            data-term-he="${escape(item.hebrewTerm)}" 
-           data-term-en="${escape(item.englishTerm)}">
+           data-term-en="${escape(item.englishTerm)}"
+           data-complexity="${escape(item.complexity)}">
         <div class="card-header">
           <div class="card-meta">
             <span class="card-category">${escape(item.category)}</span>
             <span class="card-origin ${item.isNative ? 'tag-native' : 'tag-heblish'}">${item.isNative ? 'Native' : 'Heblish'}</span>
+            <span class="card-complexity tag-${item.complexity.toLowerCase()}">${getComplexityLabel(item.complexity)}</span>
           </div>
           <div class="card-title-row" dir="ltr">
             <h3 class="term-title">
@@ -69,12 +78,13 @@ function generateHTML(glossary, template) {
   const detailsHtml = glossary
     .map((item, index) => {
       return `
-      <div class="detail-block" id="detail-term-${index}" data-id="${index}" data-category="${escape(item.category)}">
+      <div class="detail-block" id="detail-term-${index}" data-id="${index}" data-category="${escape(item.category)}" data-complexity="${escape(item.complexity)}">
         <div class="detail-header-section">
           <div class="detail-meta">
             <div class="detail-tags">
               <span class="detail-category-tag">${escape(item.category)}</span>
               <span class="detail-origin-tag ${item.isNative ? 'tag-native' : 'tag-heblish'}">${item.isNative ? 'Native' : 'Heblish'}</span>
+              <span class="detail-complexity-tag tag-${item.complexity.toLowerCase()}">${getComplexityLabel(item.complexity)}</span>
             </div>
             <button class="action-btn share-permalink-btn" data-term="${escape(item.englishTerm)}" title="Copy shareable link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
