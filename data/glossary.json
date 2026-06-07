@@ -22,7 +22,7 @@
   {
     "category": "Hardware",
     "hebrewTerm": "מקלדת",
-    "englishTerm": "Makledet",
+    "englishTerm": "Mikledet",
     "englishDefinition": "Keyboard",
     "hebrewExample": "מקלדת אלחוטית",
     "transliteration": "Makledet alchutit",
@@ -152,7 +152,7 @@
   {
     "category": "UI/UX",
     "hebrewTerm": "ממשק",
-    "englishTerm": "Mimsak",
+    "englishTerm": "Mimshak",
     "englishDefinition": "Interface",
     "hebrewExample": "ממשק נוח",
     "transliteration": "Mimsak no'ach",
@@ -572,7 +572,7 @@
   {
     "category": "Tech Core",
     "hebrewTerm": "ממשק",
-    "englishTerm": "Mimsak",
+    "englishTerm": "Mimshak",
     "englishDefinition": "Interface.",
     "hebrewExample": "הממשק משתמש פה לא אינטואיטיבי.",
     "transliteration": "Ha-mimsak mishtamesh po lo intuitivi.",
@@ -722,7 +722,7 @@
   {
     "category": "Tech Core (Verbs)",
     "hebrewTerm": "להקצות",
-    "englishTerm": "Lehakztot",
+    "englishTerm": "Lehaktzot",
     "englishDefinition": "To allocate.",
     "hebrewExample": "צריך להקצות יותר זיכרון לתהליך.",
     "transliteration": "Tzarich lehakztot yoter zikaron la-tahalich.",
@@ -802,7 +802,7 @@
   {
     "category": "Tech Core (Verbs)",
     "hebrewTerm": "לסקייל",
-    "englishTerm": "Lesakyel",
+    "englishTerm": "Leskayel",
     "englishDefinition": "To scale.",
     "hebrewExample": "אנחנו צריכים לסקייל את הארכיטקטורה.",
     "transliteration": "Anachnu tzrichim lesakyel et ha-architektura.",
@@ -812,7 +812,7 @@
   {
     "category": "Tech Core (Verbs)",
     "hebrewTerm": "לסנכרן",
-    "englishTerm": "Lesancren",
+    "englishTerm": "Lesankren",
     "englishDefinition": "To synchronize.",
     "hebrewExample": "הדאטה לא מסתנכרן כמו שצריך.",
     "transliteration": "Ha-data lo mistancren kmo she-tzarich.",
