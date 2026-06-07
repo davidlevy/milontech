@@ -60,23 +60,26 @@
 }
 
 /* Layout Framework */
-body {
+html, body {
   background-color: var(--bg-app);
   color: var(--text-primary);
   font-family: var(--font-sans);
-  height: 100vh;
-  width: 100vw;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
   overflow: hidden;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior-y: none; 
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
 }
 
 /* 1. Header Styles */
