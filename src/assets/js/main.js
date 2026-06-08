@@ -359,21 +359,31 @@ function initVirtualizer() {
     }
     
     const card = termsList.querySelector(`.glossary-card[data-id="${index}"]`);
-    if (!card) {
-      console.log("selectTerm: card not found for index", index);
-      return;
-    }
+    if (!card) return;
+
+    // If the term is currently filtered out, clear all filters so it can be seen
     if (card.classList.contains('hidden')) {
-      console.log("selectTerm: card is hidden");
-      return;
+      searchInput.value = '';
+      searchQuery = '';
+      activeCategory = 'all';
+      activeComplexity = 'all';
+      
+      categoryBadges.forEach(b => {
+        b.classList.remove('active');
+        if (b.getAttribute('data-category') === 'all') b.classList.add('active');
+      });
+      complexityBadges.forEach(b => {
+        b.classList.remove('active');
+        if (b.getAttribute('data-complexity') === 'all') b.classList.add('active');
+      });
+      
+      updateListVisibility(); // this removes the hidden classes and updates visibleIndices
     }
 
     highlightActiveCard(index);
 
-    console.log("selectTerm: virtualizer exists:", !!virtualizer);
     if (triggerVirtualScroll && virtualizer) {
       const vIndex = visibleIndices.indexOf(index);
-      console.log("selectTerm: vIndex is", vIndex);
       if (vIndex !== -1) {
         isScrollingProgrammatically = true;
         
