@@ -2,8 +2,8 @@ name: Auto Sync Data from Sheets
 
 on:
   schedule:
-    # Runs every hour
-    - cron: '0 * * * *'
+    # Runs every day at midnight
+    - cron: '0 0 * * *'
   repository_dispatch:
     types: [sync-sheet]
   workflow_dispatch:
